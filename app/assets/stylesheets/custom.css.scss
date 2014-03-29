@@ -1,1 +1,17 @@
 @import "foundation";
+
+
+
+
+.top-bar-section ul{
+    text-transform: uppercase;
+    font-size: 13px;
+}
+
+.top-bar-section li a:not(.button) {
+    color: pink;
+}
+
+.top-bar{
+  margin-bottom: 0;
+}

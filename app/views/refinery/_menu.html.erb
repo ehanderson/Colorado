@@ -6,33 +6,29 @@
     css = [(css || 'menu clearfix')].flatten.join(' ')
     hide_children = Refinery::Core.menu_hide_children if hide_children.nil?
 -%>
-<nav class="top-bar" data-topbar>
-  <ul class="title-area">
-    <li class="name">
-      <h1><a href="#">My Site</a></h1>
-    </li>
-    <li class="toggle-topbar menu-icon"><a href="#">Menu</a></li>
-  </ul>
+  <nav id='<%= dom_id %>' class="top-bar" data-topbar>
+    <ul class="title-area">
+      <li class="name">
+        <h1><a href="/">Climb Higher</a></h1>
+      </li>
 
-  <section class="top-bar-section">
-    <!-- Right Nav Section -->
-    <ul class="right">
-      <li class="active"><a href="#">Right Button Active</a></li>
-      <li class="has-dropdown">
-        <a href="#">Right Button Dropdown</a>
-        <ul class="dropdown">
-          <li><a href="#">First link in dropdown</a></li>
-        </ul>
+      <li class="toggle-topbar menu-icon"><a href="#">Menu</a>
       </li>
     </ul>
+    <section class="top-bar-section">
+      <ul class="right">
 
-    <!-- Left Nav Section -->
-    <ul class="left">
-      <li><a href="#">Left Nav Button</a></li>
-    </ul>
-  </section>
-</nav>
-
+        <%= render :partial => '/refinery/menu_branch', :collection => roots,
+                   :locals => {
+                     :hide_children => hide_children,
+                     :sibling_count => (roots.length - 1),
+                     :menu_levels => local_assigns[:menu_levels],
+                     :apply_css => true #if you don't care about class='first' class='last' or class='selected' set apply_css to false for speed.
+                   } -%>
+      </ul>
+    </section>
+  </nav>
 
 <% end -%>
+
 
