@@ -156,7 +156,7 @@ GEM
       refinerycms-core (= 2.0.10)
     routing-filter (0.3.1)
       actionpack
-    sass (3.3.4)
+    sass (3.2.18)
     sass-rails (3.2.6)
       railties (~> 3.2.0)
       sass (>= 3.1.10)
@@ -196,6 +196,7 @@ DEPENDENCIES
   rails (= 3.2.14)
   refinerycms (~> 2.0.0)
   refinerycms-i18n (~> 2.0.0)
-  sass-rails (~> 3.2.3)
+  sass (~> 3.2.0)
+  sass-rails (~> 3.2.6)
   uglifier (>= 1.0.3)
   zurb-foundation (~> 4.0.0)
