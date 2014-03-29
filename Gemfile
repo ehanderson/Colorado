@@ -23,6 +23,11 @@ group :assets do
   gem 'zurb-foundation', '~> 4.0.0'
 end
 
+gem 'guard-rspec'
+gem 'guard-livereload'
+gem 'haml'
+gem 'haml-rails'
+
 gem 'jquery-rails', '~> 2.0.0'
 
 # To use ActiveModel has_secure_password
