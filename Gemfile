@@ -28,6 +28,8 @@ gem 'guard-livereload'
 gem 'haml'
 gem 'haml-rails'
 
+gem 'refinerycms-inquiries', '~> 2.0.0'
+
 gem 'jquery-rails', '~> 2.0.0'
 
 # To use ActiveModel has_secure_password
