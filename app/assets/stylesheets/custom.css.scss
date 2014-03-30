@@ -15,6 +15,10 @@
 
 /* =========================  FOOTER  ============================== */
 
+footer {
+  background-color: rgb(111, 112, 115);
+}
+
 .row {
   margin-left: auto;
   margin-right: auto;
@@ -31,4 +35,8 @@
 
 .panel-title {
   font-weight: bold;
+}
+
+p {
+  color: white;
 }
