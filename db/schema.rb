@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140330204240) do
+ActiveRecord::Schema.define(:version => 20140330211511) do
 
   create_table "refinery_image_page_translations", :force => true do |t|
     t.integer  "refinery_image_page_id"
@@ -47,14 +47,6 @@ ActiveRecord::Schema.define(:version => 20140330204240) do
     t.datetime "updated_at",      :null => false
   end
 
-  create_table "refinery_page_contents", :force => true do |t|
-    t.string   "title"
-    t.integer  "background_id"
-    t.integer  "position"
-    t.datetime "created_at",    :null => false
-    t.datetime "updated_at",    :null => false
-  end
-
   create_table "refinery_inquiries_inquiries", :force => true do |t|
     t.string   "name"
     t.string   "email"
@@ -66,6 +58,14 @@ ActiveRecord::Schema.define(:version => 20140330204240) do
   end
 
   add_index "refinery_inquiries_inquiries", ["id"], :name => "index_refinery_inquiries_inquiries_on_id"
+
+  create_table "refinery_page_contents", :force => true do |t|
+    t.string   "title"
+    t.integer  "background_id"
+    t.integer  "position"
+    t.datetime "created_at",    :null => false
+    t.datetime "updated_at",    :null => false
+  end
 
   create_table "refinery_page_part_translations", :force => true do |t|
     t.integer  "refinery_page_part_id"
