@@ -8,7 +8,7 @@
     <div id="page_container">
       <header id="header">
         <%= render '/refinery/header' -%>
-      <%= image_tag'GOPR1016.jpg'%>
+        <%= image_tag @background_image if @background_image%>
       </header>
       <section id="page">
         <%= yield %>
