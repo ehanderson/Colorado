@@ -15,34 +15,53 @@ footer {
     height: 20rem;
     overflow: hidden;
     padding: 10px;
-    background-color: #333;
   }
   .panel-title {
+    font: 20px;
     font-weight: bold;
-    color: white;
+    color: #a9abae;
+  }
+  .footer-panels > li:hover {
+    color: orange;
   }
   .social-media > li {
     margin: 10px;
     overflow: hidden;
     background-color: white;
-    border-radius: 20px;
+    border-radius: 25px;
+    border: 2px solid gray;
   }
-  .twitter {
+  .social-media li img {
+    -webkit-filter: grayscale(100%);
+       -moz-filter: grayscale(100%);
+         -o-filter: grayscale(100%);
+        -ms-filter: grayscale(100%);
+            filter: grayscale(100%); 
+  }
+  .social-media li img:hover {
+    filter: none;
+    -webkit-filter: grayscale(0);
+  }
+  .twitter:hover {
     border: 2px solid #55acee;
   }
-  .facebook {
+  .facebook:hover {
     border: 2px solid #3b5998;
   }
-  .instagram {
+  .instagram:hover {
     border: 2px solid #3f729b;
   }
-  .google {
+  .google:hover {
     border: 2px solid #f4b400;
   }
-  .youtube {
+  .youtube:hover {
     border: 2px solid #c4302b;
   }
-  .linkedin {
+  .linkedin:hover {
     border: 2px solid #0e76a8;
+  }
+  .copyright {
+    padding: 2rem;
+    background-color: #333;
   }
 }
