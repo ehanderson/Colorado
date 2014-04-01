@@ -1,0 +1,67 @@
+@import "foundation";
+
+footer {
+  background-color: rgb(111, 112, 115);
+  color: white;
+  .row {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 90rem;
+  }
+  .footer-panels {
+    display: inline-block;
+    list-style: none;
+    margin: 1px;
+    height: 20rem;
+    overflow: hidden;
+    padding: 10px;
+  }
+  .panel-title {
+    font: 20px;
+    font-weight: bold;
+    color: #a9abae;
+  }
+  .footer-panels > li:hover {
+    color: orange;
+  }
+  .social-media > li {
+    margin: 10px;
+    overflow: hidden;
+    background-color: white;
+    border-radius: 25px;
+    border: 2px solid gray;
+  }
+  .social-media li img {
+    -webkit-filter: grayscale(100%);
+       -moz-filter: grayscale(100%);
+         -o-filter: grayscale(100%);
+        -ms-filter: grayscale(100%);
+            filter: grayscale(100%); 
+  }
+  .social-media li img:hover {
+    filter: none;
+    -webkit-filter: grayscale(0);
+  }
+  .twitter:hover {
+    border: 2px solid #55acee;
+  }
+  .facebook:hover {
+    border: 2px solid #3b5998;
+  }
+  .instagram:hover {
+    border: 2px solid #3f729b;
+  }
+  .google:hover {
+    border: 2px solid #f4b400;
+  }
+  .youtube:hover {
+    border: 2px solid #c4302b;
+  }
+  .linkedin:hover {
+    border: 2px solid #0e76a8;
+  }
+  .copyright {
+    padding: 2rem;
+    background-color: #333;
+  }
+}
