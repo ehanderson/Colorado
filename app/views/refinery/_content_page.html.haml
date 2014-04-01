@@ -1,0 +1,19 @@
+%section#page-layout
+  .sidenav
+    %ul.four.side-nav
+      %li.divider
+      %li.active
+        %a{:href => "#"} Link 1
+      %li
+        %a{:href => "#"} Link 2
+      %li
+        %a{:href => "#"} Link 3
+      %li
+        %a{:href => "#"} Link 4
+  .content
+    = render_content_page(@page, {                                                                              |
+        :hide_sections => local_assigns[:hide_sections],                                                        |
+        :can_use_fallback => !local_assigns[:show_empty_sections] && !local_assigns[:remove_automatic_sections] |
+      })                                                                                                        |
+    = render '/refinery/draft_page_message' unless @page.nil? or @page.live?
+  %section
