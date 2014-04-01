@@ -1,0 +1,21 @@
+<%= render '/refinery/html_tag' %>
+<% site_bar = render('/refinery/site_bar', :head => true) %>
+<%= render '/refinery/head' %>
+<body>
+  <%= site_bar %>
+  <%= render '/refinery/ie6check' if request.env['HTTP_USER_AGENT'] =~ /MSIE/ %>
+  <header id="header">
+    <%= render '/refinery/header' %>
+  </header>
+  <%= image_tag @background_image if @background_image %>
+  <!-- %div{id: "page_container"}
+  -->
+  <section id="page">
+    <%= yield %>
+  </section>
+  <footer>
+    <%= render '/refinery/footer' %>
+  </footer>
+  <%= render '/refinery/javascripts' %>
+<%= javascript_include_tag 'application' %>
+</body>

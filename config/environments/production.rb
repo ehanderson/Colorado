@@ -3,7 +3,7 @@ Colorado::Application.configure do
 
   # Code is not reloaded between requests
   config.cache_classes = true
-
+ config.eager_load = true
   # Full error reports are disabled and caching is turned on
   config.consider_all_requests_local       = false
   config.action_controller.perform_caching = true
@@ -19,6 +19,8 @@ Colorado::Application.configure do
 
   # Generate digests for assets URLs
   config.assets.digest = true
+
+  # config.assets.precompile += %w( vendor/modernizr.js )
 
   # Defaults to nil and saved in location specified by config.assets.prefix
   # config.assets.manifest = YOUR_PATH

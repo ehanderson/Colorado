@@ -16,18 +16,19 @@ group :assets do
   gem 'sass',   '~> 3.2.0'
   gem 'sass-rails',   '~> 3.2.6'
   gem 'coffee-rails', '~> 3.2.1'
+  # gem 'modernizr-rails'
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   # gem 'therubyracer', :platforms => :ruby
 
   gem 'uglifier', '>= 1.0.3'
-  gem 'compass-rails'
-  gem 'zurb-foundation', '~> 4.0.0'
+  gem 'foundation-rails'
 end
-
+# gem 'jquery-ui-rails'
 gem 'guard-rspec'
 gem 'guard-livereload'
 gem 'haml'
 gem 'haml-rails'
+
 
 gem 'refinerycms-inquiries', '~> 2.0.0'
 
@@ -36,8 +37,14 @@ gem 'jquery-rails', '~> 2.0.0'
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
+# Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
+# These do not work with foundation 5 so we are not going to use them
+# However, jquery.turbolinks may be an option
+# gem 'turbolinks'
+
+
 # To use Jbuilder templates for JSON
-# gem 'jbuilder'
+gem 'jbuilder'
 
 # Use unicorn as the app server
 # gem 'unicorn'

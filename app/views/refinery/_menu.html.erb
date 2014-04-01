@@ -1,3 +1,4 @@
+
 <%
   # Collect the root items.
   # ::Refinery::Menu is smart enough to remember all of the items in the original collection.
@@ -6,18 +7,18 @@
     css = [(css || 'menu clearfix')].flatten.join(' ')
     hide_children = Refinery::Core.menu_hide_children if hide_children.nil?
 -%>
+<div class="contain-to-grid">
   <nav id='<%= dom_id %>' class="top-bar" data-topbar>
     <ul class="title-area">
       <li class="name">
         <h1><a href="/">Climb Higher</a></h1>
       </li>
 
-      <li class="toggle-topbar menu-icon"><a href="#">Menu</a>
+      <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a>
       </li>
     </ul>
     <section class="top-bar-section">
-      <ul class="right">
-
+      <ul class="left">
         <%= render :partial => '/refinery/menu_branch', :collection => roots,
                    :locals => {
                      :hide_children => hide_children,
@@ -28,7 +29,6 @@
       </ul>
     </section>
   </nav>
-
+</div>
 <% end -%>
-
 
