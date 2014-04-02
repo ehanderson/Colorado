@@ -7,8 +7,10 @@
   %div{id: "page_container"}
     %header{:id => "header"}
       = render '/refinery/header'
-    %div#background-image
-      = image_tag @background_image if @background_image
+      %div.row#background-image
+        / %div.large-12.columns.small-12.columns.side-nav
+        / %div.large-8.small-8.columns.four.side-nav
+        = image_tag @background_image if @background_image
     %section{:id => "page"}
       = yield
     %footer
