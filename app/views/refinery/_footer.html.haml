@@ -1,37 +1,37 @@
 %hr
 %div.row
-  %div.large-12.small-12.columns.text-center
-    %ul.large-2.small-5.footer-panels
+  %div.small-12.large-12.columns.text-center
+    %ul.small-6.large-2.columns.footer-panels
       %h6.panel-title Additional Resources
       %li Tool Kits
       %li Downloadable Content
       %li Research Papers
       %li FAQs
       %li More Federal and State Resources
-    %ul.large-2.small-5.footer-panels
+    %ul.small-6.large-2.columns.footer-panels
       %h6.panel-title News
       %li Newsroom
       %li eNewsletter Archive
-    %ul.large-2.small-5.footer-panels
+    %ul.small-6.large-2.columns.footer-panels
       %h6.panel-title Contact Us
       %li Co Address
       %li Suite #
       %li Somewhere, Colorado 20000
       %li phone number
       %li fax number
-    %ul.large-2.small-5.footer-panels.inline-list.social-media
+    %ul.small-6.large-2.columns.footer-panels.inline-list.social-media
       %h6.panel-title Stay Connected
-      %li.facebook
+      %li#facebook
         = image_tag('facebook.png', size: "50x50")
-      %li.twitter
+      %li#twitter
         = image_tag('twitter.png', size: "50x50")
-      %li.linkedin
+      %li#linkedin
         = image_tag('linkedin.png', size: "50x50")
-      %li.instagram
+      %li#instagram
         = image_tag('instagram.png', size: "50x50")
-      %li.youtube
+      %li#youtube
         = image_tag('youtube.png', size: "50x50")
-      %li.google
+      %li#google
         = image_tag('googleplus.png', size: "50x50")
 %p.copyright.text-center
   = t('.copyright', :year => Time.now.year, :site_name => Refinery::Core.site_name)

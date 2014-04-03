@@ -1,29 +1,10 @@
-/*
-section#page-layout {
-    margin: auto;
-    padding: 5%;
-}
-div.sidenav {
-    width: 15%;
-    float: left;
-}
-div.content {
-    margin-left: 15%;
-}*/
-    /*height: 200px;*/
-    /*background: black;*/
-
-/*#logos {
-  width: 80%;
-  text-align:center;
-  img{
-    width: 30%;
-    padding: 20px;
-  }
+#show-page > div {
+  display: inline-block;
 }
 
-*/
-
+.inline {
+  display: inline-block;
+}
 
 .side-nav{
   padding-left: 5%;

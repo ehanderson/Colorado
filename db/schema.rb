@@ -11,6 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
+
 ActiveRecord::Schema.define(:version => 20140330211511) do
 
   create_table "refinery_image_page_translations", :force => true do |t|
@@ -45,26 +46,6 @@ ActiveRecord::Schema.define(:version => 20140330211511) do
     t.string   "image_ext"
     t.datetime "created_at",      :null => false
     t.datetime "updated_at",      :null => false
-  end
-
-  create_table "refinery_inquiries_inquiries", :force => true do |t|
-    t.string   "name"
-    t.string   "email"
-    t.string   "phone"
-    t.text     "message"
-    t.boolean  "spam",       :default => false
-    t.datetime "created_at",                    :null => false
-    t.datetime "updated_at",                    :null => false
-  end
-
-  add_index "refinery_inquiries_inquiries", ["id"], :name => "index_refinery_inquiries_inquiries_on_id"
-
-  create_table "refinery_page_contents", :force => true do |t|
-    t.string   "title"
-    t.integer  "background_id"
-    t.integer  "position"
-    t.datetime "created_at",    :null => false
-    t.datetime "updated_at",    :null => false
   end
 
   create_table "refinery_page_part_translations", :force => true do |t|
@@ -203,5 +184,20 @@ ActiveRecord::Schema.define(:version => 20140330211511) do
 
   add_index "seo_meta", ["id"], :name => "index_seo_meta_on_id"
   add_index "seo_meta", ["seo_meta_id", "seo_meta_type"], :name => "index_seo_meta_on_seo_meta_id_and_seo_meta_type"
+
+  create_table "users", :force => true do |t|
+    t.string   "role"
+    t.string   "first_name"
+    t.string   "last_name"
+    t.string   "organization"
+    t.string   "title"
+    t.string   "twitter_handle"
+    t.boolean  "tweeter",           :default => false
+    t.boolean  "opinion_editorial", :default => false
+    t.boolean  "letter_to_editor",  :default => false
+    t.datetime "created_at",                           :null => false
+    t.datetime "updated_at",                           :null => false
+    t.string   "email"
+  end
 
 end
