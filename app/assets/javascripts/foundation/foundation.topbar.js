@@ -85,7 +85,6 @@
       }
 
       var settings = topbar.data(this.attr_name(true) + '-init');
-
       var section = self.S('section, .section', topbar);
 
       if (self.breakpoint()) {
@@ -147,7 +146,6 @@
     events : function (bar) {
       var self = this,
           S = this.S;
-
       S(this.scope)
         .off('.topbar')
         .on('click.fndtn.topbar', '[' + this.attr_name() + '] .toggle-topbar', function (e) {
@@ -173,8 +171,8 @@
           }
 
           if (self.breakpoint()) return;
-          if (settings.is_hover && !Modernizr.touch) return;
 
+          if (settings.is_hover && !Modernizr.touch) return;
           e.stopImmediatePropagation();
 
           if (li.hasClass('hover')) {
@@ -197,8 +195,8 @@
         })
         .on('click.fndtn.topbar', '[' + this.attr_name() + '] .has-dropdown>a', function (e) {
           if (self.breakpoint()) {
-
             e.preventDefault();
+
 
             var $this = S(this),
                 topbar = $this.closest('[' + self.attr_name() + ']'),
@@ -224,7 +222,6 @@
       S(window).off('.topbar').on('resize.fndtn.topbar', self.throttle(function () {
         self.resize.call(self);
       }, 50)).trigger('resize');
-
       S('body').off('.topbar').on('click.fndtn.topbar touchstart.fndtn.topbar', function (e) {
         var parent = S(e.target).closest('li').closest('li.hover');
 
