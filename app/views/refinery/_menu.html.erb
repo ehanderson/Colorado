@@ -8,7 +8,7 @@
     hide_children = Refinery::Core.menu_hide_children if hide_children.nil?
 -%>
 <div class="contain-to-grid">
-  <nav id='<%= dom_id %>' class="top-bar" data-topbar>
+  <nav id='<%= dom_id %>' class="top-bar" data-topbar data-no-turobolink>
     <ul class="title-area">
       <li class="name">
         <h1><a href="/">Climb Higher</a></h1>
@@ -17,7 +17,7 @@
       <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a>
       </li>
     </ul>
-    <section class="top-bar-section">
+    <section class="top-bar-section" >
       <ul class="right">
         <%= render :partial => '/refinery/menu_branch', :collection => roots,
                    :locals => {
