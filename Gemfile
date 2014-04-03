@@ -4,6 +4,7 @@ gem 'rails', '3.2.14'
 gem 'refinerycms', '~> 2.0.0'
 gem 'refinerycms-i18n', '~> 2.0.0'
 gem 'refinerycms-page-images', '~> 2.0.0'
+# gem 'refinerycms-inquiries', '~> 2.0.0'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
@@ -30,9 +31,13 @@ gem 'haml'
 gem 'haml-rails'
 
 
-gem 'refinerycms-inquiries', '~> 2.0.0'
-
 gem 'jquery-rails', '~> 2.0.0'
+
+group :production do
+  gem 'fog'
+end
+
+gem 'taps'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
@@ -55,3 +60,5 @@ gem 'jbuilder'
 # To use debugger
 # gem 'debugger'
  gem "globalize3", "0.3.0"
+
+ ruby "1.9.3"

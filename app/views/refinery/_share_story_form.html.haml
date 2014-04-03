@@ -1,0 +1,35 @@
+%div.row
+  %div.large-12
+    = render :partial => "/refinery/content_page"
+  %div.large-12.inquiries
+    = form_for :user do |f|
+      %div.row
+        %div.field.large-6.columns
+          = f.text_field :first_name, class: 'input', required: 'required', placeholder: 'First Name'
+        %div.field.large-6.columns
+          = f.text_field :last_name, class: 'input', required: 'required', placeholder: 'Last Name'
+      %div.row
+        %div.field.large-6.columns
+          = f.email_field :email, class: 'input', required: 'required', placeholder: 'Email'
+        %div.field.large-6.columns
+          = f.text_field :phone, class: 'input', placeholder: 'Phone Number'
+      %div.row
+        %div.field.large-6.columns
+          = f.text_field :twitter_handle, class: 'input', placeholder: 'Twitter Handle'
+      %div.row   
+        %div.field.message_field.large-12.columns
+          = f.text_area :message, :rows => 5, required: 'required', placeholder: 'Share Your Story'
+      %div.row
+        %div.field.radio.large-12.columns
+          = f.label :tweeter, "Are you interested in receiving emails with sample social media content for you to post?", class: 'inline'
+          = f.radio_button :tweeter, "0", class: 'inline'
+      %div.row
+        %div.field.radio.large-12.columns
+          = f.label :opinion_editorial, "Are you interested in writing an op-ed to be posted in a local newspaper?", class: 'inline'
+          = f.radio_button :opinion_editorial, "0", class: 'inline'
+      %div.row
+        %div.field.radio.large-12.columns
+          = f.label :letter_to_editor, "Are you interested in writing a letter to the editor to be posted in a local newspaper?", class: 'inline'
+          = f.radio_button :letter_to_editor, "0", class: 'inline'
+      %div.actions
+        = f.submit 'Sign Up!', class: "button radius"
