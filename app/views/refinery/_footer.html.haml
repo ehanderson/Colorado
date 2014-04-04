@@ -1,70 +1,30 @@
-
-/ %div.large-12.columns.centered
-/   %hr
-/     %row
-/       %div.large-3.columns
-/         %ul.footer-panels
-/           %h6.panel-title Additional Resources
-/           %li Tool Kits
-/           %li Downloadable Content
-/           %li Research Papers
-/           %li FAQs
-/           %li More Federal and State Resources
-/         %ul.footer-panels
-/           %h6.panel-title News
-/           %li Newsroom
-/           %li eNewsletter Archive
-/         %ul.footer-panels
-/           %h6.panel-title Contact Us
-/           %li Co Address
-/           %li Suite #
-/           %li Somewhere, Colorado 20000
-/           %li phone number
-/           %li fax number
-/         %ul.footer-panels.inline-list.social-media
-/           %h6.panel-title Stay Connected
-/           %li#facebook
-/             = image_tag('facebook.png', size: "50x50")
-/           %li#twitter
-/             = image_tag('twitter.png', size: "50x50")
-/           %li#linkedin
-/             = image_tag('linkedin.png', size: "50x50")
-/           %li#instagram
-/             = image_tag('instagram.png', size: "50x50")
-/           %li#youtube
-/             = image_tag('youtube.png', size: "50x50")
-/           %li#google
-/             = image_tag('googleplus.png', size: "50x50")
-/ / %p.copyright.text-center
-/ /   = t('.copyright', :year => Time.now.year, :site_name => Refinery::Core.site_name)
-
-%div.large-12.columns.centered
-  %hr
-    %row
-      %div.large-3.columns.centered
-        %ul.footer-panels
+%hr
+  %div.row
+    %div.large-12.columns
+      %div.large-3.columns.footer-panels
+        %ul
           %h6.panel-title Additional Resources
           %li Tool Kits
           %li Downloadable Content
           %li Research Papers
           %li FAQs
           %li More Federal and State Resources
-      %div.large-3.columns
-        %ul.footer-panels
+      %div.large-3.columns.footer-panels
+        %ul
           %h6.panel-title News
           %li Newsroom
           %li eNewsletter Archive
-      %div.large-3.columns
-        %ul.footer-panels
+      %div.large-3.columns.footer-panels
+        %ul
           %h6.panel-title Contact Us
           %li Co Address
           %li Suite #
           %li Somewhere, Colorado 20000
           %li phone number
           %li fax number
-      %div.large-3.columns
-        %ul.footer-panels.inline-list.social-media
-          %h6.panel-title Stay Connected
+      %div.large-3.columns.footer-panels
+        %ul.inline-list.social-media
+          %h6.panel-title.text-center Stay Connected
           %li#facebook
             = image_tag('facebook.png', size: "50x50")
           %li#twitter
@@ -75,4 +35,5 @@
             = image_tag('youtube.png', size: "50x50")
           %li#google
             = image_tag('googleplus.png', size: "50x50")
-/
+  %p.copyright.text-center
+    = t('.copyright', :year => Time.now.year, :site_name => Refinery::Core.site_name)

@@ -1,12 +1,11 @@
-%section#page-layout
-  %div.row
-    %div.large-12.columns.small-12.columns
-      = render '/refinery/side_nav' unless @page.nil? or @page.title=="Home"
-      %div.large-10.small-10.columns
-        = render_content_page(@page, {                                                                              |
-            :hide_sections => local_assigns[:hide_sections],                                                        |
-            :can_use_fallback => !local_assigns[:show_empty_sections] && !local_assigns[:remove_automatic_sections] |
-          })                                                                                                        |
-        = render '/refinery/draft_page_message' unless @page.nil? or @page.live?
+%div.row
+  %div.large-12.columns.small-12.columns
+    = render '/refinery/side_nav' 
+    %div.large-10.small-10.columns
+      = render_content_page(@page, {                                                                              |
+          :hide_sections => local_assigns[:hide_sections],                                                        |
+          :can_use_fallback => !local_assigns[:show_empty_sections] && !local_assigns[:remove_automatic_sections] |
+        })                                                                                                        |
+      = render '/refinery/draft_page_message' unless @page.nil? or @page.live?
 
 

@@ -1,11 +1,10 @@
-/ %div.content.large-9.columns
 - case @page.title
   - when 'Take Action'
-    / %div#take-action.large-12.columns.text-center
-    /   %div.large-6.columns.panel.inline
-    /     = raw @page.content_for(:body)
-    /   %div.large-6.columns.panel.inline
-    /     = raw @page.content_for(:side_body)
+    %div#take-action.large-12.columns.text-center
+      %div.large-6.columns.inline
+        = raw @page.content_for(:body)
+      %div.large-6.columns.inline
+        = raw @page.content_for(:side_body)
   - when 'Sign Up'
     = render 'refinery/sign_up_form'
   - when 'Share Story'
