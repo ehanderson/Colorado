@@ -11,8 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-
-ActiveRecord::Schema.define(:version => 20140330211511) do
+ActiveRecord::Schema.define(:version => 20140406204629) do
 
   create_table "refinery_image_page_translations", :force => true do |t|
     t.integer  "refinery_image_page_id"
@@ -172,6 +171,16 @@ ActiveRecord::Schema.define(:version => 20140330211511) do
 
   add_index "refinery_users", ["id"], :name => "index_refinery_users_on_id"
 
+  create_table "refinery_web_users", :force => true do |t|
+    t.string   "role"
+    t.string   "first_name"
+    t.string   "last_name"
+    t.string   "email"
+    t.integer  "position"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
   create_table "seo_meta", :force => true do |t|
     t.integer  "seo_meta_id"
     t.string   "seo_meta_type"
@@ -184,20 +193,5 @@ ActiveRecord::Schema.define(:version => 20140330211511) do
 
   add_index "seo_meta", ["id"], :name => "index_seo_meta_on_id"
   add_index "seo_meta", ["seo_meta_id", "seo_meta_type"], :name => "index_seo_meta_on_seo_meta_id_and_seo_meta_type"
-
-  create_table "users", :force => true do |t|
-    t.string   "role"
-    t.string   "first_name"
-    t.string   "last_name"
-    t.string   "organization"
-    t.string   "title"
-    t.string   "twitter_handle"
-    t.boolean  "tweeter",           :default => false
-    t.boolean  "opinion_editorial", :default => false
-    t.boolean  "letter_to_editor",  :default => false
-    t.datetime "created_at",                           :null => false
-    t.datetime "updated_at",                           :null => false
-    t.string   "email"
-  end
 
 end
