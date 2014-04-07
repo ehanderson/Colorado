@@ -23,7 +23,7 @@ module Refinery
     #
     def show
       if background_image?
-        image = @page.images.last
+        image = page.images.last
         @background_image = image.thumbnail.url
       else
         @background_image = nil

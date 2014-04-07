@@ -1,9 +1,8 @@
-%ul.small-2.columns.side-nav
-  %li.divider
-  %li.active
-    %a{href: "#"} Link 1
-  %li
-    %a{href: "#"} Link 2
-  %li
-    %a{href: "#"} Link 3
-
+%div.center
+  %ul.small-2.columns.side-nav
+    %li
+      = Refinery::Pages::SubMenuPresenter.new(sub_menu_parent(@page), self).to_html
+    %li
+      - Refinery::Pages::SubMenuPresenter.new(sub_menu_siblings(@page), self).to_html if @page.parent_id?
+    %li
+      = Refinery::Pages::SubMenuPresenter.new(sub_menu_children(@parent || @page), self).to_html
