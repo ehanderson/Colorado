@@ -1,15 +1,17 @@
-<nav class="top-bar" data-topbar>
-  <ul class="title-area">
-    <li class="name">
-      <h1><%= link_to Refinery::Core.site_name, refinery.root_path %></h1>
-    </li>
-    <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
-  </ul>
 
-  <section class="top-bar-section" id="menu">
-    <%= zurb_menu(refinery_menu_pages, list_tag_css: 'right').to_html %>
+  <nav class="top-bar row" data-topbar>
+    <ul class="title-area">
+      <li class="name">
+        <h1><%= link_to Refinery::Core.site_name, refinery.root_path %></h1>
+      </li>
+      <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+    </ul>
 
-  </section>
+    <section class="top-bar-section large-12 columns right" id="menu">
+      <%= zurb_menu(refinery_menu_pages, list_tag_css: 'right').to_html %>
 
-</nav>
+    </section>
+
+  </nav>
+
 

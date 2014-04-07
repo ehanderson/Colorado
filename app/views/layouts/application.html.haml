@@ -5,11 +5,14 @@
   = site_bar
   = render '/refinery/ie6check' if request.env['HTTP_USER_AGENT'] =~ /MSIE/
   %header{:id => "header"}
-    = render '/refinery/header'
+    %div.strip
+      = render '/refinery/header'
+    %div.row
+      %div.large-12.columns.bcimg
+        = image_tag @background_image if @background_image
   %div{id: "page_container"}
     %div.row
       %div.large-12.columns
-        = image_tag @background_image if @background_image
     %section{:id => "page", class: "row"}
       = yield
   %footer

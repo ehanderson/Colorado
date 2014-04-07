@@ -1,5 +1,3 @@
-require 'net/http'
-
 module Refinery
   module Admin
     class PagesDialogsController < ::Refinery::Admin::DialogsController
@@ -9,21 +7,23 @@ module Refinery
       def link_to
         # Get the switch_local variable to determine the locale we're currently editing
         # Set up Globalize with our current locale
-        if ::Refinery.i18n_enabled?
-          Thread.current[:globalize_locale] = params[:switch_locale] || Refinery::I18n.default_locale
+        Globalize.locale = if params[:switch_locale].present? && Refinery::I18n.built_in_locales.keys.map(&:to_s).include?(params[:switch_locale])
+          Globalize.locale = params[:switch_locale]
+        else
+          Refinery::I18n.default_locale
         end
 
         @pages = ::Refinery::Page.roots.paginate(:page => params[:page], :per_page => ::Refinery::Page.per_page(true))
 
-        @pages = @pages.with_globalize if ::Refinery.i18n_enabled?
+        @pages = @pages.with_globalize
 
         if ::Refinery::Plugins.registered.names.include?('refinery_files')
-            @resources = Resource.paginate(:page => params[:resource_page], :per_page => Resource.per_page(true)).
-                                  order('created_at DESC')
+          @resources = Resource.paginate(:page => params[:resource_page], :per_page => Resource.per_page(true)).
+                                order('created_at DESC')
 
           # resource link
           if params[:current_link].present?
-           is_resource_link = params[:current_link].include?("/system/resources")
+            is_resource_link = params[:current_link].include?("/system/resources")
           end
         end
 
@@ -49,43 +49,6 @@ module Refinery
           @web_address_area_selected = (@web_address_text != "http://")
           @email_address_area_selected = @email_address_text.present?
           @resource_area_selected = is_resource_link
-        end
-      end
-
-      def test_url
-        result = 'failure'
-        begin
-          timeout(5) do
-            unless params[:url].blank?
-              url = URI.parse(params[:url])
-              if url.host.nil? && params[:url].start_with?('/')
-                url.host = URI.parse(request.url).host
-              end
-
-              result = case Net::HTTP.get_response(url)
-                when Net::HTTPSuccess, Net::HTTPRedirection
-                  'success'
-                end
-               
-            end
-          end
-
-        rescue
-          # be quiet
-        end
-        
-        render :json => {:result => result}
-      end
-
-      def test_email
-        if params[:email].present?
-          valid = params[:email] =~ /^([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})$/i
-
-          render :json => if valid
-            {:result => 'success'}
-          else
-            {:result => 'failure'}
-          end
         end
       end
 

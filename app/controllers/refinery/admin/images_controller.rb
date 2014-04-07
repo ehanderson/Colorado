@@ -11,12 +11,14 @@ module Refinery
 
       def new
         @image = ::Refinery::Image.new if @image.nil?
+
         @url_override = refinery.admin_images_path(:dialog => from_dialog?)
       end
 
       # This renders the image insert dialog
       def insert
         self.new if @image.nil?
+
         @url_override = refinery.admin_images_path(request.query_parameters.merge(:insert => true))
 
         if params[:conditions].present?
@@ -27,12 +29,12 @@ module Refinery
           extra_condition[1] = nil if extra_condition[1] == "nil"
         end
 
-        find_all_images(({extra_condition[0].to_sym => extra_condition[1]} if extra_condition.present?))
+        find_all_images(({extra_condition[0] => extra_condition[1]} if extra_condition.present?))
         search_all_images if searching?
 
         paginate_images
 
-      render :action => "insert"
+        render :action => "insert"
       end
 
       def create
@@ -68,8 +70,45 @@ module Refinery
           if @images.all?(&:valid?)
             @image_id = @image.id if @image.persisted?
             @image = nil
+          end
 
-            self.insert
+          self.insert
+        end
+      end
+
+      def update
+        attributes_before_assignment = @image.attributes
+        @image.attributes = params[:image]
+        if @image.valid? && @image.save
+          flash.notice = t(
+            'refinery.crudify.updated',
+            :what => "'#{@image.title}'"
+          )
+
+          unless from_dialog?
+            unless params[:continue_editing] =~ /true|on|1/
+              redirect_back_or_default refinery.admin_images_path
+            else
+              unless request.xhr?
+                redirect_to :back
+              else
+                render :partial => '/refinery/message'
+              end
+            end
+          else
+            self.index
+            @dialog_successful = true
+            render :index
+          end
+        else
+          @thumbnail = Image.find params[:id]
+          unless request.xhr?
+            render :action => 'edit'
+          else
+            render :partial => '/refinery/admin/error_messages', :locals => {
+                     :object => @image,
+                     :include_object_name => true
+                   }
           end
         end
       end
@@ -82,6 +121,7 @@ module Refinery
         @update_image = params[:update_image]
         @thumbnail = params[:thumbnail]
         @callback = params[:callback]
+        @multiple = params[:multiple]
         @conditions = params[:conditions]
       end
 
@@ -97,10 +137,6 @@ module Refinery
 
       def restrict_controller
         super unless action_name == 'insert'
-      end
-
-      def store_current_location!
-        super unless action_name == 'insert' or from_dialog?
       end
 
     end

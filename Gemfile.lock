@@ -1,9 +1,3 @@
-PATH
-  remote: vendor/extensions
-  specs:
-    refinerycms-web_users (1.0)
-      refinerycms-core (~> 2.0.10)
-
 GEM
   remote: https://rubygems.org/
   specs:
@@ -101,10 +95,6 @@ GEM
     globalize (3.1.0)
       activemodel (>= 3.1.0, < 4.0.0)
       activerecord (>= 3.1.0, < 4.0.0)
-    globalize3 (0.3.0)
-      activemodel (>= 3.0.0)
-      activerecord (>= 3.0.0)
-      paper_trail (~> 2)
     guard (2.6.0)
       formatador (>= 0.2.4)
       listen (~> 2.7)
@@ -156,9 +146,6 @@ GEM
     nokogiri (1.6.1)
       mini_portile (~> 0.5.0)
     orm_adapter (0.5.0)
-    paper_trail (2.7.2)
-      activerecord (~> 3.0)
-      railties (~> 3.0)
     pg (0.17.1)
     polyglot (0.3.4)
     pry (0.9.12.6)
@@ -297,7 +284,6 @@ DEPENDENCIES
   coffee-rails (~> 3.2.1)
   fog
   foundation-rails
-  globalize3 (= 0.3.0)
   guard-livereload
   guard-rspec
   haml
@@ -306,13 +292,9 @@ DEPENDENCIES
   jquery-rails
   pg
   rails (= 3.2.14)
-  refinerycms (~> 2.1.0)
-  refinerycms-acts-as-indexed (~> 1.0.0)
-  refinerycms-page-images (~> 2.1.0)
-  refinerycms (~> 2.0.0)
-  refinerycms-i18n (~> 2.0.0)
-  refinerycms-page-images (~> 2.0.0)
-  refinerycms-web_users!
+  refinerycms
+  refinerycms-acts-as-indexed
+  refinerycms-page-images
   sass (~> 3.2.0)
   sass-rails (~> 3.2.6)
   taps
