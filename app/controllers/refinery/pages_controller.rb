@@ -43,13 +43,20 @@ module Refinery
       else
         error_404
       end
+      parent
     end
+
 
     def preview
       render_with_templates?(:action => :show)
     end
 
   protected
+
+    def parent
+      @parent = Refinery::Page.find_by_id(@page.parent_id)
+    end
+
     def background_image?
       !page.images.empty?
     end

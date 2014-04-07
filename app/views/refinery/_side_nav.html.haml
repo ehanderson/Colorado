@@ -3,6 +3,4 @@
     %li
       = Refinery::Pages::SubMenuPresenter.new(sub_menu_parent(@page), self).to_html
     %li
-      - Refinery::Pages::SubMenuPresenter.new(sub_menu_siblings(@page), self).to_html if @page.parent_id?
-    %li
       = Refinery::Pages::SubMenuPresenter.new(sub_menu_children(@parent || @page), self).to_html

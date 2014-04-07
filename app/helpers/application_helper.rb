@@ -25,13 +25,6 @@ module ApplicationHelper
       }.parent)
   end
 
-  def sub_menu_siblings(page)
-      @parent = Refinery::Page.find_by_id(@page.parent_id)
-      Refinery::Menu.new(refinery_menu_pages.detect{
-      |item| item.original_id == page.id
-      }.siblings)
-  end
-
   def sub_menu_children(page)
       Refinery::Menu.new(refinery_menu_pages.detect{
       |item| item.original_id == page.id
