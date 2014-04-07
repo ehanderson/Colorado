@@ -1,6 +1,6 @@
 %div.center
   %ul.small-2.columns.side-nav
     %li
-      = Refinery::Pages::SubMenuPresenter.new(sub_menu_parent(@page), self).to_html
+      = Refinery::Pages::SubMenuPresenter.new(sub_menu_parent(@parent ||@page), self).to_html
     %li
       = Refinery::Pages::SubMenuPresenter.new(sub_menu_children(@parent || @page), self).to_html
