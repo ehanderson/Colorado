@@ -4,7 +4,6 @@ gem 'rails', '3.2.14'
 
 gem 'pg'
 
-
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
@@ -53,12 +52,16 @@ gem 'jbuilder'
 
 # To use debugger
 # gem 'debugger'
- gem "globalize3", "0.3.0"
+gem "globalize3", "0.3.0"
 
 gem 'refinerycms', '~> 2.1.0'
 gem 'refinerycms-acts-as-indexed', '~> 1.0.0'
- gem 'refinerycms-page-images', '~> 2.1.0'
- ruby "1.9.3"
+gem 'refinerycms-page-images', '~> 2.1.0'
+
 #  gem 'refinerycms-blog', '~> 2.1.0'
 #  gem 'refinerycms-inquiries', '~> 2.1.0'
 #  gem 'refinerycms-search', '~> 2.1.0'
+
+gem 'refinerycms-web_users', :path => 'vendor/extensions'
+
+ruby "1.9.3"

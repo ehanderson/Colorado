@@ -1,0 +1,83 @@
+<%= form_for [refinery, :web_users_admin, @web_user] do |f| -%>
+  <%= render '/refinery/admin/error_messages',
+              :object => @web_user,
+              :include_object_name => true %>
+
+  
+  <div class='field'>
+    <%= f.label :role -%>
+    <%= f.text_field :role, :class => 'larger widest'  -%>
+
+  </div>
+  
+  <div class='field'>
+    <%= f.label :first_name -%>
+    <%= f.text_field :first_name  -%>
+
+  </div>
+  
+  <div class='field'>
+    <%= f.label :last_name -%>
+    <%= f.text_field :last_name  -%>
+
+  </div>
+  
+  <div class='field'>
+    <%= f.label :email -%>
+    <%= f.text_field :email  -%>
+
+  </div>
+  
+  <div class='field'>
+    <%= f.label :organization -%>
+    <%= f.text_field :organization  -%>
+
+  </div>
+  
+  <div class='field'>
+    <%= f.label :title -%>
+    <%= f.text_field :title  -%>
+
+  </div>
+  
+  <div class='field'>
+    <%= f.label :twitter_handle -%>
+    <%= f.text_field :twitter_handle  -%>
+
+  </div>
+  
+  <div class='field'>
+    <%= f.label :tweeter -%>
+    <%= f.check_box :tweeter, :checked => @web_user[:tweeter]  -%>
+
+  </div>
+  
+  <div class='field'>
+    <%= f.label :opinion_editorial -%>
+    <%= f.check_box :opinion_editorial, :checked => @web_user[:opinion_editorial]  -%>
+
+  </div>
+  
+  <div class='field'>
+    <%= f.label :letter_to_editor -%>
+    <%= f.check_box :letter_to_editor, :checked => @web_user[:letter_to_editor]  -%>
+
+  </div>
+  
+  <div class='field'>
+    <%= f.label :created_at -%>
+    <%= f.datetime_select :created_at  -%>
+
+  </div>
+  
+  <div class='field'>
+    <%= f.label :updated_at -%>
+    <%= f.datetime_select :updated_at  -%>
+
+  </div>
+  
+  <%= render '/refinery/admin/form_actions', :f => f,
+             :continue_editing => false,
+             :delete_title => t('delete', :scope => 'refinery.web_users.admin.web_users.web_user'),
+             :delete_confirmation => t('message', :scope => 'refinery.admin.delete', :title => @web_user.role) %>
+<% end -%>

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140406204629) do
+ActiveRecord::Schema.define(:version => 20140406215746) do
 
   create_table "refinery_image_page_translations", :force => true do |t|
     t.integer  "refinery_image_page_id"
@@ -176,9 +176,17 @@ ActiveRecord::Schema.define(:version => 20140406204629) do
     t.string   "first_name"
     t.string   "last_name"
     t.string   "email"
+    t.string   "organization"
+    t.string   "title"
+    t.string   "twitter_handle"
+    t.boolean  "tweeter"
+    t.boolean  "opinion_editorial"
+    t.boolean  "letter_to_editor"
+    t.datetime "created_at",        :null => false
+    t.datetime "updated_at",        :null => false
     t.integer  "position"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.string   "phone_number"
+    t.text     "story"
   end
 
   create_table "seo_meta", :force => true do |t|

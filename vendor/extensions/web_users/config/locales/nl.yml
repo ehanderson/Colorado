@@ -1,0 +1,38 @@
+nl:
+  refinery:
+    plugins:
+      web_users:
+        title: Web Users
+    web_users:
+      admin:
+        web_users:
+          actions:
+            create_new: Maak een nieuwe Web User
+            reorder: Wijzig de volgorde van de Web Users
+            reorder_done: Klaar met het wijzingen van de volgorde van de Web Users
+          records:
+            title: Web Users
+            sorry_no_results: Helaas! Er zijn geen resultaten gevonden.
+            no_items_yet: Er zijn nog geen Web Users. Druk op 'Maak een nieuwe Web User' om de eerste aan te maken.
+          web_user:
+            view_live_html: Bekijk deze web user op de website <br/><em>(opent een nieuw venster)</em>
+            edit: Bewerk deze web user
+            delete: Verwijder deze web user voor eeuwig
+      web_users:
+        show:
+          other: Andere Web Users
+  activerecord:
+    attributes:
+      'refinery/web_users/web_user':
+        role: Role
+        first_name: First Name
+        last_name: Last Name
+        email: Email
+        organization: Organization
+        title: Title
+        twitter_handle: Twitter Handle
+        tweeter: Tweeter
+        opinion_editorial: Opinion Editorial
+        letter_to_editor: Letter To Editor
+        created_at: Created At
+        updated_at: Updated At

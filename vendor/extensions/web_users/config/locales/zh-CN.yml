@@ -1,0 +1,40 @@
+zh-CN:
+  refinery:
+    plugins:
+      web_users:
+        title: Web Users
+    web_users:
+      admin:
+        web_users:
+          actions:
+            create_new: 建立新的 Web User
+            reorder: 对 Web Users 重新排序
+            reorder_done: 对 Web Users 的重新排序结束
+          records:
+            title: Web Users
+            sorry_no_results: 对不起，未找到结果。 #Sorry! There are no results found.
+
+            # There are no Web Users yet. Click "Add New Web User" to add your first web user.
+            no_items_yet: 目前没有 Web Users . 点击 "Add New Web User" 创建一个web user.
+          web_user:
+            view_live_html: 查看 web user 的最新内容.<br/><em>(新窗口中打开)</em>
+            edit: 编辑 web user
+            delete: 永久删除 web user
+      web_users:
+        show:
+          other: 其他 Web Users
+  activerecord:
+    attributes:
+      'refinery/web_users/web_user':
+        role: Role
+        first_name: First Name
+        last_name: Last Name
+        email: Email
+        organization: Organization
+        title: Title
+        twitter_handle: Twitter Handle
+        tweeter: Tweeter
+        opinion_editorial: Opinion Editorial
+        letter_to_editor: Letter To Editor
+        created_at: Created At
+        updated_at: Updated At

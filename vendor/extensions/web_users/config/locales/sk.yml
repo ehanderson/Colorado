@@ -1,0 +1,38 @@
+sk:
+  refinery:
+    plugins:
+      web_users:
+        title: Web Users
+    web_users:
+      admin:
+        web_users:
+          actions:
+            create_new: Pridať Web User
+            reorder: Preusporiadať Web Users
+            reorder_done: Koniec radenia Web Users
+          records:
+            title: Web Users
+            sorry_no_results: Ľutujeme, ale neboli nájdené žiadne výsledky.
+            no_items_yet: Nie sú vytvorené žiadne Web Users. Kliknite na "Pridať Web User" pre pridanie prvého web user.
+          web_user:
+            view_live_html: Zobraziť náhľad web user<br/><em>(otvorí sa v novom okne)</em>
+            edit: Upraviť web user
+            delete: Zmazať web user
+      web_users:
+        show:
+          other: Daľšie Web Users
+  activerecord:
+    attributes:
+      'refinery/web_users/web_user':
+        role: Role
+        first_name: First Name
+        last_name: Last Name
+        email: Email
+        organization: Organization
+        title: Title
+        twitter_handle: Twitter Handle
+        tweeter: Tweeter
+        opinion_editorial: Opinion Editorial
+        letter_to_editor: Letter To Editor
+        created_at: Created At
+        updated_at: Updated At

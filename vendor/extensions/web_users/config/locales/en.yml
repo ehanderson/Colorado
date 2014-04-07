@@ -1,0 +1,38 @@
+en:
+  refinery:
+    plugins:
+      web_users:
+        title: Web Users
+    web_users:
+      admin:
+        web_users:
+          actions:
+            create_new: Add New Web User
+            reorder: Reorder Web Users
+            reorder_done: Done Reordering Web Users
+          records:
+            title: Web Users
+            sorry_no_results: Sorry! There are no results found.
+            no_items_yet: There are no Web Users yet. Click "Add New Web User" to add your first web user.
+          web_user:
+            view_live_html: View this web user live <br/><em>(opens in a new window)</em>
+            edit: Edit this web user
+            delete: Remove this web user forever
+      web_users:
+        show:
+          other: Other Web Users
+  activerecord:
+    attributes:
+      'refinery/web_users/web_user':
+        role: Role
+        first_name: First Name
+        last_name: Last Name
+        email: Email
+        organization: Organization
+        title: Title
+        twitter_handle: Twitter Handle
+        tweeter: Tweeter
+        opinion_editorial: Opinion Editorial
+        letter_to_editor: Letter To Editor
+        created_at: Created At
+        updated_at: Updated At

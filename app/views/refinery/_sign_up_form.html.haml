@@ -1,17 +1,15 @@
-%div.row
-  %div.large-12.small-12.columns
-    = render :partial => "/refinery/content_page"
+%div.row.large-12.small-12.columns
+  %div.large-6.small-12.columns.large-centered.text-center
+    = raw @page.content_for(:body)
   %div.large-12.columns
     = form_for :user do |f|
-      %div.row
-        %div.field.inline.large-6.columns
-          = f.text_field :first_name, class: 'input', required: 'required', placeholder: 'First Name'
-        %div.field.inline.large-6.columns
-          = f.text_field :last_name, class: 'input', required: 'required', placeholder: 'Last Name'
-      %div.row
-        %div.field.inline.large-6.columns
-          = f.email_field :email, class: 'input', required: 'required', placeholder: 'Email'
-        %div.field.inline.large-6.columns
-          = f.text_field :phone, class: 'input', placeholder: 'Phone Number'
-      %div.actions
+      %div.field.large-6.columns.large-centered
+        = f.text_field :first_name, class: 'input', required: 'required', placeholder: 'First Name'
+      %div.field.large-6.columns.large-centered
+        = f.text_field :last_name, class: 'input', required: 'required', placeholder: 'Last Name'
+      %div.field.large-6.columns.large-centered
+        = f.email_field :email, class: 'input', required: 'required', placeholder: 'Email'
+      %div.field.large-6.columns.large-centered
+        = f.text_field :phone, class: 'input', placeholder: 'Phone Number'
+      %div.actions.large-6.columns.large-centered
         = f.submit 'Sign Up!', class: "button radius"
