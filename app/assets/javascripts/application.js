@@ -18,3 +18,14 @@
 $(function(){ $(document).foundation(); });
 //= require foundation
 $(document).foundation();
+
+$(window).resize(function(){
+    
+
+    // $('.group .module').css('height','auto');
+    // $('.group .module').setMargins();
+});
+
+var setMargins = function(div) {
+
+} 

@@ -1,39 +1,39 @@
 %hr
   %div.row
-    %div.large-12.columns
-      %div.large-3.columns.footer-panels
-        %ul
+    %div.small-12.columns(data-equalizer)
+      %div.small-6.medium-4.large-3.columns.footer-panels
+        %ul(data-equalizer-watch)
           %h6.panel-title Additional Resources
           %li Tool Kits
           %li Downloadable Content
           %li Research Papers
           %li FAQs
           %li More Federal and State Resources
-      %div.large-3.columns.footer-panels
-        %ul
+      %div.small-6.medium-4.large-3.columns.footer-panels
+        %ul(data-equalizer-watch)
           %h6.panel-title News
           %li Newsroom
           %li eNewsletter Archive
-      %div.large-3.columns.footer-panels
-        %ul
+      %div.small-6.medium-4.large-3.columns.footer-panels
+        %ul(data-equalizer-watch)
           %h6.panel-title Contact Us
           %li Co Address
           %li Suite #
           %li Somewhere, Colorado 20000
           %li phone number
           %li fax number
-      %div.large-3.columns.footer-panels
+      %div.small-6.medium-12.large-3.columns.footer-panels.text-center
         %ul.inline-list.social-media
           %h6.panel-title.text-center Stay Connected
           %li#facebook
-            = image_tag('facebook.png', size: "50x50")
+            = image_tag('facebook.png')
           %li#twitter
-            = image_tag('twitter.png', size: "50x50")
+            = image_tag('twitter.png')
           %li#linkedin
-            = image_tag('linkedin.png', size: "50x50")
+            = image_tag('linkedin.png')
           %li#youtube
-            = image_tag('youtube.png', size: "50x50")
+            = image_tag('youtube.png')
           %li#google
-            = image_tag('googleplus.png', size: "50x50")
+            = image_tag('googleplus.png')
   %p.copyright.text-center
     = t('.copyright', :year => Time.now.year, :site_name => Refinery::Core.site_name)

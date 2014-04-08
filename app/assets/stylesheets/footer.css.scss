@@ -8,8 +8,7 @@ footer {
   }
   .footer-panels {
     overflow: hidden;
-    height: 20rem;
-    padding: 0px;  
+    margin-bottom: 10px; 
   }
   .footer-panels > ul {
     display: inline-block;
@@ -37,6 +36,8 @@ footer {
          -o-filter: grayscale(100%);
         -ms-filter: grayscale(100%);
             filter: grayscale(100%);
+    height: 50px;
+    width: 50px;
   }
   .social-media li img:hover {
     filter: none;

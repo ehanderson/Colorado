@@ -9,6 +9,5 @@
 # Added by Refinery CMS Pages extension
 Refinery::Pages::Engine.load_seed
 
-
 # Added by Refinery CMS WebUsers extension
 Refinery::WebUsers::Engine.load_seed
