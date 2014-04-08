@@ -4,7 +4,8 @@ module Refinery
       class WebUsersController < ::Refinery::AdminController
 
         crudify :'refinery/web_users/web_user',
-                :title_attribute => 'role', :xhr_paging => true
+                :title_attribute => 'role',
+                :xhr_paging => true
 
       end
     end

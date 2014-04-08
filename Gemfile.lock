@@ -1,3 +1,9 @@
+PATH
+  remote: vendor/extensions
+  specs:
+    refinerycms-web_users (1.0)
+      refinerycms-core (~> 2.1.2)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -295,6 +301,7 @@ DEPENDENCIES
   refinerycms
   refinerycms-acts-as-indexed
   refinerycms-page-images
+  refinerycms-web_users!
   sass (~> 3.2.0)
   sass-rails (~> 3.2.6)
   taps

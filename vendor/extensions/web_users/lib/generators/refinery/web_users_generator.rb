@@ -10,7 +10,7 @@ module Refinery
       append_file 'db/seeds.rb', :verbose => true do
         <<-EOH
 
-# Added by Refinery CMS Web Users extension
+# Added by Refinery CMS WebUsers extension
 Refinery::WebUsers::Engine.load_seed
         EOH
       end

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140406215746) do
+ActiveRecord::Schema.define(:version => 20140408002515) do
 
   create_table "refinery_image_page_translations", :force => true do |t|
     t.integer  "refinery_image_page_id"
@@ -45,6 +45,26 @@ ActiveRecord::Schema.define(:version => 20140406215746) do
     t.string   "image_ext"
     t.datetime "created_at",      :null => false
     t.datetime "updated_at",      :null => false
+  end
+
+  create_table "refinery_inquiries_inquiries", :force => true do |t|
+    t.string   "name"
+    t.string   "email"
+    t.string   "phone"
+    t.text     "message"
+    t.boolean  "spam",       :default => false
+    t.datetime "created_at",                    :null => false
+    t.datetime "updated_at",                    :null => false
+  end
+
+  add_index "refinery_inquiries_inquiries", ["id"], :name => "index_refinery_inquiries_inquiries_on_id"
+
+  create_table "refinery_page_contents", :force => true do |t|
+    t.string   "title"
+    t.integer  "background_id"
+    t.integer  "position"
+    t.datetime "created_at",    :null => false
+    t.datetime "updated_at",    :null => false
   end
 
   create_table "refinery_page_part_translations", :force => true do |t|
@@ -182,10 +202,10 @@ ActiveRecord::Schema.define(:version => 20140406215746) do
     t.boolean  "tweeter"
     t.boolean  "opinion_editorial"
     t.boolean  "letter_to_editor"
-    t.datetime "created_at",        :null => false
-    t.datetime "updated_at",        :null => false
     t.integer  "position"
     t.string   "phone_number"
+    t.datetime "created_at",        :null => false
+    t.datetime "updated_at",        :null => false
     t.text     "story"
   end
 

@@ -1,27 +1,26 @@
-es:
+tr:
   refinery:
     plugins:
       web_users:
         title: Web Users
-#        article: masculino/femenino
     web_users:
       admin:
         web_users:
           actions:
-            create_new: Crear nuevo web user
-            reorder: Reordenar web users
-            reorder_done: Reordenación de web users completada
+            create_new: Yeni Ekle Web User
+            reorder: Tekrar sirala Web Users
+            reorder_done: Tekrar siralama tamamlandiWeb Users
           records:
             title: Web Users
-            sorry_no_results: Lo siento, no hay resultados
-            no_items_yet: No hay web users todavía. Pulsa en "Crear nuevo Web User" para crear tu primer web user.
+            sorry_no_results: Uzgunum! Herhangi bir sonuc bulunamadi.
+            no_items_yet: Herhangi bir Web Users yok henuz.  Tikla "Yeni Ekle Web User" eklemek senin ilk web user.
           web_user:
-            view_live_html: Ver este web user como abierto al público <br/><em>(abre en ventana nueva)</em>
-            edit: Editar este web user
-            delete: Borrar este web user para siempre
+            view_live_html: Bunu canlu web user goruntule <br/><em>(yeni bir pencerede acar)</em>
+            edit: Bunu Duzenle web user
+            delete: Bunu Sil web user sonsuza dek
       web_users:
         show:
-          other: Otros web users
+          other: Diger Web Users
   activerecord:
     attributes:
       'refinery/web_users/web_user':

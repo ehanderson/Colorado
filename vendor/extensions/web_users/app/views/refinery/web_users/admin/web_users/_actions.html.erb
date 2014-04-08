@@ -8,7 +8,7 @@
     <%= link_to t('.create_new'), refinery.new_web_users_admin_web_user_path,
                  :class => "add_icon" %>
   </li>
-<% if !searching? && ::Refinery::WebUsers::Admin::WebUsersController.sortable? && ::Refinery::WebUsers::WebUser.any? %>
+<% if !searching? && ::Refinery::WebUsers::Admin::WebUsersController.sortable? && ::Refinery::WebUsers::WebUser.many? %>
   <li>
     <%= link_to t('.reorder', :what => "Web Users"),
                  refinery.web_users_admin_web_users_path,

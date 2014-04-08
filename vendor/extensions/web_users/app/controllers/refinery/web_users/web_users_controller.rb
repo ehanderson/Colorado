@@ -11,11 +11,6 @@ module Refinery
         present(@page)
       end
 
-      def create
-        binding.pry
-        params[:web_user]
-      end
-
       def show
         @web_user = WebUser.find(params[:id])
 

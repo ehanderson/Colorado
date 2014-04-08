@@ -34,5 +34,6 @@ en:
         tweeter: Tweeter
         opinion_editorial: Opinion Editorial
         letter_to_editor: Letter To Editor
-        created_at: Created At
-        updated_at: Updated At
+        position: Position
+        email: Email
+        phone_number: Phone Number

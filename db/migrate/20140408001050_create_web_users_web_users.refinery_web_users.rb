@@ -1,3 +1,4 @@
+# This migration comes from refinery_web_users (originally 1)
 class CreateWebUsersWebUsers < ActiveRecord::Migration
 
   def up

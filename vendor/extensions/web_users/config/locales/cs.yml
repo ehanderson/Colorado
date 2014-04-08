@@ -1,27 +1,26 @@
-es:
+cs:
   refinery:
     plugins:
       web_users:
         title: Web Users
-#        article: masculino/femenino
     web_users:
       admin:
         web_users:
           actions:
-            create_new: Crear nuevo web user
-            reorder: Reordenar web users
-            reorder_done: Reordenación de web users completada
+            create_new: Přidat Web User
+            reorder: Řadit Web Users
+            reorder_done: Konec řazení Web Users
           records:
             title: Web Users
-            sorry_no_results: Lo siento, no hay resultados
-            no_items_yet: No hay web users todavía. Pulsa en "Crear nuevo Web User" para crear tu primer web user.
+            sorry_no_results: Litujeme, ale nebyly nalezny žádné výsledky.
+            no_items_yet: Zatím nebyly vytvořeny žádné Web Users. Zvolte "Přidat Web User" pro přidání prvního web user.
           web_user:
-            view_live_html: Ver este web user como abierto al público <br/><em>(abre en ventana nueva)</em>
-            edit: Editar este web user
-            delete: Borrar este web user para siempre
+            view_live_html: Zobrazit náhled web user<br/><em>(otevře se v novém okně)</em>
+            edit: Upravit web user
+            delete: Smazat web user
       web_users:
         show:
-          other: Otros web users
+          other: Další Web Users
   activerecord:
     attributes:
       'refinery/web_users/web_user':

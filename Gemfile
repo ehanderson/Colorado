@@ -62,6 +62,6 @@ gem 'refinerycms-page-images'
 #  gem 'refinerycms-inquiries', '~> 2.1.0'
 #  gem 'refinerycms-search', '~> 2.1.0'
 
-# gem 'refinerycms-web_users', :path => 'vendor/extensions'
-
 ruby "1.9.3"
+
+gem 'refinerycms-web_users', :path => 'vendor/extensions'

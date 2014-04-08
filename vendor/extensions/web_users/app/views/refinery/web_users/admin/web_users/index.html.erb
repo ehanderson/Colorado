@@ -4,4 +4,4 @@
 <aside id='actions'>
   <%= render 'actions' %>
 </aside>
-<%= render '/refinery/admin/make_sortable', :tree => false if !searching? and ::Refinery::WebUsers::Admin::WebUsersController.sortable? and ::Refinery::WebUsers::WebUser.count > 1 %>
+<%= render '/refinery/admin/make_sortable', :tree => false if !searching? and ::Refinery::WebUsers::Admin::WebUsersController.sortable? and ::Refinery::WebUsers::WebUser.many? %>
