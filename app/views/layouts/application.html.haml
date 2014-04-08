@@ -7,9 +7,7 @@
   %header{:id => "header"}
     %div.strip
       = render '/refinery/header'
-    %div.row
-      %div.large-12.columns.bcimg
-        = image_tag @background_image if @background_image
+    %div.panel.bcimg.callout.radius
   %div{id: "page_container"}
     %div.row
       %div.large-12.columns

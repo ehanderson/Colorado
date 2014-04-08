@@ -9,6 +9,7 @@ module Refinery
     # This action is usually accessed with the root path, normally '/'
     def home
       render_with_templates?
+      background_image
     end
 
     # This action can be accessed normally, or as nested pages.
@@ -22,12 +23,7 @@ module Refinery
     #   GET /about/mission
     #
     def show
-      if background_image?
-        image = page.images.last
-        @background_image = image.thumbnail.url
-      else
-        @background_image = nil
-      end
+      background_image
       if current_user_can_view_page?
         if should_skip_to_first_child?
           redirect_to refinery.url_for(first_live_child.url)
@@ -57,8 +53,12 @@ module Refinery
       @parent = Refinery::Page.find_by_id(@page.parent_id)
     end
 
-    def background_image?
-      !page.images.empty?
+    def background_image
+      @background_image = set_background_image
+    end
+
+    def set_background_image
+      page.images.last.thumbnail.url if !page.images.empty?
     end
 
     def requested_friendly_id
