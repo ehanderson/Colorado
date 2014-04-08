@@ -1,0 +1,6 @@
+- if @background_image
+  - case @page.title
+    - when 'Home'
+      = image_tag @background_image, :class => 'home-img fade-in'
+    - else
+      = image_tag @background_image, :class => 'show-img fade-in'
