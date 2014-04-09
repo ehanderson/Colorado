@@ -7,9 +7,14 @@
   list-style-type: none;
 }
 
-#home-logo a{
+#home-logo {
+    img{
+  height: 10em;
+  }
+    a {
   padding: 0;
   background-color: white;
+  }
 }
 
 .main{
