@@ -14,18 +14,15 @@
 //= require jquery_ujs
 //= require foundation
 //= require_tree .
-
-$(function(){ $(document).foundation(); });
 //= require foundation
-$(document).foundation();
 
-$(window).resize(function(){
-    
 
-    // $('.group .module').css('height','auto');
-    // $('.group .module').setMargins();
+$(document).ready(function() {
+  
+  $( "p" ).text( "The DOM is now loaded and can be manipulated." );
 });
 
-var setMargins = function(div) {
 
-} 
+var searchPDFs = function(div) {
+
+};

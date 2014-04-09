@@ -23,6 +23,11 @@ module Colorado
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
 
+    Refinery::Core::Engine.after_inclusion do
+      Refinery::Resource # force autoload
+      ::Dragonfly[:refinery_resources].content_disposition = nil
+    end
+
     # Custom directories with classes and modules you want to be autoloadable.
     # config.autoload_paths += %W(#{config.root}/extras)
 
