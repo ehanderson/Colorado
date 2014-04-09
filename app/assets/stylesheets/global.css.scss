@@ -1,4 +1,6 @@
 
+@import 'foundation_mixins_only';
+
 body {
   margin: 0px;
   padding: 0px;
@@ -9,7 +11,9 @@ body {
     margin-top: 1rem;
     background-color: white;
   }
-
 }
 
-
+.pdf {
+  @include button();
+  @include radius();
+}
