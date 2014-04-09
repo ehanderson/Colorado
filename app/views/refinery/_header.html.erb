@@ -1,0 +1,29 @@
+<div class="row nav-pic fade-in" style="background: url(<%= @background_image %>)">
+  <div class="medium-10 medium-offset-1 columns main" >
+    <nav class="top-bar" data-topbar>
+      <ul class="title-area">
+        <li class="name">
+          <div class="row">
+            <div class="medium-10 columns">
+              <h1 id="home-logo" class=" small-8 medium-1 large-4 columns"><%= link_to Refinery::Core.site_name, refinery.root_path %>
+              </h1>
+              <div class='login-form large-8 medium-8 columns right hide-for-small-only'>
+                <%= render "refinery/login_form" %>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+      </ul>
+      <section class="top-bar-section">
+        <%= zurb_menu(refinery_menu_pages, list_tag_css: 'right').to_html %>
+        <li class='show-for-small-only'>
+          <div class='login-form large-8 medium-8 columns'>
+            <%= render "refinery/login_form" %>
+          </div>
+        </li>
+      </section>
+    </nav>
+  </div>
+</div>
+

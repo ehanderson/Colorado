@@ -1,34 +1,40 @@
-%div.row
-  %div.small-12.columns.home
-    %div.small-12.large-6.columns
-      = raw(@page.content_for(:mission))
-    %div.small-12.large-6.columns
-      %div.sign-up-form
-        %h1 Sign-Up
-        = form_for :user do |f|
-          %div.row
-            %div.field.small-6.columns
-              = f.text_field :first_name, class: 'input', required: 'required', placeholder: 'First Name'
-            %div.field.small-6.columns
-              = f.text_field :last_name, class: 'input', required: 'required', placeholder: 'Last Name'
-          %div.row
-            %div.field.small-12.columns.small-centered
-              = f.email_field :email, class: 'input', required: 'required', placeholder: 'Email'
-          %div.row
-            %div.field.small-6.columns.left
-              = f.text_field :phone, class: 'input', placeholder: 'Phone Number'
-            %div.actions.small-6.columns.right
-              = f.submit 'Sign Up!', class: "button radius"
-%div.row
-  %div.small-12.large-10.large-offset-1.columns
-    = raw(@page.content_for(:body))
-%div.row
-  %div.small-12.columns.social-media(data-equalizer)
-    %div.small-12.large-4.columns.social-media-panels(data-equalizer-watch)
-      %h1 Social Media
-    %div.small-12.large-4.columns.social-media-panels(data-equalizer-watch)
-      = raw(@page.content_for(:facebook))
-    %div.small-12.large-4.columns.social-media-panels(data-equalizer-watch)
-      = raw(@page.content_for(:twitter))
+%div.home-body
+  %div.row
+    %div.small-12.columns.home
+      %div.small-12.large-6.columns
+        = raw(@page.content_for(:mission))
+      %div.small-12.large-6.columns
+        %div.sign-up-form
+          %h1 Sign-Up
+          = form_for :user do |f|
+            %div.row
+              %div.field.small-6.columns
+                = f.text_field :first_name, class: 'input', required: 'required', placeholder: 'First Name'
+              %div.field.small-6.columns
+                = f.text_field :last_name, class: 'input', required: 'required', placeholder: 'Last Name'
+            %div.row
+              %div.field.small-12.columns.small-centered
+                = f.email_field :email, class: 'input', required: 'required', placeholder: 'Email'
+            %div.row
+              %div.field.small-6.columns.left
+                = f.text_field :phone, class: 'input', placeholder: 'Phone Number'
+              %div.actions.small-6.columns.right
+                = f.submit 'Sign Up!', class: "button radius"
+  %div.row
+    %div.small-12.large-12.columns.news(data-equalizer)
+      %div.large-4.columns.news-panels(data-equalizer-watch)
+        = p raw(@page.content_for(:News1))
+      %div.large-4.columns.news-panels(data-equalizer-watch)
+        = raw(@page.content_for(:News2))
+      %div.large-4.columns.news-panels(data-equalizer-watch)
+        = raw(@page.content_for(:News3))
+  %div.row
+    %div.small-12.columns.social-media(data-equalizer)
+      %div.small-12.large-4.columns.social-media-panels(data-equalizer-watch)
+        %h1 Social Media
+      %div.small-12.large-4.columns.social-media-panels(data-equalizer-watch)
+        = raw(@page.content_for(:facebook))
+      %div.small-12.large-4.columns.social-media-panels(data-equalizer-watch)
+        = raw(@page.content_for(:twitter))
 = render '/refinery/draft_page_message' unless @page.nil? or @page.live?
 
