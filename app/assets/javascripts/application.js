@@ -15,14 +15,3 @@
 //= require foundation
 //= require_tree .
 //= require foundation
-
-
-$(document).ready(function() {
-  
-  $( "p" ).text( "The DOM is now loaded and can be manipulated." );
-});
-
-
-var searchPDFs = function(div) {
-
-};

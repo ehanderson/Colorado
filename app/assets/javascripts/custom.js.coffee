@@ -1,4 +1,4 @@
-$(document).ready(function() ->
-  $( "p" ).text( "The DOM is now loaded and can be manipulated." );
-
-var searchPDFs = function(div) ->
+$(document).ready ->
+  $("a[href*='pdf']").each ->
+    $(this).addClass('pdf');
+    $(this).parent().addClass('text-center');
