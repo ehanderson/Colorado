@@ -22,19 +22,26 @@ body {
 /*========================== HOME ======================================*/
 .home-body{
   padding-right: 1em;
-
+  padding-left: 1em;
 }
 
 .home{
   padding-top: 2em;
 }
 .news{
-  padding-bottom: 3em;
-  .news-panels img{
-    width: 225px;
-    height: 126px;
-}
+  padding-top: 3em;
 
+  .news-panels {
+    padding-bottom: 3em;
+
+    img{
+    width: 20em;
+    height: 10em;
+    }
+    div{
+    /*max-width: 225px;*/
+    }
+  }
 }
 
 .social-media-panels{
