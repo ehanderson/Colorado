@@ -10,6 +10,7 @@ module Refinery
     def home
       render_with_templates?
       background_image
+      mission_statement
     end
 
     # This action can be accessed normally, or as nested pages.
@@ -48,6 +49,9 @@ module Refinery
     end
 
   protected
+    def mission_statement
+
+    end
 
     def parent
       @parent = Refinery::Page.find_by_id(@page.parent_id)

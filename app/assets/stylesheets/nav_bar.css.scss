@@ -3,18 +3,39 @@
   padding-top: 20%;
 }
 
-
-.strip{
-  margin-bottom: 0;
-  background-color: #333333;
-}
-
 #menu ul{
   list-style-type: none;
 }
 
+#home-logo a{
+  padding: 0;
+  background-color: white;
+}
+
+.main{
+  margin-top:5px;
+  background-color: #fff;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.nav-pic{
+
+  height: 35em;
+}
+.login-form{
+  padding-right: 10px;
+}
+.top-bar-section{
+  padding-right: 10px;
+  padding-left: 10px;
+
+  ul li a{
+    font-weight: bold;
+  }
+}
 .top-img {
-  max-width: 100%;
+/*  max-width: 100%;
   .center{
     text-align: center;
     .home-img{
@@ -23,7 +44,7 @@
     .show-img{
       width:70em;
     }
-  }
+  }*/
 }
 
 @-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }

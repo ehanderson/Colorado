@@ -17,3 +17,14 @@ body {
   @include button();
   @include radius();
 }
+
+
+/*========================== HOME ======================================*/
+
+.home{
+  padding-top: 2em;
+}
+
+.social-media-panels{
+  display:inline-block;
+}
