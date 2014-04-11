@@ -17,4 +17,7 @@
 
 $(function(){ $(document).foundation(); });
 //= require foundation
-$(document).foundation();
+$(document).foundation(){
+
+};
+

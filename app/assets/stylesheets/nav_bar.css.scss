@@ -1,3 +1,4 @@
+/*==================== Side Nav ==========================*/
 .side-nav{
   padding-left: 5%;
   padding-top: 20%;
@@ -23,20 +24,30 @@
   padding-left: 0;
   padding-right: 0;
 }
-
+/*================== Main Nav ==============================*/
 .nav-pic{
-
   height: 35em;
 }
+
 .login-form{
   padding-right: 10px;
 }
+
 .top-bar-section{
   padding-right: 10px;
   padding-left: 10px;
 
   ul li a{
     font-weight: bold;
+  }
+}
+.small-signin-spacing{
+  padding-bottom: 2em;
+  .small-gap{
+    padding-bottom: 0.5em;
+    .input{
+      line-height: 2em;
+    }
   }
 }
 .top-img {
