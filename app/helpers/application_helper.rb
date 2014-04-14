@@ -30,4 +30,9 @@ module ApplicationHelper
       |item| item.original_id == page.id
       }.children)
   end
+
+  def logo
+    image_tag("colorado-logo.png",
+        :alt => Refinery::Core.site_name)
+  end
 end
