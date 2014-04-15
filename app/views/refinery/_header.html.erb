@@ -1,14 +1,15 @@
 <div class="row nav-pic fade-in" style="background-image: url(<%= @background_image %>); background-repeat:no-repeat">
   <div id="home-logo" class="small-4 medium-2 columns"><%= link_to logo, refinery.root_path %>
   </div>
+
   <div class="small-8 medium-10 columns main" >
-          <div class="row">
-            <div class="medium-10 columns">
-              <div class='login-form large-8 medium-8 columns right hide-for-small-only'>
-                <%= render "refinery/login_form" %>
-              </div>
-            </div>
-          </div>
+    <div class="row search-row">
+
+        <div class='login-form large-12 medium-12 columns hide-for-small-only'>
+          <%= render "refinery/login_form" %>
+        </div>
+
+    </div>
     <nav class="top-bar" data-topbar>
       <ul class="title-area">
         <li class="name">

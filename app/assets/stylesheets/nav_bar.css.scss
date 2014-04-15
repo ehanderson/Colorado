@@ -1,7 +1,6 @@
 /*==================== Side Nav ==========================*/
 .side-nav{
-  padding-left: 5%;
-  padding-top: 20%;
+  padding-top: 8em;
 }
 
 #menu ul{
@@ -30,12 +29,19 @@
   background-color: white;
   }
 }
-
 .main{
+
   z-index: -1;
   margin-top:5px;
   background-color: #fff;
 
+  form > div{
+    display:inline-block;
+  }
+  input {
+    height: 25px;
+    padding:0px;
+  }
   .login-form{
     padding-top:1em;
   }
