@@ -26,9 +26,18 @@ module ApplicationHelper
   end
 
   def sub_menu_children(page)
+    wow = refinery_menu_pages.detect{
+      |item| item.original_id == page.id
+      }
+    if wow != nil
       Refinery::Menu.new(refinery_menu_pages.detect{
       |item| item.original_id == page.id
       }.children)
+    else
+      Refinery::Menu.new(refinery_menu_pages.detect{
+      |item| item.original_id == page.id
+      })
+    end
   end
 
   def logo

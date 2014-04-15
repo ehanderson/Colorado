@@ -57,7 +57,7 @@ gem 'jbuilder'
 gem 'refinerycms'
 gem 'refinerycms-acts-as-indexed'
 gem 'refinerycms-page-images'
-
+gem 'refinerycms-search'
 #  gem 'refinerycms-blog', '~> 2.1.0'
 #  gem 'refinerycms-inquiries', '~> 2.1.0'
 

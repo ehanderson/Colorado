@@ -1,11 +1,6 @@
-<%= form_for :user do |f| %>
-  <div class="field large-4 columns small-gap" >
-   <%= f.text_field :first_name, class: 'input', required: 'required', placeholder: 'First Name' %>
-  </div>
-  <div class= 'field large-4 columns small-gap' >
-    <%= f.text_field :last_name, class: 'input', required: 'required', placeholder: 'Last Name' %>
-  </div>
-  <div class= 'field large-2 columns' id='search-button'>
-    <%= f.submit 'Sign Up!', class: "button[tiny]" %>
-  </div>
+<%= form_tag refinery.search_path do -%>
+  <%= text_field_tag :query, {}, {:type => "search",
+                     :placeholder => "Search site for...",
+                     :value => (params[:query] if params[:query])} %>
+  <%= submit_tag 'Go' %>
 <% end %>

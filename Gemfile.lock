@@ -235,6 +235,9 @@ GEM
       acts_as_indexed (~> 0.8.0)
       dragonfly (~> 0.9.12)
       refinerycms-core (= 2.1.2)
+    refinerycms-search (2.1.0)
+      refinerycms-acts-as-indexed (~> 1.0.0)
+      refinerycms-core (~> 2.1.0)
     rest-client (1.6.7)
       mime-types (>= 1.16)
     routing-filter (0.3.1)
@@ -301,6 +304,7 @@ DEPENDENCIES
   refinerycms
   refinerycms-acts-as-indexed
   refinerycms-page-images
+  refinerycms-search
   refinerycms-web_users!
   sass (~> 3.2.0)
   sass-rails (~> 3.2.6)
