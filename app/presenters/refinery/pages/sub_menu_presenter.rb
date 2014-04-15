@@ -1,6 +1,6 @@
 module Refinery
   module Pages
-    class SubMenuPresenter < MenuPresenter
+    class SubMenuPresenter < Refinery::Pages::MenuPresenter
 
       def initialize(collection, context)
         super

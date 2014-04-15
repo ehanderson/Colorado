@@ -80,7 +80,7 @@ GEM
       fog-core (~> 1.21, >= 1.21.1)
       fog-json
       nokogiri (~> 1.5, >= 1.5.11)
-    fog-brightbox (0.0.1)
+    fog-brightbox (0.0.2)
       fog-core
       fog-json
     fog-core (1.21.1)
@@ -124,9 +124,9 @@ GEM
     hike (1.2.3)
     http_parser.rb (0.5.3)
     i18n (0.6.9)
-    jbuilder (2.0.5)
-      activesupport (>= 3.0.0)
-      multi_json (>= 1.2.0)
+    jbuilder (2.0.6)
+      activesupport (>= 3.0.0, < 5)
+      multi_json (~> 1.2)
     journey (1.0.4)
     jquery-rails (2.3.0)
       railties (>= 3.0, < 5.0)
@@ -145,7 +145,7 @@ GEM
     mime-types (1.25.1)
     mini_portile (0.5.3)
     multi_json (1.9.2)
-    net-scp (1.1.2)
+    net-scp (1.2.0)
       net-ssh (>= 2.6.5)
     net-ssh (2.8.0)
     nio4r (1.0.0)

@@ -60,7 +60,7 @@ gem 'refinerycms-page-images'
 
 #  gem 'refinerycms-blog', '~> 2.1.0'
 #  gem 'refinerycms-inquiries', '~> 2.1.0'
-#  gem 'refinerycms-search', '~> 2.1.0'
+
 
 ruby "1.9.3"
 
