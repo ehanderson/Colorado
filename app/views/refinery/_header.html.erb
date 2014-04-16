@@ -1,8 +1,8 @@
-<div class="row nav-pic fade-in" style="background-image: url(<%= @background_image %>); background-repeat:no-repeat">
-  <div id="home-logo" class="small-4 medium-2 columns"><%= link_to logo, refinery.root_path %>
+<div class="row nav-pic fade-in" style="background-image: url(<%= @background_image %>); background-repeat:no-repeat; background-position:center;">
+  <div id="home-logo" class="small-1 medium-2 columns hide-for-small-only"><%= link_to logo, refinery.root_path %>
   </div>
 
-  <div class="small-8 medium-10 columns main" >
+  <div class="small-11 medium-10 columns main" >
     <div class="row search-row">
 
         <div class='login-form large-12 medium-12 columns hide-for-small-only'>
@@ -13,6 +13,8 @@
     <nav class="top-bar" data-topbar>
       <ul class="title-area">
         <li class="name">
+          <div id="home-logo" class="show-for-small-only"><%= link_to logo, refinery.root_path %>
+          </div>
         </li>
         <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
       </ul>

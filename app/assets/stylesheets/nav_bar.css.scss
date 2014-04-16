@@ -12,8 +12,11 @@
   height: 30em;
   padding-right:2em;
   padding-left: 1em ;
-  @media only screen and (max-width: 40.063em){
-    width:20em;
+
+  @media only screen and (max-width: 40em){
+    height: 20em;
+    padding-right: 0em;
+    padding-left: 0em;
   }
 }
 
@@ -21,26 +24,43 @@
   img{
     max-width: 9em;
     background-color: #CCCCCC;
-      @media only screen and (max-width: 40.063em){
-        width:6em;
-      }
-  }
-    a {
-  background-color: white;
+    @media only screen and (min-width: 40.064em) and (max-width: 48em) {
+      background-color: #fff;
+      width: 4em;
+      margin-top: -0.8em;
+    }
+    @media only screen and (max-width: 40.063em){
+      width:3.5em;
+      margin-top: -0.5em;
+      background-color: #fff;
+    }
   }
 }
-.main{
 
+.main{
   z-index: -1;
   margin-top:5px;
   background-color: #fff;
+  @media only screen and (max-width: 40.063em){
+    z-index: 1;
+    margin-top:0px;
+    background-size: 100%;
+
+  }
 
   form > div{
     display:inline-block;
   }
   input {
     height: 25px;
-    padding:0px;
+    margin-bottom:0px;
+
+  }
+  .field{
+    input{
+      width: 20em;
+
+    }
   }
   .login-form{
     padding-top:1em;
