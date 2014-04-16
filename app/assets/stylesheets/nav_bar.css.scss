@@ -12,17 +12,17 @@
   height: 30em;
   padding-right:2em;
   padding-left: 1em ;
+  background-image: url('home_v5.gif');
+  display:block;
+  -webkit-background-size:cover;
+  -moz-background-size:cover;
+  -o-background-size: cover;
+  background-size:cover;
 
   @media only screen and (max-width: 40em){
     height: 20em;
     padding-right: 0em;
     padding-left: 0em;
-    display:block;
-
-    -webkit-background-size:cover;
-    -moz-background-size:cover;
-    -o-background-size: cover;
-    background-size:cover;
   }
 }
 
