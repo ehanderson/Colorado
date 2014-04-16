@@ -1,10 +1,10 @@
 %div.home-body
   %div.row
     %div.small-12.columns.home
-      %div.small-12.large-6.columns.mission
+      %div.small-12.medium-6.columns.mission
         = raw(@page.content_for(:mission))
-      %div.small-12.large-6.columns
-      %div.small-12.large-6.columns.sign-up.hide-for-medium-only
+      %div.small-12.medium-6.columns
+      %div.small-12.medium-6.columns.sign-up
         %div.sign-up-form
           %h1 Sign Up
           = form_for :user do |f|
