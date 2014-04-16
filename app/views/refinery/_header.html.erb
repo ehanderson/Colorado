@@ -1,4 +1,7 @@
-<div class="row nav-pic fade-in" style="background-image: url(<%= @background_image %>); background-repeat:no-repeat; background-position:center;">
+<div class="row">
+  <div class='nav-pic fadein'>
+    <%=image_tag @background_image %>
+    <div>
   <div id="home-logo" class="small-1 medium-2 columns hide-for-small-only"><%= link_to logo, refinery.root_path %>
   </div>
 
