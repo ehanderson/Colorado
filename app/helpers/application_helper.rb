@@ -44,4 +44,6 @@ module ApplicationHelper
     image_tag("colorado-logo.png",
         :alt => Refinery::Core.site_name)
   end
+
+
 end
