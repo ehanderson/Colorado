@@ -5,7 +5,7 @@
         = raw(@page.content_for(:mission))
       %br.show-for-small-only
       %div.small-12.medium-6.columns.sign-up
-        %div.sign-up-form
+        %div#sign-up-form
           %h1 Sign Up
           = form_for :user do |f|
             %div.row
@@ -16,11 +16,11 @@
             %div.row
               %div.field.small-12.columns.small-centered
                 = f.email_field :email, class: 'input', required: 'required', placeholder: 'Email'
-            %div.row
+            %div.row.bottom
               %div.field.small-6.columns.left
-                = f.text_field :phone, class: 'input', placeholder: 'Phone Number'
+                = f.text_field :phone, class: 'input', placeholder: 'Phone'
               %div.actions.small-6.columns.right
-                = f.submit 'Sign Up!', class: "button radius"
+                = f.submit 'Sign Up!', class: "custom-button-class"
   %div.row
     %div.large-12.large-centered.columns.spacing.hide-for-small-only
   %div.row.news-group

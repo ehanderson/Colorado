@@ -14,8 +14,8 @@
   <div class="small-11 medium-10 columns main" >
     <div class="row search-row">
 
-        <div class='login-form large-12 medium-12 columns hide-for-small-only'>
-          <%= render "refinery/login_form" %>
+        <div id="big-search" class='search_bar large-12 medium-12 columns hide-for-small-only'>
+          <%= render "refinery/search_bar" %>
         </div>
 
     </div>
@@ -29,9 +29,9 @@
       </ul>
       <section class="top-bar-section">
         <%= zurb_menu(refinery_menu_pages, list_tag_css: 'right').to_html %>
-        <li class='show-for-small-only'>
-          <div class='login-form small-12 columns small-signin-spacing'>
-            <%= render "refinery/login_form" %>
+        <li id="small-search" class='show-for-small-only'>
+          <div class='search_bar'>
+            <%= render "refinery/search_bar" %>
           </div>
         </li>
       </section>

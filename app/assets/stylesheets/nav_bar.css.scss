@@ -13,7 +13,7 @@
   padding-right:2em;
   padding-left: 1em ;
   display:block;
-  -webkit-background-size:30em;
+  -webkit-background-size:cover;
   -moz-background-size:cover;
   -o-background-size: cover;
   background-size:cover;
@@ -49,11 +49,13 @@
   @media only screen and (max-width: 40.063em){
     margin-top:0px;
     background-size: 100%;
-
   }
 
   form > div{
     display:inline-block;
+    vertical-align: middle;
+    padding-bottom: 0.5em;
+
   }
 
   input {
@@ -61,26 +63,17 @@
     margin-bottom:0px;
   }
 
-  .field{
+  #big-search .field{
     input{
       width: 20em;
     }
-    @media only screen and (max-width: 48em){
-      padding-bottom: 0.5em;
-    }
-  }
-  .action{
-    @media only screen and (max-width: 48em){
-      float:right;
-    }
-    input{
-      @media only screen and (max-width: 48em){
-        width: 4em;
+    .action{
+      input{
+        @media only screen and (max-width: 48em){
+          width: 8em;
+        }
       }
     }
-  }
-  .login-form{
-    padding-top:1em;
   }
 
   .top-bar-section{
@@ -91,15 +84,7 @@
       font-weight: bold;
     }
   }
-  .small-signin-spacing{
-    padding-bottom: 2em;
-    .small-gap{
-      padding-bottom: 0.5em;
-      .input{
-        line-height: 2em;
-      }
-    }
-  }
+
 }
 .top-img {
 /*  max-width: 100%;

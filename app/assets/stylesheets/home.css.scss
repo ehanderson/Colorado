@@ -1,3 +1,4 @@
+@import 'foundation_mixins_only';
 .home-body{
   padding-right: 1em;
   padding-left: 1em;
@@ -20,6 +21,18 @@
   padding-top:1em;
   border-bottom: 2px solid #E9E9E9;
 }
+
+#sign-up-form{
+  .custom-button-class{
+    $button-display: inline-block;
+    @include button( 0.5, $primary-color, true);
+    padding-top: 0.5em;
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
+    font-size: medium;
+    float: right;
+  }
+}
 .news-group{
   .news{
       padding-top: 1em;
@@ -29,13 +42,9 @@
       width: 20em;
       height: 10em;
       }
-      div{
-      /*max-width: 225px;*/
-      }
     }
   }
 }
-
 .splits{
   @media only screen and (min-width: 48.063em){
     border-right:2px solid #E9E9E9 ;
