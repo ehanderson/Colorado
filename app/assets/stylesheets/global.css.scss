@@ -23,7 +23,16 @@ body {
 
 #sign-up-page{
   padding: 5em;
+  @media only screen and (max-width: 48.063em) {
+    padding: 1em;
+  }
   #sign-up-body, .sign-up-field{
     padding-bottom: 1em;
   }
+}
+
+/*------------------------- TAKE ACTION -----------------------------*/
+
+#take-action{
+  padding-top: 2em;
 }

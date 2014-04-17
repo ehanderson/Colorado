@@ -1,5 +1,5 @@
-%div.row.large-12.columns
-  %div.large-8.columns.large-centered.text-center
+%div.row#share-story-page
+  %div.large-10.small-10.columns.large-centered.small-centered
     = raw @page.content_for(:body)
   %div.large-10.columns
     = form_for Refinery::WebUsers::WebUser.new, url: web_users_web_users_path do |f|
