@@ -1,5 +1,9 @@
-<div class="row">
-  <div class='nav-pic fadein'>
+<div class="row nav-pic fadein">
+  <style >
+  .nav-pic{
+    background-image: url('<%= @background_image %>');
+  }
+  </style>
 
     <div>
   <div id="home-logo" class="small-1 medium-2 columns hide-for-small-only"><%= link_to logo, refinery.root_path %>
