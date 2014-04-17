@@ -36,3 +36,11 @@ body {
 #take-action{
   padding-top: 2em;
 }
+
+/*======================= SHARE STORY PAGE ========================*/
+#share-story-page{
+  padding: 5em;
+  @media only screen and (max-width: 48.063em) {
+    padding: 1em;
+  }
+}
