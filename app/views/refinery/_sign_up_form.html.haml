@@ -1,15 +1,22 @@
-%div.row.large-12.small-12.columns
-  %div.large-6.small-12.columns.large-centered.text-center
+%div.row#sign-up-page
+  %div.large-12.small-12.columns.large-centered#sign-up-body
     = raw @page.content_for(:body)
-  %div.large-12.columns
+  %div#sign-up-form
     = form_for :user do |f|
-      %div.field.large-6.columns.large-centered
-        = f.text_field :first_name, class: 'input', required: 'required', placeholder: 'First Name'
-      %div.field.large-6.columns.large-centered
-        = f.text_field :last_name, class: 'input', required: 'required', placeholder: 'Last Name'
-      %div.field.large-6.columns.large-centered
-        = f.email_field :email, class: 'input', required: 'required', placeholder: 'Email'
-      %div.field.large-6.columns.large-centered
-        = f.text_field :phone, class: 'input', placeholder: 'Phone Number'
-      %div.actions.large-6.columns.large-centered
+      %row
+        %div.sign-up-field.large-6.columns
+          = f.label :first_name, 'First Name *'
+          = f.text_field :first_name, class: 'input', required: 'required', placeholder: 'First Name'
+        %div.sign-up-field.large-6.columns
+          = f.label :last_name, 'Last Name *'
+          = f.text_field :last_name, class: 'input', required: 'required', placeholder: 'Last Name'
+      %row
+        %div.sign-up-field.large-12.columns.large-centered
+          = f.label :email, "Email *"
+          = f.email_field :email, class: 'input', required: 'required', placeholder: 'Email'
+      %row
+        %div.sign-up-field.large-12.columns.large-centered
+          = f.label :phone, "Phone *"
+          = f.text_field :phone, class: 'input', placeholder: 'Phone Number'
+      %div.actions.large-6.columns
         = f.submit 'Sign Up!', class: "button radius"
