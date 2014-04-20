@@ -1,0 +1,33 @@
+it:
+  refinery:
+    plugins:
+      social_media_posts:
+        title: Social Media Posts
+    social_media_posts:
+      admin:
+        social_media_posts:
+          actions:
+            create_new: Aggiungi Nuovo Social Media Post
+            reorder: Riordina Social Media Posts
+            reorder_done: Termina il Riordino di Social Media Posts
+          records:
+            title: Social Media Posts
+            sorry_no_results: "Spiacenti! Nessun risultato trovato"
+            no_items_yet: Non ci sono ancora Social Media Posts. Clicca "Aggiungi Nuovo Social Media Post" per aggiungere il tuo primo social media post.
+          social_media_post:
+            view_live_html: Guarda live questo social media post <br/><em>(apre una nuova finestra)</em>
+            edit: Modifica questo social media post
+            delete: Rimuovi per sempre questo social media post
+      social_media_posts:
+        show:
+          other: Altri Social Media Posts
+  activerecord:
+    attributes:
+      'refinery/social_media_posts/social_media_post':
+        post_date: Post Date
+        platform: Platform
+        content: Content
+        image: Image
+        tweet_id: Tweet
+        fb_id: Fb
+        youtube_id: Youtube

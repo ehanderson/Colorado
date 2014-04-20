@@ -1,0 +1,33 @@
+fr:
+  refinery:
+    plugins:
+      social_media_posts:
+        title: Social Media Posts
+    social_media_posts:
+      admin:
+        social_media_posts:
+          actions:
+            create_new: Créer un(e) nouve(au/l/lle) Social Media Post
+            reorder: Réordonner les Social Media Posts
+            reorder_done: Fin de réordonnancement des Social Media Posts
+          records:
+            title: Social Media Posts
+            sorry_no_results: "Désolé ! Aucun résultat."
+            no_items_yet: 'Il n''y a actuellement aucun(e) Social Media Post. Cliquer sur "Créer un(e) nouve(au/l/lle) Social Media Post" pour créer votre premi(er/ère) social media post.'
+          social_media_post:
+            view_live_html: Voir ce(t/tte) social media post <br/><em>(Ouvre une nouvelle fenêtre)</em>
+            edit: Modifier ce(t/tte) social media post
+            delete: Supprimer définitivement ce(t/tte) social media post
+      social_media_posts:
+        show:
+          other: Autres Social Media Posts
+  activerecord:
+    attributes:
+      'refinery/social_media_posts/social_media_post':
+        post_date: Post Date
+        platform: Platform
+        content: Content
+        image: Image
+        tweet_id: Tweet
+        fb_id: Fb
+        youtube_id: Youtube

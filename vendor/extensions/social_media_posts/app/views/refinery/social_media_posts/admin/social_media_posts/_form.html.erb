@@ -1,0 +1,30 @@
+<%= form_for [refinery, :social_media_posts_admin, @social_media_post] do |f| -%>
+  <%= render '/refinery/admin/error_messages',
+              :object => @social_media_post,
+              :include_object_name => true %>
+
+  <div class='field'>
+    <%= f.label :post_date -%>
+    <%= f.datetime_select :post_date -%>
+  </div>
+
+  <div class='field'>
+    <%= render '/refinery/admin/wysiwyg',
+                :f => f,
+                :fields => [:platform, :content, :image, :tweet_id, :fb_id, :youtube_id],
+                :object => "social_media_posts/social_media_post" -%>
+  </div>
+
+  <%= render '/refinery/admin/form_actions', :f => f,
+             :continue_editing => false,
+             :delete_title => t('delete', :scope => 'refinery.social_media_posts.admin.social_media_posts.social_media_post'),
+             :delete_confirmation => t('message', :scope => 'refinery.admin.delete') -%>
+<% end -%>
+
+<% content_for :javascripts do -%>
+  <script>
+    $(document).ready(function(){
+      page_options.init(false, '', '');
+    });
+  </script>
+<% end -%>

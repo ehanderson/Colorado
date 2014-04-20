@@ -1,0 +1,33 @@
+nl:
+  refinery:
+    plugins:
+      social_media_posts:
+        title: Social Media Posts
+    social_media_posts:
+      admin:
+        social_media_posts:
+          actions:
+            create_new: Nieuwe Social Media Post toevoegen
+            reorder: De volgorde van de Social Media Posts wijzigen
+            reorder_done: Klaar met het wijzingen van de van de Social Media Post-volgorde
+          records:
+            title: Social Media Posts
+            sorry_no_results: Helaas! Er zijn geen resultaten gevonden.
+            no_items_yet: Er zijn nog geen Social Media Posts. Druk op 'Nieuwe Social Media Post toevoegen' om de eerste toe te voegen.
+          social_media_post:
+            view_live_html: Deze social media post op de website bekijken <br/><em>(opent in een nieuw venster)</em>
+            edit: Bewerk deze social media post
+            delete: Deze social media post definitief verwijderen
+      social_media_posts:
+        show:
+          other: Andere Social Media Posts
+  activerecord:
+    attributes:
+      'refinery/social_media_posts/social_media_post':
+        post_date: Post Date
+        platform: Platform
+        content: Content
+        image: Image
+        tweet_id: Tweet
+        fb_id: Fb
+        youtube_id: Youtube

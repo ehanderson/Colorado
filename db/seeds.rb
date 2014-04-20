@@ -12,7 +12,8 @@ Refinery::Pages::Engine.load_seed
 # Added by Refinery CMS WebUsers extension
 Refinery::WebUsers::Engine.load_seed
 
-
-
 # Added by Refinery CMS Search engine
 Refinery::Search::Engine.load_seed
+
+# Added by Refinery CMS SocialMediaPosts extension
+Refinery::SocialMediaPosts::Engine.load_seed

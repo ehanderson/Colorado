@@ -34,6 +34,11 @@ gem 'taps'
 
 gem 'twitter', '~> 5.0'
 
+gem 'omniauth-facebook'
+gem "koala", "~> 1.8.0rc1"
+
+gem 'whenever', :require => false
+
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
@@ -67,3 +72,7 @@ gem 'refinerycms-search'
 ruby "1.9.3"
 
 gem 'refinerycms-web_users', :path => 'vendor/extensions'
+<<<<<<< HEAD
+=======
+gem 'refinerycms-social_media_posts', :path => 'vendor/extensions'
+>>>>>>> WIP: Social Media - stuck on facebook unexpirable token

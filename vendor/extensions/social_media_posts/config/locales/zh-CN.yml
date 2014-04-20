@@ -1,0 +1,35 @@
+zh-CN:
+  refinery:
+    plugins:
+      social_media_posts:
+        title: Social Media Posts
+    social_media_posts:
+      admin:
+        social_media_posts:
+          actions:
+            create_new: 建立新的 Social Media Post
+            reorder: 对 Social Media Posts 重新排序
+            reorder_done: 对 Social Media Posts 的重新排序结束
+          records:
+            title: Social Media Posts
+            sorry_no_results: 对不起，未找到结果。 #Sorry! There are no results found.
+
+            # There are no Social Media Posts yet. Click "Add New Social Media Post" to add your first social media post.
+            no_items_yet: 目前没有 Social Media Posts . 点击 "Add New Social Media Post" 创建一个social media post.
+          social_media_post:
+            view_live_html: 查看 social media post 的最新内容.<br/><em>(新窗口中打开)</em>
+            edit: 编辑 social media post
+            delete: 永久删除 social media post
+      social_media_posts:
+        show:
+          other: 其他 Social Media Posts
+  activerecord:
+    attributes:
+      'refinery/social_media_posts/social_media_post':
+        post_date: Post Date
+        platform: Platform
+        content: Content
+        image: Image
+        tweet_id: Tweet
+        fb_id: Fb
+        youtube_id: Youtube

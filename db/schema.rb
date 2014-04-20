@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140415011625) do
+ActiveRecord::Schema.define(:version => 20140417040430) do
 
   create_table "refinery_image_page_translations", :force => true do |t|
     t.integer  "refinery_image_page_id"
@@ -163,6 +163,20 @@ ActiveRecord::Schema.define(:version => 20140415011625) do
   end
 
   add_index "refinery_settings", ["name"], :name => "index_refinery_settings_on_name"
+
+  create_table "refinery_social_media_posts", :force => true do |t|
+    t.datetime "post_date"
+    t.text     "platform"
+    t.text     "content"
+    t.text     "image"
+    t.text     "tweet_id"
+    t.text     "fb_id"
+    t.text     "youtube_id"
+    t.integer  "position"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+    t.integer  "likes"
+  end
 
   create_table "refinery_user_plugins", :force => true do |t|
     t.integer "user_id"

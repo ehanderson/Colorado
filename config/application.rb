@@ -76,10 +76,13 @@ module Colorado
     config.assets.initialize_on_precompile = true
     
     config.before_configuration do
-      env_file = File.join(Rails.root, 'config', 'twitter.yml')
-      YAML.load(File.open(env_file)).each do |key, value|
-        ENV[key.to_s] = value
-      end if File.exists?(env_file)
+      social_media = [File.join(Rails.root, 'config', 'twitter.yml'),
+                      File.join(Rails.root, 'config', 'facebook.yml')]
+      social_media.each do |file|
+        YAML.load(File.open(file)).each do |key, value|
+          ENV[key.to_s] = value
+        end if File.exists?(file)
+      end
     end
   end
 end

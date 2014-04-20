@@ -1,0 +1,33 @@
+tr:
+  refinery:
+    plugins:
+      social_media_posts:
+        title: Social Media Posts
+    social_media_posts:
+      admin:
+        social_media_posts:
+          actions:
+            create_new: Yeni Ekle Social Media Post
+            reorder: Tekrar sirala Social Media Posts
+            reorder_done: Tekrar siralama tamamlandiSocial Media Posts
+          records:
+            title: Social Media Posts
+            sorry_no_results: Uzgunum! Herhangi bir sonuc bulunamadi.
+            no_items_yet: Herhangi bir Social Media Posts yok henuz.  Tikla "Yeni Ekle Social Media Post" eklemek senin ilk social media post.
+          social_media_post:
+            view_live_html: Bunu canlu social media post goruntule <br/><em>(yeni bir pencerede acar)</em>
+            edit: Bunu Duzenle social media post
+            delete: Bunu Sil social media post sonsuza dek
+      social_media_posts:
+        show:
+          other: Diger Social Media Posts
+  activerecord:
+    attributes:
+      'refinery/social_media_posts/social_media_post':
+        post_date: Post Date
+        platform: Platform
+        content: Content
+        image: Image
+        tweet_id: Tweet
+        fb_id: Fb
+        youtube_id: Youtube

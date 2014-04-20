@@ -1,0 +1,34 @@
+es:
+  refinery:
+    plugins:
+      social_media_posts:
+        title: Social Media Posts
+#        article: masculino/femenino
+    social_media_posts:
+      admin:
+        social_media_posts:
+          actions:
+            create_new: Crear nuevo social media post
+            reorder: Reordenar social media posts
+            reorder_done: Reordenación de social media posts completada
+          records:
+            title: Social Media Posts
+            sorry_no_results: Lo siento, no hay resultados
+            no_items_yet: No hay social media posts todavía. Pulsa en "Crear nuevo Social Media Post" para crear tu primer social media post.
+          social_media_post:
+            view_live_html: Ver este social media post como abierto al público <br/><em>(abre en ventana nueva)</em>
+            edit: Editar este social media post
+            delete: Borrar este social media post para siempre
+      social_media_posts:
+        show:
+          other: Otros social media posts
+  activerecord:
+    attributes:
+      'refinery/social_media_posts/social_media_post':
+        post_date: Post Date
+        platform: Platform
+        content: Content
+        image: Image
+        tweet_id: Tweet
+        fb_id: Fb
+        youtube_id: Youtube

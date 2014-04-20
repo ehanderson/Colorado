@@ -1,0 +1,33 @@
+en:
+  refinery:
+    plugins:
+      social_media_posts:
+        title: Social Media Posts
+    social_media_posts:
+      admin:
+        social_media_posts:
+          actions:
+            create_new: Add New Social Media Post
+            reorder: Reorder Social Media Posts
+            reorder_done: Done Reordering Social Media Posts
+          records:
+            title: Social Media Posts
+            sorry_no_results: Sorry! There are no results found.
+            no_items_yet: There are no Social Media Posts yet. Click "Add New Social Media Post" to add your first social media post.
+          social_media_post:
+            view_live_html: View this social media post live <br/><em>(opens in a new window)</em>
+            edit: Edit this social media post
+            delete: Remove this social media post forever
+      social_media_posts:
+        show:
+          other: Other Social Media Posts
+  activerecord:
+    attributes:
+      'refinery/social_media_posts/social_media_post':
+        post_date: Post Date
+        platform: Platform
+        content: Content
+        image: Image
+        tweet_id: Tweet
+        fb_id: Fb
+        youtube_id: Youtube

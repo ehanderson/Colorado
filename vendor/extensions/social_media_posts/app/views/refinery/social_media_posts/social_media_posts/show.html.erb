@@ -1,0 +1,63 @@
+<% content_for :body_content_title do %>
+  <%= @social_media_post.title %>
+<% end %>
+
+<% content_for :body do %>
+  <section>
+    <h1>Post Date</h1>
+    <p>
+      <%=raw @social_media_post.post_date %>
+    </p>
+  </section>
+  <section>
+    <h1>Platform</h1>
+    <p>
+      <%=raw @social_media_post.platform %>
+    </p>
+  </section>
+  <section>
+    <h1>Content</h1>
+    <p>
+      <%=raw @social_media_post.content %>
+    </p>
+  </section>
+  <section>
+    <h1>Image</h1>
+    <p>
+      <%=raw @social_media_post.image %>
+    </p>
+  </section>
+  <section>
+    <h1>Tweet</h1>
+    <p>
+      <%=raw @social_media_post.tweet_id %>
+    </p>
+  </section>
+  <section>
+    <h1>Fb</h1>
+    <p>
+      <%=raw @social_media_post.fb_id %>
+    </p>
+  </section>
+  <section>
+    <h1>Youtube</h1>
+    <p>
+      <%=raw @social_media_post.youtube_id %>
+    </p>
+  </section>
+<% end %>
+
+<% content_for :side_body do %>
+  <aside>
+    <h2><%= t('.other') %></h2>
+    <ul id="social_media_posts">
+      <% @social_media_posts.each do |social_media_post| %>
+        <li>
+          <%= link_to social_media_post.title, refinery.social_media_posts_social_media_post_path(social_media_post) %>
+        </li>
+      <% end %>
+    </ul>
+  </aside>
+<% end %>
+
+<%= render '/refinery/content_page' %>

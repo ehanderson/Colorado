@@ -1,0 +1,33 @@
+sk:
+  refinery:
+    plugins:
+      social_media_posts:
+        title: Social Media Posts
+    social_media_posts:
+      admin:
+        social_media_posts:
+          actions:
+            create_new: Pridať Social Media Post
+            reorder: Preusporiadať Social Media Posts
+            reorder_done: Koniec radenia Social Media Posts
+          records:
+            title: Social Media Posts
+            sorry_no_results: Ľutujeme, ale neboli nájdené žiadne výsledky.
+            no_items_yet: Nie sú vytvorené žiadne Social Media Posts. Kliknite na "Pridať Social Media Post" pre pridanie prvého social media post.
+          social_media_post:
+            view_live_html: Zobraziť náhľad social media post<br/><em>(otvorí sa v novom okne)</em>
+            edit: Upraviť social media post
+            delete: Zmazať social media post
+      social_media_posts:
+        show:
+          other: Daľšie Social Media Posts
+  activerecord:
+    attributes:
+      'refinery/social_media_posts/social_media_post':
+        post_date: Post Date
+        platform: Platform
+        content: Content
+        image: Image
+        tweet_id: Tweet
+        fb_id: Fb
+        youtube_id: Youtube
