@@ -35,11 +35,22 @@
     %div.large-12.large-centered.columns.spacing.hide-for-small-only
   %div.row
     %div.small-12.columns.social-media(data-equalizer)
-      %div.small-12.medium-4.large-4.columns.social-media-panels.text-centered(data-equalizer-watch)
-        %h1 Social Media
-      %div.small-12.medium-4.large-4.columns.social-media-panels.text-centered.splits(data-equalizer-watch)
+      %div.small-12.medium-4.large-3.columns.social-media-panels.text-centered(data-equalizer-watch)
+        %h3 
+          Follow Us On 
+          = link_to("Social Media", "/social-media")
+      %div.small-12.medium-2.large-3.columns.social-media-panels.splits(data-equalizer-watch)
+        %div.text-centered
+          = link_to(image_tag('facebook.png', class: 'social-media-img'), "/facebook")
         = raw(@page.content_for(:facebook))
-      %div.small-12.medium-4.large-4.columns.social-media-panels.text-centered(data-equalizer-watch)
+      %div.small-12.medium-2.large-3.columns.social-media-panels.text-centered.splits(data-equalizer-watch)
+        %div.text-centered
+          = link_to(image_tag('twitter.png', class: 'social-media-img'), "/twitter")
         = raw(@page.content_for(:twitter))
+      %div.small-12.medium-2.large-3.columns.social-media-panels.text-centered(data-equalizer-watch)
+        %div.text-centered
+          = link_to(image_tag('youtube.png', class: 'social-media-img'), "/youtube")
+        = raw(@page.content_for(:youtube))
+
 = render '/refinery/draft_page_message' unless @page.nil? or @page.live?
 

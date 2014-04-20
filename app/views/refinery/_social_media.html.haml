@@ -1,0 +1,11 @@
+%p 
+  = raw @page.content_for(:body)
+
+%div#social-media-stream.large-12.columns
+  %ul
+  - $twitter.user_timeline.each do |tweet|
+    %li.large-1.column
+      = image_tag('twitter.png', class: 'stream-logo')
+    %li.large-11.columns
+      = tweet.text
+    %hr

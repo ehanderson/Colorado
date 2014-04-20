@@ -18,7 +18,6 @@ body {
   @include radius();
 }
 
-
 /*========================== Sign Up Form ======================================*/
 
 #sign-up-page{
@@ -42,5 +41,19 @@ body {
   padding: 5em;
   @media only screen and (max-width: 48.063em) {
     padding: 1em;
+  }
+}
+
+/*======================== Social Media ===========================*/
+
+.social-media{
+    padding-top: 1em;
+    padding-bottom: 1em;
+  .social-media-panels {
+    display:inline;
+  }
+  .social-media-img {
+    height: 50px;
+    width: 50px;
   }
 }
