@@ -72,7 +72,5 @@ gem 'refinerycms-search'
 ruby "1.9.3"
 
 gem 'refinerycms-web_users', :path => 'vendor/extensions'
-<<<<<<< HEAD
-=======
+
 gem 'refinerycms-social_media_posts', :path => 'vendor/extensions'
->>>>>>> WIP: Social Media - stuck on facebook unexpirable token
