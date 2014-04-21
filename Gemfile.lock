@@ -363,6 +363,7 @@ DEPENDENCIES
   refinerycms-search
   refinerycms-social_media_posts!
   refinerycms-web_users!
+  rest-client
   sass (~> 3.2.0)
   sass-rails (~> 3.2.6)
   taps

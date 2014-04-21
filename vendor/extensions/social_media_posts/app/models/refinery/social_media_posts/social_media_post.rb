@@ -32,22 +32,26 @@ module Refinery
         end
 
         def pull_facebook_statuses
-          $facebook.get_connections('me', 'statuses').each do |status|
-            unless exists?(fb_id: status['id'])
-              create!(fb_id: status['id'],
-                      content: status['message'],
-                      post_date: status['updated_time'],
-                      likes: status['likes']['data'].length,
-                      image: 'facebook',
-                      platform: 'facebook'
-              )
+          token = Facebook.page_access_token # saved long-lived token
+          if FacebookService.valid?(token)
+            FacebookService.get_statuses(token).each do |status|
+              unless exists?(fb_id: status['id'])
+                create!(fb_id: status['id'],
+                        content: status['message'],
+                        post_date: status['updated_time'],
+                        likes: status['likes']['data'].length,
+                        image: 'facebook',
+                        platform: 'facebook'
+                )
+              end
             end
+          else
+            Rails.logger.warn('Facebook access token has expired. Attempting to refresh')
+            FacebookService.refresh_token(token)
+            # self.pull_facebook_statuses --# probably don't want to do this (recursive) 
           end
         end
 
-        def pull_youtube_posts
-
-        end
       end
     end
   end
