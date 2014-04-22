@@ -5,8 +5,8 @@ class FacebookService
       connect_to_oauth.exchange_access_token_info(page_token)
     end
 
-    def get_managed_pages
-      connect_to_graph.get_connections('me', 'accounts')
+    def get_managed_pages(access_token)
+      connect_to_graph(access_token).get_connections('me', 'accounts')
     end
 
     def get_statuses(access_token)
