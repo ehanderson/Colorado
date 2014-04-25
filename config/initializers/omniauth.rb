@@ -1,15 +1,15 @@
-OAUTH = FacebookService.connect_to_oauth
+# OAUTH = FacebookService.connect_to_oauth
 
-GRAPH = FacebookService.connect_to_graph(ENV["ACCESS_TOKEN"])
+# GRAPH = FacebookService.connect_to_graph(ENV["ACCESS_TOKEN"])
 
-PAGES = FacebookService.get_managed_pages
+# PAGES = FacebookService.get_managed_pages(ENV["ACCESS_TOKEN"])
 
-PAGE_TOKEN = PAGES.first['access_token'] # THIS EXPIRES IN TWO HOURS
+# PAGE_TOKEN = PAGES.first['access_token'] # THIS EXPIRES IN TWO HOURS
 
-NEW_ACCESS_TOKEN = FacebookService.extend_access_token_expiration(PAGE_TOKEN) # THIS EXPIRES IN 2 MONTHS
+# NEW_ACCESS_TOKEN = FacebookService.extend_access_token_expiration(PAGE_TOKEN) # THIS EXPIRES IN 2 MONTHS
 
-LONG_ACCESS_TOKEN = NEW_ACCESS_TOKEN['access_token']
-EXPIRATION        = NEW_ACCESS_TOKEN['expires']
+# LONG_ACCESS_TOKEN = NEW_ACCESS_TOKEN['access_token']
+# EXPIRATION        = NEW_ACCESS_TOKEN['expires']
 
 # binding.pry
 
@@ -39,7 +39,7 @@ EXPIRATION        = NEW_ACCESS_TOKEN['expires']
 # Stack Overflow Step by Step (poor)
 # http://stackoverflow.com/questions/12168452/long-lasting-fb-access-token-for-server-to-pull-fb-page-info?lq=1
 
-# Get 2 Month Access Token with Koala: 
+# Get 2 Month Access Token with Koala:
 # https://github.com/mkdynamic/omniauth-facebook/issues/23#issuecomment-15565902
 
 ### =================== STEP BY STEP ========================== ###
@@ -51,8 +51,8 @@ EXPIRATION        = NEW_ACCESS_TOKEN['expires']
 #    - GRAPH = Koala::Facebook::API.new(ENV['ACCESS_TOKEN']) -> via graph explorer online
 # 3) Get managed pages via
 #    - GRAPH.get_connections('me', 'accounts')
-# 4) Get the token of the specific page the account manages 
-#    - PAGE_TOKEN = PAGES.first['access_token'] 
+# 4) Get the token of the specific page the account manages
+#    - PAGE_TOKEN = PAGES.first['access_token']
 # 5) Exchange the short-lived token for a long-lived token via:
 #    - LONG_ACCESS_TOKEN = OAUTH.exchange_access_token_info(PAGE_TOKEN)
 # 6) Use the long-lived access token to make a request and retrieve never expiring token

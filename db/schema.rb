@@ -15,10 +15,10 @@ ActiveRecord::Schema.define(:version => 20140417040430) do
 
   create_table "refinery_image_page_translations", :force => true do |t|
     t.integer  "refinery_image_page_id"
-    t.string   "locale"
-    t.text     "caption"
+    t.string   "locale",                 :null => false
     t.datetime "created_at",             :null => false
     t.datetime "updated_at",             :null => false
+    t.text     "caption"
   end
 
   add_index "refinery_image_page_translations", ["locale"], :name => "index_refinery_image_page_translations_on_locale"
@@ -49,10 +49,10 @@ ActiveRecord::Schema.define(:version => 20140417040430) do
 
   create_table "refinery_page_part_translations", :force => true do |t|
     t.integer  "refinery_page_part_id"
-    t.string   "locale"
-    t.text     "body"
+    t.string   "locale",                :null => false
     t.datetime "created_at",            :null => false
     t.datetime "updated_at",            :null => false
+    t.text     "body"
   end
 
   add_index "refinery_page_part_translations", ["locale"], :name => "index_refinery_page_part_translations_on_locale"
@@ -72,13 +72,13 @@ ActiveRecord::Schema.define(:version => 20140417040430) do
 
   create_table "refinery_page_translations", :force => true do |t|
     t.integer  "refinery_page_id"
-    t.string   "locale"
+    t.string   "locale",           :null => false
+    t.datetime "created_at",       :null => false
+    t.datetime "updated_at",       :null => false
     t.string   "title"
     t.string   "custom_slug"
     t.string   "menu_title"
     t.string   "slug"
-    t.datetime "created_at",       :null => false
-    t.datetime "updated_at",       :null => false
   end
 
   add_index "refinery_page_translations", ["locale"], :name => "index_refinery_page_translations_on_locale"
