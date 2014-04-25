@@ -1,2 +1,4 @@
-== This Readme will not be created until the product is complete! 
+=== For privacy reasons, this readme will not be created until the app is production status. Apologies for any inconvenience.
+
+==== Any further questions? Please contact the repository owners directly.
 
