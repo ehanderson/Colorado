@@ -9,15 +9,15 @@
 # RestClient.post("https://graph.facebook.com/oauth/access_token?client_id=#{ENV["APP_ID"]}&client_secret=#{ENV["APP_SECRET"]}&grant_type=fb_exchange_token&fb_exchange_token=#{LONG_ACCESS_TOKEN['access_token']}", {})
 # if we want more transparency into url vs. koala wrapper we can use restcient
 
-short_user_token = ENV["ACCESS_TOKEN"] # THIS EXPIRES IN TWO HOURS
+# short_user_token = ENV["ACCESS_TOKEN"] # THIS EXPIRES IN TWO HOURS
 
-oauth = Koala::Facebook::OAuth.new(ENV['APP_ID'], ENV["APP_SECRET"])
+# oauth = Koala::Facebook::OAuth.new(ENV['APP_ID'], ENV["APP_SECRET"])
 
-long_user_token = oauth.exchange_access_token_info(short_user_token) # THIS EXPIRES IN 2 MONTHS
+# long_user_token = oauth.exchange_access_token_info(short_user_token) # THIS EXPIRES IN 2 MONTHS
 
-PAGES = FacebookService.get_managed_pages(long_user_token["access_token"])
+# PAGES = FacebookService.get_managed_pages(long_user_token["access_token"])
 
-LONG_PAGE_TOKEN = PAGES.first['access_token'] # This expires NEVER!!! Wahoooo
+# LONG_PAGE_TOKEN = PAGES.first['access_token'] # This expires NEVER!!! Wahoooo
 
 
 ### ================== RESOURCES ============================= ###
