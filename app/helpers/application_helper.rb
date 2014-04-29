@@ -45,5 +45,10 @@ module ApplicationHelper
         :alt => Refinery::Core.site_name)
   end
 
+  def home_logo
+    image_tag("colorado-logo.png",
+        :alt => Refinery::Core.site_name)
+  end
+
 
 end
