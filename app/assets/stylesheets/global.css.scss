@@ -18,30 +18,25 @@ body {
   @include radius();
 }
 
-/*========================== Sign Up Form ======================================*/
+/*========================== Sign Up Form & SHARE STORY PAGE ======================================*/
 
-#sign-up-page{
+.sub-take-action{
   padding: 5em;
   @media only screen and (max-width: 48.063em) {
     padding: 1em;
   }
-  #sign-up-body, .sign-up-field{
+  .field{
     padding-bottom: 1em;
   }
+}
+.sub-take-action-body {
+  padding-bottom: 2em;
 }
 
 /*------------------------- TAKE ACTION -----------------------------*/
 
 #take-action{
   padding-top: 2em;
-}
-
-/*======================= SHARE STORY PAGE ========================*/
-#share-story-page{
-  padding: 5em;
-  @media only screen and (max-width: 48.063em) {
-    padding: 1em;
-  }
 }
 
 /*======================== Social Media ===========================*/

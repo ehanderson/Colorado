@@ -6,9 +6,15 @@
       %div.large-6.columns.inline
         = raw @page.content_for(:side_body)
   - when 'Sign Up'
-    = render 'refinery/sign_up_form'
+    %div.row.sub-take-action
+      %div.sub-take-action-body
+        = raw @page.content_for(:body)
+      = render 'refinery/sign_up_form'
   - when 'Share Story'
-    = render 'refinery/share_story_form'
+    %div.row.sub-take-action
+      %div.sub-take-action-body
+        = raw @page.content_for(:body)
+      = render 'refinery/share_story_form'
   - when 'Social Media'
     = render 'refinery/social_media'
   - when 'Legislator Lookup'
