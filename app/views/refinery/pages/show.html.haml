@@ -12,7 +12,9 @@
   - when 'Social Media'
     = render 'refinery/social_media'
   - when 'Legislator Lookup'
-    = render '/refinery/leg_lookup'
+    / = render '/refinery/leg_lookup'
+    / = render '/refinery/sign_up_form'
+    = render '/refinery/share_story_form'
   - else
     = render '/refinery/content_page'
 

@@ -2,27 +2,37 @@
   %div.large-10.small-10.columns.large-centered.small-centered
     = raw @page.content_for(:body)
   %div.large-10.columns
-    = form_for Refinery::WebUsers::WebUser.new, url: web_users_web_users_path do |f|
+    %form{action: "https://sandbox.salsalabs.com/save", method: "POST"}
+      %input{name: "organization_KEY", type: "hidden", value: "17800"}/
+      %input{name: "object", type: "hidden", value: "supporter"}/
       %div.field.large-5.columns.large-centered.inline
-        = f.text_field :first_name, class: 'input', required: 'required', placeholder: 'First Name'
+        %label{for: "first_name"} First Name:
+        %input#first_name{name: "First_Name", type: "text"}/
       %div.field.large-5.columns.large-centered.inline
-        = f.text_field :last_name, class: 'input', required: 'required', placeholder: 'Last Name'
+        %label{for: "last_name"} Last Name:
+        %input#last_name{name: "Last_Name", type: "text"}/
       %div.field.large-5.columns.large-centered.inline
-        = f.email_field :email, class: 'input', required: 'required', placeholder: 'Email'
+        %label{for: "email"} Email:
+        %input#email{name: "Email", type: "text"}/
       %div.field.large-5.columns.large-centered.inline
-        = f.text_field :phone_number, class: 'input', placeholder: 'Phone Number'
+        %label{for: "phone"} Phone:
+        %input#phone{name: "Phone", type: "text"}/
       %div.field.large-5.columns.large-centered.inline
-        = f.text_field :twitter_handle, class: 'input', placeholder: 'Twitter Handle'
+        %label{for: "otherdata1"} Twitter Handle:
+        %input#otherdata1{name: "Other_Data_1", type: "text"}/
       %div.field.message_field.large-10.columns
-        = f.text_area :story, :rows => 5, required: 'required', placeholder: 'Share Your Story'
-      %div.field.radio.large-10.columns
-        = f.label :tweeter, "Are you interested in receiving emails with sample social media content for you to post?", class: 'inline'
-        = f.radio_button :tweeter, "0", class: 'inline'
-      %div.field.radio.large-10.columns
-        = f.label :opinion_editorial, "Are you interested in writing an op-ed to be posted in a local newspaper?", class: 'inline'
-        = f.radio_button :opinion_editorial, "0", class: 'inline'
-      %div.field.radio.large-10.columns
-        = f.label :letter_to_editor, "Are you interested in writing a letter to the editor to be posted in a local newspaper?", class: 'inline'
-        = f.radio_button :letter_to_editor, "0", class: 'inline'
+        %label{for: "notes"} Story:
+        %input#notes{name: "Notes", type: "text"}/
+      %input{name: "tag", type: "hidden", value: "story"}/
+      %input{name: "redirect", type: "hidden", value: "http://climbhighercolorado.herokuapp.com/"}/
+      / %div.field.radio.large-10.columns
+      /   = f.label :tweeter, "Are you interested in receiving emails with sample social media content for you to post?", class: 'inline'
+      /   = f.radio_button :tweeter, "0", class: 'inline'
+      / %div.field.radio.large-10.columns
+      /   = f.label :opinion_editorial, "Are you interested in writing an op-ed to be posted in a local newspaper?", class: 'inline'
+      /   = f.radio_button :opinion_editorial, "0", class: 'inline'
+      / %div.field.radio.large-10.columns
+      /   = f.label :letter_to_editor, "Are you interested in writing a letter to the editor to be posted in a local newspaper?", class: 'inline'
+      /   = f.radio_button :letter_to_editor, "0", class: 'inline'
       %div.actions.large-12.columns
-        = f.submit 'Sign Up!', class: "button radius"
+        %input{type: "Submit", value: "Sign up"}/
