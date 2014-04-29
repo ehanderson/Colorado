@@ -42,7 +42,6 @@ module Refinery
       parent
     end
 
-
     def preview
       render_with_templates?(:action => :show)
     end
