@@ -5,7 +5,11 @@
   = site_bar
   = render '/refinery/ie6check' if request.env['HTTP_USER_AGENT'] =~ /MSIE/
   %header{:id => "header"}
-    = render '/refinery/header'
+    - case @page.title
+      - when 'Home'
+        = render '/refinery/home_header'
+      - else
+        = render '/refinery/header'
     / = render '/refinery/background'
   %div{id: "page_container"}
     %div.row

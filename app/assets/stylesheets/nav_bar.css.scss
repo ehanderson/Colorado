@@ -7,8 +7,8 @@
     display:table;
     width:100%;
     table-layout: fixed;
-    /*min-height: 50px;*/
   }
+
   li {
     vertical-align: middle;
     text-transform: uppercase;
@@ -16,6 +16,7 @@
     text-align:center;
     display: table-cell;
     border: 1px solid #fff;
+    height: 3em;
   }
 }
   .side-nav nav ul li.selected{
@@ -69,10 +70,9 @@
 .main{
   z-index: 1;
   margin-top:5px;
-  background-color: #fff;
+  background-color: #004b8d;
   @media only screen and (max-width: 40.063em){
     margin-top:0px;
-    background-size: 100%;
   }
 
   form > div{
@@ -100,29 +100,17 @@
       }
     }
   }
-
   .top-bar-section{
     padding-right: 10px;
     padding-left: 10px;
-
-    ul li a{
-      font-weight: bold;
-    }
+    background-color: #fff;
   }
 
 }
-.top-img {
-/*  max-width: 100%;
-  .center{
-    text-align: center;
-    .home-img{
-      width: 90rem;
-    }
-    .show-img{
-      width:70em;
-    }
-  }*/
+#home-nav{
+
 }
+
 
 @-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
 @-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }

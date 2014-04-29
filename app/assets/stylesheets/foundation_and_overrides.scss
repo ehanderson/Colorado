@@ -910,7 +910,7 @@ $medium-range: (48.063em, 64em);
 $side-nav-link-color: white;
 // $side-nav-link-color-active: scale-color($side-nav-link-color, $lightness: 30%);
 $side-nav-link-color-hover: #0074d9;
-$side-nav-font-size: rem-calc(19);
+$side-nav-font-size: rem-calc(14);
 // $side-nav-font-weight: normal;
 // $side-nav-font-family: $body-font-family;
 // $side-nav-active-font-family: $side-nav-font-family;
@@ -1130,7 +1130,7 @@ $side-nav-font-size: rem-calc(19);
 // $include-html-top-bar-classes: $include-html-classes;
 
 // Background color for the top bar
-$topbar-bg-color: white;
+$topbar-bg-color: #004b8d;
 // $topbar-bg: $topbar-bg-color;
 
 // Height and margin
@@ -1145,13 +1145,13 @@ $topbar-bg-color: white;
 $topbar-dropdown-bg: white;
 $topbar-dropdown-link-color: black;
 $topbar-dropdown-link-bg: white;
-$topbar-dropdown-link-weight: bold;
+// $topbar-dropdown-link-weight: normal;
 // $topbar-dropdown-toggle-size: 5px;
 // $topbar-dropdown-toggle-color: #fff;
 // $topbar-dropdown-toggle-alpha: 0.4;
 
 // Set the link colors and styles for top-level nav
-$topbar-link-color: #333;
+// $topbar-link-color: #333;
 // $topbar-link-color-hover: #fff;
 // $topbar-link-color-active: #fff;
 // $topbar-link-color-active-hover: #fff;

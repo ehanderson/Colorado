@@ -1,0 +1,40 @@
+<div class="row nav-pic fade-in">
+  <style>
+  .nav-pic{
+    background: #fff;
+    background-image: url('<%= @background_image %>');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+  </style>
+  <div id="home-logo" class="small-1 medium-2 columns hide-for-small-only"><%= link_to logo, refinery.root_path %>
+  </div>
+
+  <div class="small-11 medium-10 columns main" id='home-nav' >
+    <div class="row search-row">
+
+        <div id="big-search" class='search_bar large-12 medium-12 columns hide-for-small-only'>
+          <%= render "refinery/search_bar" %>
+        </div>
+
+    </div>
+    <nav class="top-bar" data-topbar>
+      <ul class="title-area">
+        <li class="name">
+          <div id="home-logo" class="show-for-small-only"><%= link_to logo, refinery.root_path %>
+          </div>
+        </li>
+        <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+      </ul>
+      <section class="top-bar-section">
+        <%= zurb_menu(refinery_menu_pages, list_tag_css: 'right').to_html %>
+        <li id="small-search" class='show-for-small-only'>
+          <div class='search_bar'>
+            <%= render "refinery/search_bar" %>
+          </div>
+        </li>
+      </section>
+    </nav>
+  </div>
+</div>
