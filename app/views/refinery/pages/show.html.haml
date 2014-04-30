@@ -18,12 +18,11 @@
   - when 'About'
     %div#content-pages
       %div.row
-        %div.small-12.columns
+        %div.small-12.columns.hide-for-small-only
           = render '/refinery/side_nav'
       %div.row
         %div.small-12.columns
         = raw @page.content_for(:mission)
-
         = raw @page.content_for(:about)
   - when 'Social Media'
     = render 'refinery/social_media'

@@ -1,4 +1,8 @@
 @import 'foundation_mixins_only';
+$light-blue: #0074d9;
+$dark-blue: #004b8d;
+$grey: #CCCCCC;
+$white: #fff;
 /*==================== Side Nav ==========================*/
 .side-nav{
 
@@ -12,18 +16,18 @@
   li {
     vertical-align: middle;
     text-transform: uppercase;
-    background-color: #004b8d;
+    background-color: $dark-blue;
     text-align:center;
     display: table-cell;
-    border: 1px solid #fff;
+    border: 1px solid $white;
     height: 3em;
   }
 }
   .side-nav nav ul li.selected{
-    background-color: #0074d9;
-    border-top: 4px solid #004b8d;
+    background-color: $light-blue;
+    border-top: 4px solid $dark-blue;
     :hover{
-      color: #004b8d;
+      color: $dark-blue;
     }
   }
 
@@ -51,26 +55,26 @@
 }
 
 #home-logo {
+    z-index: 1;
   img{
     max-width: 9em;
-    background-color: #CCCCCC;
+    background-color: $grey;
     @media only screen and (min-width: 40.064em) and (max-width: 48em) {
-      background-color: #fff;
+      background-color: $white;
       width: 4em;
       margin-top: -0.8em;
     }
     @media only screen and (max-width: 40.063em){
       width:3.5em;
       margin-top: -0.5em;
-      background-color: #fff;
+      background-color: $white;
     }
   }
 }
 
 .main{
-  z-index: 1;
   margin-top:5px;
-  background-color: #004b8d;
+  background-color: $dark-blue;
   @media only screen and (max-width: 40.063em){
     margin-top:0px;
   }
@@ -103,7 +107,7 @@
   .top-bar-section{
     padding-right: 10px;
     padding-left: 10px;
-    background-color: #fff;
+    background-color: $white;
   }
 
 }
