@@ -1,17 +1,7 @@
 
 @import 'foundation_mixins_only';
 
-body {
-  margin: 0px;
-  padding: 0px;
-  background-image: url(textured_stripes.png);
-  background-repeat:repeat;
 
-  #page {
-    margin-top: 1rem;
-    background-color: white;
-  }
-}
 
 .pdf {
   @include button();

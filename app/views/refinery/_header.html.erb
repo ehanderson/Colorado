@@ -1,22 +1,14 @@
-<div class="row nav-pic fade-in">
-  <style>
-  .nav-pic{
-    background: #fff;
-    background-image: url('<%= @background_image %>');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-  }
-  </style>
-  <div id="home-logo" class="medium-2 columns hide-for-small-only"><%= link_to logo, refinery.root_path %>
+<div class="row">
+  <div  id="home-logo" class="medium-2 columns hide-for-small-only"><%= link_to logo, refinery.root_path %>
   </div>
-
-  <div class="small-12 medium-10 columns main" >
-    <div class="row search-row">
-        <div id="big-search" class='search_bar large-12 medium-12 columns hide-for-small-only'>
-          <%= render "refinery/search_bar" %>
-        </div>
+</div>
+<div class="main" >
+  <div class="row search-row">
+    <div id="big-search" class='search_bar medium-12 columns hide-for-small-only'>
+      <%= render "refinery/search_bar" %>
     </div>
+  </div>
+  <div class="row">
     <nav class="top-bar" data-topbar>
       <ul class="title-area">
         <li class="name">
@@ -36,4 +28,18 @@
     </nav>
   </div>
 </div>
+
+
+<div class="row nav-pic fade-in">
+  <style>
+  .nav-pic{
+    background: #fff;
+    background-image: url('<%= @background_image %>');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+  </style>
+</div>
+
 
