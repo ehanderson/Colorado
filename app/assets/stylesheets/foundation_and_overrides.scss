@@ -11,7 +11,10 @@
 
 // Allows the use of rem-calc() or lower-bound() in your settings
 @import "foundation/functions";
-
+$light-blue: #0074d9;
+$dark-blue: #004b8d;
+$grey: #CCCCCC;
+$white: #fff;
 // $experimental: true;
 
 // The default font-size is set to 100% of the browser style sheet (usually 16px)
@@ -55,7 +58,7 @@
 // $default-float: left;
 
 // We use these as default colors throughout
-$primary-color: #0074d9;
+$primary-color: $dark-blue;
 // $secondary-color: #e7e7e7;
 // $alert-color: #f04124;
 // $success-color: #43AC6A;
@@ -909,7 +912,7 @@ $medium-range: (48.063em, 64em);
 // We use these to control link styles.
 $side-nav-link-color: white;
 // $side-nav-link-color-active: scale-color($side-nav-link-color, $lightness: 30%);
-$side-nav-link-color-hover: $primary-color;
+$side-nav-link-color-hover: $light-blue;
 $side-nav-font-size: rem-calc(14);
 // $side-nav-font-weight: normal;
 // $side-nav-font-family: $body-font-family;
@@ -1130,7 +1133,7 @@ $side-nav-font-size: rem-calc(14);
 // $include-html-top-bar-classes: $include-html-classes;
 
 // Background color for the top bar
-$topbar-bg-color: #004b8d;
+$topbar-bg-color: $light-blue;
 // $topbar-bg: $topbar-bg-color;
 
 // Height and margin
@@ -1142,9 +1145,9 @@ $topbar-bg-color: #004b8d;
 // $topbar-title-font-size: rem-calc(17);
 
 // Style the top bar dropdown elements
-$topbar-dropdown-bg: #004b8d;
+$topbar-dropdown-bg: $dark-blue;
 // $topbar-dropdown-link-color: #fff;
-$topbar-dropdown-link-bg: #004b8d;
+$topbar-dropdown-link-bg: $light-blue;
 // $topbar-dropdown-link-weight: normal;
 // $topbar-dropdown-toggle-size: 5px;
 // $topbar-dropdown-toggle-color: #fff;
@@ -1156,10 +1159,10 @@ $topbar-dropdown-link-bg: #004b8d;
 // $topbar-link-color-active: #fff;
 // $topbar-link-color-active-hover: #fff;
 // $topbar-link-weight: normal;
-$topbar-link-font-size: rem-calc(17       );
+$topbar-link-font-size: rem-calc(17);
 // $topbar-link-hover-lightness: -10%; // Darken by 10%
-$topbar-link-bg-hover: #0074d9;
-// $topbar-link-bg-active: $primary-color;
+$topbar-link-bg-hover: $dark-blue;
+$topbar-link-bg-active: scale-color($primary-color, $lightness: 10%);
 // $topbar-link-bg-active-hover: scale-color($primary-color, $lightness: -14%);
 // $topbar-link-font-family: $body-font-family;
 $topbar-link-text-transform: uppercase;
