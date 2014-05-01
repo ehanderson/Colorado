@@ -70,6 +70,7 @@ gem 'refinerycms'
 gem 'refinerycms-acts-as-indexed'
 gem 'refinerycms-page-images'
 gem 'refinerycms-search'
+
 # gem 'refinerycms-routes'
 #  gem 'refinerycms-blog', '~> 2.1.0'
 #  gem 'refinerycms-inquiries', '~> 2.1.0'
@@ -80,3 +81,6 @@ ruby "1.9.3"
 gem 'refinerycms-web_users', :path => 'vendor/extensions'
 
 gem 'refinerycms-social_media_posts', :path => 'vendor/extensions'
+
+
+gem 'refinerycms-leg_finders', :path => 'vendor/extensions'

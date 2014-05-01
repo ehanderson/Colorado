@@ -1,0 +1,76 @@
+sk:
+  refinery:
+    plugins:
+      leg_finders:
+        title: Leg Finders
+        description: Poskytuje kontaktný formulár a zaznamenáva leg finders
+    leg_finders:
+      leg_finders:
+        new:
+          send: Odoslať správu
+          privacy_policy: Chránime vaše súkromie
+      admin:
+        leg_finders:
+          delete: Trvalo odstrániť leg finder
+          leg_finder:
+            read_leg_finder: Prečítať leg finder
+            said: povedal
+            mark_as_spam: Označiť ako spam
+            mark_as_ham: Označiť ako prečítané
+          submenu:
+            inbox: Inbox
+            spam: Spam
+            update_notified: Upraviť zoznam notifikovaných
+            edit_confirmation_email: Upraviť potvrdzovací e-mail
+          index:
+            no_leg_finders: Zatiaľ ste neobdržali žiadne leg finders.
+          spam:
+            no_spam: Hurá! Nemáte žiaden spam.
+          show:
+            details: Podrobnosti
+            age: Vek
+            actions: Akcie
+            back_to_all_leg_finders: Späť na všetky leg finders
+            spam: Spam
+            spam_yes: 'áno'
+            leg_finder: Leg Finder
+            to: Komu
+            from: Od
+            click_to_email: Kliknite pre odoslanie tejto adresy e-mailom
+            phone: Telefón
+            date: Dátum
+            message: Správa
+        settings:
+          notification_recipients_form:
+            settings_value_name: Poslať upozornenie pre
+            explanation: Zakaždým, keď Vás niekto kontaktuje cez vaše webové stránky, Refinery odošle e-mail s upozornením na nový leg finder.
+            hint: Keď je odoslaný nový leg finder, Refinery odošle upozornenie na Váš e-mail.
+            example: "Zadajte e-mailovú adresu(y) ako: jack@work.com, jill@office.com"
+          confirmation_email_form:
+            to: Komu
+            from: Od
+            subject: Predmet
+            click_to_edit_subject: Kliknite tu ak chcete upraviť predmet
+            explanation: Zakaždým, keď Vás niekto kontaktuje cez vaše webové stránky, Refinery odošle e-mail s potvrdením o prijatí odosielateľovi leg finder.
+            below_edit_email_sent: Nižšie môžete upraviť e-mail, ktorý je odosielaný.
+            the_customer_making_leg_finder: Klient robiť leg finder
+            message: Správa
+            note: "Poznámka: umiestniťe text %name%, pre určenie pozície mena klienta v e-maile"
+      mailer:
+        notification:
+          greeting: Ahoj
+          you_recieved_new_leg_finder: Práve ste obdržali nový leg finder na vašej webové stránke.
+          leg_finder_starts: --- leg finder začiatok ---
+          leg_finder_ends: --- leg finder koniec ---
+          from: Od
+          email: E-mail
+          phone: Telefón
+          message: Správa
+          closing_line: S pozdravom
+          ps_html: P.S. Všetky vaše leg finders sú uložené v "Leg Finders" sekcii v Refinery, ak by ste ich chceli zobraziť neskôr.
+  activerecord:
+    models:
+      leg_finder: Leg Finder
+    attributes:
+      leg_finder:
+        zip: Zip

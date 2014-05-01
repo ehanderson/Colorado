@@ -1,0 +1,76 @@
+en:
+  refinery:
+    plugins:
+      leg_finders:
+        title: Leg Finders
+        description: Provides a contact form and stores leg finders
+    leg_finders:
+      leg_finders:
+        new:
+          send: Send message
+          privacy_policy: We value your privacy
+      admin:
+        leg_finders:
+          delete: Remove this leg finder forever
+          leg_finder:
+            read_leg_finder: Read the leg finder
+            said: said
+            mark_as_spam: Mark as spam
+            mark_as_ham: Move to inbox
+          submenu:
+            inbox: Inbox
+            spam: Spam
+            update_notified: Update who gets notified
+            edit_confirmation_email: Edit confirmation email
+          index:
+            no_leg_finders: You have not received any leg finders yet.
+          spam:
+            no_spam: Hooray! You don't have any spam.
+          show:
+            details: Details
+            age: Age
+            actions: Actions
+            back_to_all_leg_finders: Back to all leg finders
+            spam: Spam
+            spam_yes: 'yes'
+            leg_finder: Leg Finder
+            to: To
+            from: From
+            click_to_email: Click to email this address
+            phone: Phone
+            date: Date
+            message: Message
+        settings:
+          notification_recipients_form:
+            settings_value_name: Send notifications to
+            explanation: Every time someone contacts you on your website, Refinery sends out an email to say there is a new leg finder.
+            hint: When a new leg finder is submitted, Refinery will send an email notification to you.
+            example: "Enter your email address(es) like: jack@work.com, jill@office.com"
+          confirmation_email_form:
+            to: To
+            from: From
+            subject: Subject
+            click_to_edit_subject: Click here to edit the subject
+            explanation: Every time someone contacts you on your website, Refinery sends out an email to confirm the leg finder with the person who made it.
+            below_edit_email_sent: Below you can edit the email that is sent out.
+            the_customer_making_leg_finder: The customer making the leg finder
+            message: Message
+            note: "Note: place the text %name% where you'd like the customer's name to appear in the email"
+      mailer:
+        notification:
+          greeting: Hi there
+          you_recieved_new_leg_finder: You just received a new leg finder on your website.
+          leg_finder_starts: --- leg finder starts ---
+          leg_finder_ends: --- leg finder ends ---
+          from: From
+          email: Email
+          phone: Phone
+          message: Message
+          closing_line: Kind Regards
+          ps_html: P.S. All your leg finders are stored in the "Leg Finders" section of Refinery should you ever want to view it later there.
+  activerecord:
+    models:
+      leg_finder: Leg Finder
+    attributes:
+      leg_finder:
+        zip: Zip

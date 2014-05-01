@@ -17,3 +17,4 @@ Refinery::Search::Engine.load_seed
 
 # Added by Refinery CMS SocialMediaPosts extension
 Refinery::SocialMediaPosts::Engine.load_seed
+Refinery::LegFinders::Engine.load_seed

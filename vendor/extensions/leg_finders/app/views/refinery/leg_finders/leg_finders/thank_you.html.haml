@@ -1,0 +1,24 @@
+%div.row
+  %div.small-12.columns
+    - $members_of_congress.each do |member|
+
+      =image_tag "http://theunitedstates.io/images/congress/225x275/#{member.bioguide_id}.jpg"
+      %h4
+        %span= member.title
+        %span= member.firstname
+        %span= member.lastname
+        %span
+          (#{member.party})
+      %h5
+        Phone:
+        = member.phone
+      %h5
+        Website:
+        = member.website
+      %h5
+        Twitter Handle :
+        %span
+          @#{member.twitter_id}
+      %br
+
+= render '/refinery/content_page'

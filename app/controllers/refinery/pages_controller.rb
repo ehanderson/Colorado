@@ -103,7 +103,6 @@ module Refinery
     alias_method :page, :find_page
 
     def render_with_templates?(render_options = {})
-
       render render_options if render_options.any?
     end
 

@@ -1,0 +1,16 @@
+<li class='clearfix record <%= cycle("on", "on-hover") %>'>
+  <span class='title'>
+    <%= link_to leg_finder.name, refinery.leg_finders_admin_leg_finder_path(leg_finder) %> <%= t('.said') %>
+    <span class="preview"><%= truncate(strip_tags(sanitize(leg_finder.message)), :length => 60) -%></span>
+  </span>
+  <span class='actions'>
+    <%= link_to refinery_icon_tag('delete.png'), refinery.leg_finders_admin_leg_finder_path(leg_finder),
+                :class => "cancel confirm-delete",
+                :title => t('admin.leg_finders.delete'),
+                :'data-confirm' => t('shared.admin.delete.message', :title => leg_finder.name),
+                :'data-method' => "delete" -%>
+
+    <%= link_to refinery_icon_tag('zoom.png'), refinery.leg_finders_admin_leg_finder_path(leg_finder),
+                :title => t('.read_leg_finder') -%>
+  </span>
+</li>
