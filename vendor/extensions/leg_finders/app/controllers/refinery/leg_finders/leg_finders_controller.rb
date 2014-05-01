@@ -19,27 +19,6 @@ module Refinery
       end
 
       def create
-  sunlight = 'http://assets.sunlightfoundation.com/moc/200x250.zip'
-
-
-
-## Step A. Download a zip file of images from Sunlight:
-
-zip_basename = File.basename(sunlight, '.zip')
-
-unless File.directory?(zip_basename)
-  puts "Downloading #{sunlight}...this may take awhile..."
-  File.open("#{zip_basename}.zip", 'w'){|f| f.write( RestClient.get(URLS['sunlight']) ) }
-
-## Use the backtick to call your systems' unzip program...hopefully you have
-## 'unzip' somewhere. Otherwise, unzip the folder manually and just skip this step:
-
-  `unzip #{zip_basename}.zip`
-
-## a directory named [zip_basename] should appear in your working directory
-## this contains all the image files
-end
-
         $members_of_congress = Sunlight::Legislator.all_in_zipcode(params[:leg_finder][:zip])
         $district = Sunlight::District.all_from_zipcode(params[:leg_finder][:zip])
         p $district
