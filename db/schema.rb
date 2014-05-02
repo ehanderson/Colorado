@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140430185022) do
+ActiveRecord::Schema.define(:version => 20140502193351) do
 
   create_table "refinery_image_page_translations", :force => true do |t|
     t.integer  "refinery_image_page_id"
@@ -54,6 +54,14 @@ ActiveRecord::Schema.define(:version => 20140430185022) do
   end
 
   add_index "refinery_leg_finders", ["id"], :name => "index_refinery_leg_finders_on_id"
+
+  create_table "refinery_legislator_lookups", :force => true do |t|
+    t.string   "zipcode"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  add_index "refinery_legislator_lookups", ["id"], :name => "index_refinery_legislator_lookups_on_id"
 
   create_table "refinery_page_part_translations", :force => true do |t|
     t.integer  "refinery_page_part_id"

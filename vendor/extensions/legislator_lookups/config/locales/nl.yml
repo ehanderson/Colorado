@@ -1,0 +1,76 @@
+nl:
+  refinery:
+    plugins:
+      legislator_lookups:
+        title: Legislator Lookups
+        description: Contactformulier en beheer van legislator lookups
+    legislator_lookups:
+      legislator_lookups:
+        new:
+          send: Bericht verzenden
+          privacy_policy: Wij respecteren uw privacy
+      admin:
+        legislator_lookups:
+          delete: Deze legislator lookup definitief verwijderen
+          legislator_lookup:
+            read_legislator_lookup: Lees de legislator lookup
+            said: zei
+            mark_as_spam: Als spam markeren
+            mark_as_ham: Naar de inbox verplaatsen
+          submenu:
+            inbox: Inbox
+            spam: Spam
+            update_notified: Wijzigen wie op de hoogte wordt gesteld
+            edit_confirmation_email: Bevestigings-e-mail bewerken
+          index:
+            no_legislator_lookups: U heeft nog geen legislator lookups ontvangen.
+          spam:
+            no_spam: Hoera! U heeft geen spam.
+          show:
+            details: Details
+            age: Leeftijd
+            actions: Acties
+            back_to_all_legislator_lookups: Terug naar alle legislator lookups
+            spam: Spam
+            spam_yes: 'ja'
+            legislator_lookup: Legislator Lookup
+            to: Aan
+            from: Van
+            click_to_email: Klik hier om een e-mail te sturen naar dit adres
+            phone: Telefoonnummer
+            date: Datum
+            message: Bericht
+        settings:
+          notification_recipients_form:
+            settings_value_name: Stuur notificaties naar
+            explanation: "Telkens wanneer iemand het contactformulier invult op uw website, stuurt Refinery een bevestiging naar de verzender."
+            hint: "Wilt u naar meerdere adressen notificaties sturen? Vul dan meerdere e-mailadressen in gescheiden door komma's"
+            example: "Bijvoorbeeld: jan@werk.nl, els@kantoor.nl"
+          confirmation_email_form:
+            to: Aan
+            from: Van
+            subject: Onderwerp
+            click_to_edit_subject: Klik hier om het onderwerp bewerken
+            explanation: "Telkens wanneer iemand het contactformulier invult op uw website, stuurt Refinery een bevestiging naar de verzender."
+            below_edit_email_sent: Hieronder kunt u de email die verzonden wordt bewerken.
+            the_customer_making_legislator_lookup: De persoon die de legislator lookup heeft ingezonden
+            message: Bericht
+            note: "N.B.: plaats de tekst %name% overal in de email waar u de naam van de klant persoon wilt invoegen"
+      mailer:
+        notification:
+          greeting: Hallo
+          you_recieved_new_legislator_lookup: U hebt een nieuwe legislator lookup ontvangen via de website.
+          legislator_lookup_starts: --- begin van de legislator lookup ---
+          legislator_lookup_ends: --- einde van de legislator lookup ---
+          from: Van
+          email: E-mail
+          phone: Telefoon
+          message: Bericht
+          closing_line: Met vriendelijke groet,
+          ps_html: P.S. Alle legislator lookups worden opgeslagen in de sectie Legislator Lookups van Refinery.
+  activerecord:
+    models:
+      legislator_lookup: Legislator Lookup
+    attributes:
+      legislator_lookup:
+        zipcode: Zipcode

@@ -1,12 +1,10 @@
 PATH
   remote: vendor/extensions
   specs:
-    refinerycms-leg_finders (1.0)
+    refinerycms-legislator_lookups (1.0)
       refinerycms-core (~> 2.1.2)
       refinerycms-settings (~> 2.1.1)
     refinerycms-social_media_posts (1.0)
-      refinerycms-core (~> 2.1.2)
-    refinerycms-web_users (1.0)
       refinerycms-core (~> 2.1.2)
 
 GEM
@@ -88,6 +86,7 @@ GEM
     execjs (2.0.2)
     faraday (0.9.0)
       multipart-post (>= 1.2, < 3)
+    fastercsv (1.5.5)
     ffi (1.9.3)
     fog (1.22.0)
       fog-brightbox
@@ -115,6 +114,16 @@ GEM
     globalize (3.1.0)
       activemodel (>= 3.1.0, < 4.0.0)
       activerecord (>= 3.1.0, < 4.0.0)
+    govkit (0.7.2)
+      activesupport
+      fastercsv (>= 1.5.3)
+      govkit
+      httparty
+      httparty (>= 0.7.4)
+      i18n
+      json (>= 1.4.3)
+      nokogiri
+      nokogiri (>= 1.4.4)
     guard (2.6.0)
       formatador (>= 0.2.4)
       listen (~> 2.7)
@@ -144,7 +153,7 @@ GEM
       json (~> 1.8)
       multi_xml (>= 0.5.2)
     i18n (0.6.9)
-    jbuilder (2.0.6)
+    jbuilder (2.0.7)
       activesupport (>= 3.0.0, < 5)
       multi_json (~> 1.2)
     journey (1.0.4)
@@ -158,7 +167,7 @@ GEM
       addressable
       faraday
       multi_json
-    listen (2.7.3)
+    listen (2.7.4)
       celluloid (>= 0.15.2)
       celluloid-io (>= 0.15.0)
       rb-fsevent (>= 0.9.3)
@@ -367,6 +376,7 @@ DEPENDENCIES
   coffee-rails (~> 3.2.1)
   fog
   foundation-rails
+  govkit
   guard-livereload
   guard-rspec
   haml
@@ -379,11 +389,10 @@ DEPENDENCIES
   rails (= 3.2.14)
   refinerycms
   refinerycms-acts-as-indexed
-  refinerycms-leg_finders!
+  refinerycms-legislator_lookups!
   refinerycms-page-images
   refinerycms-search
   refinerycms-social_media_posts!
-  refinerycms-web_users!
   rest-client
   salsa_labs
   sass (~> 3.2.0)

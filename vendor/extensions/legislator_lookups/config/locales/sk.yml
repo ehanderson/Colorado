@@ -1,0 +1,76 @@
+sk:
+  refinery:
+    plugins:
+      legislator_lookups:
+        title: Legislator Lookups
+        description: Poskytuje kontaktný formulár a zaznamenáva legislator lookups
+    legislator_lookups:
+      legislator_lookups:
+        new:
+          send: Odoslať správu
+          privacy_policy: Chránime vaše súkromie
+      admin:
+        legislator_lookups:
+          delete: Trvalo odstrániť legislator lookup
+          legislator_lookup:
+            read_legislator_lookup: Prečítať legislator lookup
+            said: povedal
+            mark_as_spam: Označiť ako spam
+            mark_as_ham: Označiť ako prečítané
+          submenu:
+            inbox: Inbox
+            spam: Spam
+            update_notified: Upraviť zoznam notifikovaných
+            edit_confirmation_email: Upraviť potvrdzovací e-mail
+          index:
+            no_legislator_lookups: Zatiaľ ste neobdržali žiadne legislator lookups.
+          spam:
+            no_spam: Hurá! Nemáte žiaden spam.
+          show:
+            details: Podrobnosti
+            age: Vek
+            actions: Akcie
+            back_to_all_legislator_lookups: Späť na všetky legislator lookups
+            spam: Spam
+            spam_yes: 'áno'
+            legislator_lookup: Legislator Lookup
+            to: Komu
+            from: Od
+            click_to_email: Kliknite pre odoslanie tejto adresy e-mailom
+            phone: Telefón
+            date: Dátum
+            message: Správa
+        settings:
+          notification_recipients_form:
+            settings_value_name: Poslať upozornenie pre
+            explanation: Zakaždým, keď Vás niekto kontaktuje cez vaše webové stránky, Refinery odošle e-mail s upozornením na nový legislator lookup.
+            hint: Keď je odoslaný nový legislator lookup, Refinery odošle upozornenie na Váš e-mail.
+            example: "Zadajte e-mailovú adresu(y) ako: jack@work.com, jill@office.com"
+          confirmation_email_form:
+            to: Komu
+            from: Od
+            subject: Predmet
+            click_to_edit_subject: Kliknite tu ak chcete upraviť predmet
+            explanation: Zakaždým, keď Vás niekto kontaktuje cez vaše webové stránky, Refinery odošle e-mail s potvrdením o prijatí odosielateľovi legislator lookup.
+            below_edit_email_sent: Nižšie môžete upraviť e-mail, ktorý je odosielaný.
+            the_customer_making_legislator_lookup: Klient robiť legislator lookup
+            message: Správa
+            note: "Poznámka: umiestniťe text %name%, pre určenie pozície mena klienta v e-maile"
+      mailer:
+        notification:
+          greeting: Ahoj
+          you_recieved_new_legislator_lookup: Práve ste obdržali nový legislator lookup na vašej webové stránke.
+          legislator_lookup_starts: --- legislator lookup začiatok ---
+          legislator_lookup_ends: --- legislator lookup koniec ---
+          from: Od
+          email: E-mail
+          phone: Telefón
+          message: Správa
+          closing_line: S pozdravom
+          ps_html: P.S. Všetky vaše legislator lookups sú uložené v "Legislator Lookups" sekcii v Refinery, ak by ste ich chceli zobraziť neskôr.
+  activerecord:
+    models:
+      legislator_lookup: Legislator Lookup
+    attributes:
+      legislator_lookup:
+        zipcode: Zipcode

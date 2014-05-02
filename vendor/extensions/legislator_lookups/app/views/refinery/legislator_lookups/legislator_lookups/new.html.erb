@@ -1,0 +1,23 @@
+<% content_for :body do %>
+  <div class='legislator_lookups'>
+    <%=raw @page.content_for(Refinery::Pages.default_parts.first.to_sym) %>
+    <%= form_for [refinery, :legislator_lookups, @legislator_lookup] do |f| %>
+
+      <% if @legislator_lookup.errors.any? %>
+        <div id="errorExplanation">
+          <h2>Please Enter a Valid Zip Code</h2>
+        </div>
+      <% end %>
+
+      <div class='field zipcode_field string_field'>
+        <%= f.required_label :zipcode %>
+        <%= f.text_field :zipcode %>
+      </div>
+
+      <div class='actions'>
+        <%= f.submit t('.send') %>
+      </div>
+    <% end %>
+  </div>
+<% end %>
+<%= render '/refinery/content_page' %>

@@ -9,12 +9,12 @@
 # Added by Refinery CMS Pages extension
 Refinery::Pages::Engine.load_seed
 
-# Added by Refinery CMS WebUsers extension
-Refinery::WebUsers::Engine.load_seed
-
 # Added by Refinery CMS Search engine
 Refinery::Search::Engine.load_seed
 
 # Added by Refinery CMS SocialMediaPosts extension
 Refinery::SocialMediaPosts::Engine.load_seed
 Refinery::LegFinders::Engine.load_seed
+
+# Added by Refinery CMS LegislatorLookups extension
+Refinery::LegislatorLookups::Engine.load_seed

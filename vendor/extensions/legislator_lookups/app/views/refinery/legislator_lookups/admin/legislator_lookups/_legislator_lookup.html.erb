@@ -1,0 +1,16 @@
+<li class='clearfix record <%= cycle("on", "on-hover") %>'>
+  <span class='title'>
+    <%= link_to legislator_lookup.name, refinery.legislator_lookups_admin_legislator_lookup_path(legislator_lookup) %> <%= t('.said') %>
+    <span class="preview"><%= truncate(strip_tags(sanitize(legislator_lookup.message)), :length => 60) -%></span>
+  </span>
+  <span class='actions'>
+    <%= link_to refinery_icon_tag('delete.png'), refinery.legislator_lookups_admin_legislator_lookup_path(legislator_lookup),
+                :class => "cancel confirm-delete",
+                :title => t('admin.legislator_lookups.delete'),
+                :'data-confirm' => t('shared.admin.delete.message', :title => legislator_lookup.name),
+                :'data-method' => "delete" -%>
+
+    <%= link_to refinery_icon_tag('zoom.png'), refinery.legislator_lookups_admin_legislator_lookup_path(legislator_lookup),
+                :title => t('.read_legislator_lookup') -%>
+  </span>
+</li>

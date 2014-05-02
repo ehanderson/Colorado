@@ -1,0 +1,76 @@
+en:
+  refinery:
+    plugins:
+      legislator_lookups:
+        title: Legislator Lookups
+        description: Provides a contact form and stores legislator lookups
+    legislator_lookups:
+      legislator_lookups:
+        new:
+          send: Send message
+          privacy_policy: We value your privacy
+      admin:
+        legislator_lookups:
+          delete: Remove this legislator lookup forever
+          legislator_lookup:
+            read_legislator_lookup: Read the legislator lookup
+            said: said
+            mark_as_spam: Mark as spam
+            mark_as_ham: Move to inbox
+          submenu:
+            inbox: Inbox
+            spam: Spam
+            update_notified: Update who gets notified
+            edit_confirmation_email: Edit confirmation email
+          index:
+            no_legislator_lookups: You have not received any legislator lookups yet.
+          spam:
+            no_spam: Hooray! You don't have any spam.
+          show:
+            details: Details
+            age: Age
+            actions: Actions
+            back_to_all_legislator_lookups: Back to all legislator lookups
+            spam: Spam
+            spam_yes: 'yes'
+            legislator_lookup: Legislator Lookup
+            to: To
+            from: From
+            click_to_email: Click to email this address
+            phone: Phone
+            date: Date
+            message: Message
+        settings:
+          notification_recipients_form:
+            settings_value_name: Send notifications to
+            explanation: Every time someone contacts you on your website, Refinery sends out an email to say there is a new legislator lookup.
+            hint: When a new legislator lookup is submitted, Refinery will send an email notification to you.
+            example: "Enter your email address(es) like: jack@work.com, jill@office.com"
+          confirmation_email_form:
+            to: To
+            from: From
+            subject: Subject
+            click_to_edit_subject: Click here to edit the subject
+            explanation: Every time someone contacts you on your website, Refinery sends out an email to confirm the legislator lookup with the person who made it.
+            below_edit_email_sent: Below you can edit the email that is sent out.
+            the_customer_making_legislator_lookup: The customer making the legislator lookup
+            message: Message
+            note: "Note: place the text %name% where you'd like the customer's name to appear in the email"
+      mailer:
+        notification:
+          greeting: Hi there
+          you_recieved_new_legislator_lookup: You just received a new legislator lookup on your website.
+          legislator_lookup_starts: --- legislator lookup starts ---
+          legislator_lookup_ends: --- legislator lookup ends ---
+          from: From
+          email: Email
+          phone: Phone
+          message: Message
+          closing_line: Kind Regards
+          ps_html: P.S. All your legislator lookups are stored in the "Legislator Lookups" section of Refinery should you ever want to view it later there.
+  activerecord:
+    models:
+      legislator_lookup: Legislator Lookup
+    attributes:
+      legislator_lookup:
+        zipcode: Zipcode

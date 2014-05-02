@@ -44,6 +44,7 @@ gem 'rest-client'
 gem 'salsa_labs'
 
 gem 'sunlight'
+gem 'govkit'
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
@@ -78,9 +79,9 @@ gem 'refinerycms-search'
 
 ruby "1.9.3"
 
-gem 'refinerycms-web_users', :path => 'vendor/extensions'
 
 gem 'refinerycms-social_media_posts', :path => 'vendor/extensions'
 
+gem 'refinerycms-legislator_lookups', :path => 'vendor/extensions'
 
-gem 'refinerycms-leg_finders', :path => 'vendor/extensions'
+

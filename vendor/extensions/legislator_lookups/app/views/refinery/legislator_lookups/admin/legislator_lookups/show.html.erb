@@ -1,0 +1,36 @@
+<div id='records'>
+  <h2><%= t('.legislator_lookup') %></h2>
+  <table id='legislator_lookup' class='inquiry'>
+      <tr>
+        <td>
+          <strong>
+            <%= t('.zipcode', :default => t('activerecord.attributes.legislator_lookup.zipcode')) %>
+          </strong>
+        </td>
+        <td>
+          <%= @legislator_lookup.zipcode %>
+        </td>
+      </tr>
+  </table>
+</div>
+<div id='actions'>
+  <h2><%= t('.details')%></h2>
+  <p>
+    <strong><%= t('.age') %>:</strong> <%= time_ago_in_words(@legislator_lookup.created_at) %>
+  </p>
+  <h2><%= t('.actions') %></h2>
+  <ul>
+    <li>
+      <%= link_to t('.back_to_all_legislator_lookups'), refinery.url_for(:action => 'index'),
+                   :class => "back_icon" %>
+    </li>
+    <li>
+      <%= link_to t('delete', :scope => 'refinery.legislator_lookups.admin.legislator_lookups'),
+                  refinery.legislator_lookups_admin_legislator_lookup_path(@legislator_lookup),
+                  :class => 'delete_icon no-tooltip confirm-delete',
+                  :title => t('delete', :scope => 'refinery.legislator_lookups.admin.legislator_lookups'),
+                  :'data-confirm' => t('message', :scope => 'refinery.admin.delete', :title => @legislator_lookup.name),
+                  :'data-method' => "delete" %>
+    </li>
+  </ul>
+</div>

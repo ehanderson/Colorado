@@ -1,0 +1,33 @@
+%div.row
+  %div.small-12.columns
+    - $members_of_congress.each do |member|
+      =image_tag "http://theunitedstates.io/images/congress/225x275/#{member.bioguide_id}.jpg"
+      %h4
+        %span= member.state
+        %span= member.title
+        %span= member.firstname
+        %span= member.lastname
+        %span
+          (#{member.party})
+      %h6
+        = member.congress_office
+      %h6
+        Phone:
+        = member.phone
+      %h6
+        Fax:
+        = member.fax
+      %h6
+        Website:
+        = link_to "#{member.website}", member.website
+      %h6
+        Twitter Handle :
+        %span
+          = link_to "@#{member.twitter_id}", "https://twitter.com/#{member.twitter_id}"
+      %h6
+        Facebook:
+        %span
+        = link_to "#{member.firstname}'s Facebook Page", "http://facebook.com/#{member.facebook_id}"
+      %br
+
+= render '/refinery/content_page'
