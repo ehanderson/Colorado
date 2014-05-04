@@ -42,6 +42,7 @@ gem 'whenever', :require => false
 gem 'rest-client'
 
 gem 'salsa_labs'
+gem 'rest-client'
 
 gem 'sunlight'
 gem 'govkit'

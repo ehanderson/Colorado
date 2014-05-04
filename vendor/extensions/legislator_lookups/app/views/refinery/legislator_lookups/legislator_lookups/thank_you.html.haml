@@ -29,5 +29,7 @@
         %span
         = link_to "#{member.firstname}'s Facebook Page", "http://facebook.com/#{member.facebook_id}"
       %br
+  - @people.each do |person|
+    = person['last_name']
 
 = render '/refinery/content_page'

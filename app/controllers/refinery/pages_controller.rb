@@ -39,6 +39,7 @@ module Refinery
       else
         error_404
       end
+      salsa
       parent
     end
 
@@ -47,6 +48,18 @@ module Refinery
     end
 
   protected
+    def salsa
+      # client = SalsaLabs::ApiClient.new({email: 'pollyk@strategies360.com', password: 'apple'})
+      # @trial_client = client.fetch('getObjects.sjs', {object: 'Supporter'})
+      # SalsaLabs::Supporter.all
+      # @support = $client.fetch('getObjects.sjs', {object: 'Supporter'})
+      # client = SalsaLabs::ApiClient.new({email: 'anderson.emilyhi@gmail.com', password: '&erson813'})
+      # @support = client.fetch('getObjects.sjs', {object: 'Supporter'})
+      # @trial_client = RestClient.get 'https://sandbox.salsalabs.com/api/authenticate.sjs?xml&email=anderson.emilyhi@gmail.com&password=&erson813'
+      # @trial_client =  RestClient.get 'https://hq-salsa4.salsalabs.com/api/describe2.sjs?object=supporter'
+      RestClient.get 'https://hq-salsa4.salsalabs.com/api/authenticate.sjs?xml&email=pollyk@strategies360.com&password=apple'
+      @trial_client =  RestClient.get 'https://hq-salsa4.salsalabs.com/api/getObject.sjs?xml&object=supporter&key=62988113'
+    end
 
     def parent
       @parent = Refinery::Page.find_by_id(@page.parent_id)
