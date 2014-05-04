@@ -15,14 +15,9 @@
 //= require foundation
 //= require_tree .
 
+
 $(function(){ $(document).foundation();
+
 //= require foundation
-
- // $("#leg-lookup").click(function(e){
- //  e.preventDefault();
- //  console.log('emily')
-
-
- // });
 
 });

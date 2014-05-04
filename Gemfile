@@ -30,6 +30,8 @@ group :production do
   gem 'fog'
 end
 
+gem 'pry', :group => :development
+
 gem 'taps'
 
 gem 'twitter', '~> 5.0'
@@ -76,6 +78,7 @@ gem 'refinerycms-search'
 #  gem 'refinerycms-blog', '~> 2.1.0'
 #  gem 'refinerycms-inquiries', '~> 2.1.0'
 
+gem 'rspec-rails'
 
 ruby "1.9.3"
 

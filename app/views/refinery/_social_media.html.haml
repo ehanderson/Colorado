@@ -1,11 +1,12 @@
 %p 
   = raw @page.content_for(:body)
 
-%div#social-media-stream.large-12.columns
-  %ul
-  - $twitter.user_timeline.each do |tweet|
-    %li.large-1.column
-      = image_tag('twitter.png', class: 'stream-logo')
-    %li.large-11.columns
-      = tweet.text
-    %hr
+- cache expires_in: 1.hour do
+  %div#social-media-stream.large-12.columns
+    %ul
+    - Refinery::SocialMediaPosts::SocialMediaPost.all.each do |post|
+      %li.large-1.column
+        = image_tag("#{post.image}.png", class: 'stream-logo')
+      %li.large-11.columns
+        = post.content
+      %hr
