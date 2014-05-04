@@ -95,3 +95,4 @@ vendor/extensions/**/spec/dummy
 # Ignore social media files
 config/facebook.yml
 config/twitter.yml
+config/database.yml

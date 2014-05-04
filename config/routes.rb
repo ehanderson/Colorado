@@ -7,6 +7,10 @@ Colorado::Application.routes.draw do
   # We ask that you don't use the :as option here, as Refinery relies on it being the default of "refinery"
   mount Refinery::Core::Engine, :at => '/'
 
+  Refinery::Core::Engine.routes.draw do
+    get 'legislature/find' => 'legislatures#find', as: 'find'
+  end
+  
   # resources: :users
 
   # The priority is based upon order of creation:

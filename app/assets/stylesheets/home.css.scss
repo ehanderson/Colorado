@@ -56,6 +56,13 @@
   .social-media-panels{
     display:inline-block;
   }
+  .active {
+    font-style: italic;
+    list-style: none;
+    overflow: hidden;
+    text-align: center;
+  }
+  .inactive {
+    display: none;
+  }
 }
-
-
