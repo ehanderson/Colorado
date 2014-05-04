@@ -10,6 +10,8 @@ module Refinery
     def home
       render_with_templates?
       background_image
+      @facebook = Refinery::SocialMediaPosts::SocialMediaPost.facebook.limit(5)
+      @twitter  = Refinery::SocialMediaPosts::SocialMediaPost.twitter.limit(5)
     end
 
     # This action can be accessed normally, or as nested pages.
