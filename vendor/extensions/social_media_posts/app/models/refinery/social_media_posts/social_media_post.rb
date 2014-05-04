@@ -3,7 +3,7 @@ module Refinery
     class SocialMediaPost < Refinery::Core::BaseModel
       self.table_name = 'refinery_social_media_posts'
 
-      attr_accessible :post_date, :platform, :content, :image, :tweet_id, :fb_id, :youtube_id, :likes, :position
+      attr_accessible :post_date, :platform, :content, :image, :tweet_id, :fb_id, :youtube_id, :likes, :position, :title
 
       validates :platform, :presence => true
 
@@ -25,7 +25,8 @@ module Refinery
                         post_date: tweet.created_at,
                         likes: tweet.favorite_count,
                         image: 'twitter',
-                        platform: 'twitter' )
+                        platform: 'twitter',
+                        title: 'tweet' )
               end
             end
           rescue
@@ -38,12 +39,14 @@ module Refinery
             statuses = FacebookService.get_statuses($FB_PAGE_TOKEN)
             statuses.each do |status|
               unless exists?(fb_id: status['id'])
-                create!(fb_id: status['id'],
+                create!(fb_id: status['id'], 
+                        platform: 'facebook', 
                         content: status['message'],
                         post_date: status['updated_time'],
                         likes: !status['likes'].nil? ? status['likes']['data'].length : nil,
                         image: 'facebook',
-                        platform: 'facebook' )
+                        platform: 'facebook',
+                        title: 'facebook status')
               end
             end
           rescue
