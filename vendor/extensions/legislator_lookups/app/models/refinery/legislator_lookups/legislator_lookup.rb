@@ -3,7 +3,9 @@ module Refinery
     class LegislatorLookup < Refinery::Core::BaseModel
       self.table_name = 'refinery_legislator_lookups'
 
-      attr_accessible :zipcode, :position
+      attr_accessible :zipcode, :position, :address, :latitude, :longitude
+      # geocoded_by :address
+      # after_validation :geocode
 
       # def message was created automatically because you didn't specify a text field
       # when you ran the refinery:form generator. <3 <3 Refinery CMS.

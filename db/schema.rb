@@ -1,4 +1,4 @@
-a# encoding: UTF-8
+# encoding: UTF-8
 # This file is auto-generated from the current state of the database. Instead
 # of editing this file, please use the migrations feature of Active Record to
 # incrementally modify your database, and then regenerate this schema definition.
@@ -11,8 +11,7 @@ a# encoding: UTF-8
 #
 # It's strongly recommended to check this file into your version control system.
 
-
-ActiveRecord::Schema.define(:version => 20140502193351) do
+ActiveRecord::Schema.define(:version => 20140505195941) do
 
   create_table "refinery_image_page_translations", :force => true do |t|
     t.integer  "refinery_image_page_id"
@@ -60,6 +59,9 @@ ActiveRecord::Schema.define(:version => 20140502193351) do
     t.string   "zipcode"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+    t.string   "address"
+    t.float    "latitude"
+    t.float    "longitude"
   end
 
   add_index "refinery_legislator_lookups", ["id"], :name => "index_refinery_legislator_lookups_on_id"

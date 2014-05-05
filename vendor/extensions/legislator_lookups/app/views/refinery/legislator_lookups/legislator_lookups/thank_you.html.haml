@@ -3,6 +3,7 @@
     - $members_of_congress.each do |member|
       =image_tag "http://theunitedstates.io/images/congress/225x275/#{member.bioguide_id}.jpg"
       %h4
+        =member.district
         %span= member.state
         %span= member.title
         %span= member.firstname
@@ -29,7 +30,21 @@
         %span
         = link_to "#{member.firstname}'s Facebook Page", "http://facebook.com/#{member.facebook_id}"
       %br
-  - @people.each do |person|
-    = person['last_name']
+/ ################### DO NOT DELETE THESE COMMENTED LINES ###########################
+/ %h2 upper
+/ %div.row
+/   %div.small-12.columns
+/     - @people.each do |person|
+/       = person['full_name']
+/       = person['level']
+/       %br
+/ %h2 lower
+/ %div.row
+/   %div.small-12.columns
+/     - @lower.each do |person|
+/       = person['full_name']
+/       = person['level']
+/       %br
+
 
 = render '/refinery/content_page'

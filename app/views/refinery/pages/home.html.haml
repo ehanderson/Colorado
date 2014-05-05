@@ -43,33 +43,29 @@
         %h3
           Follow Us On
           = link_to("Social Media", "/social-media")
-      
-      %div.small-12.medium-2.large-3.columns.social-media-panels.splits(data-equalizer-watch)
+
+      %div.small-12.medium-4.columns.social-media-panels.text-centered.splits(data-equalizer-watch)
         %div.text-centered
           = link_to(image_tag('facebook.png', class: 'social-media-img'), "https://www.facebook.com/", target: "_blank")
           = raw(@page.content_for(:facebook))
           %div.facebook-cycler
             %ul
               - @facebook.each_with_index do |post, index|
-                -  element_class = index == 0 ? 'active' : 'inactive' 
+                -  element_class = index == 0 ? 'active' : 'inactive'
                 %li{class: element_class}
                   = truncate("\"#{post.content}\"", length: 60, separator: " ")
-        
-      %div.small-12.medium-2.large-3.columns.social-media-panels.splits(data-equalizer-watch)
+
+      %div.small-12.medium-4.columns.social-media-panels.text-centered(data-equalizer-watch)
         %div.text-centered
           = link_to(image_tag('twitter.png', class: 'social-media-img'), "https://www.twitter.com/", target: "_blank")
           = raw(@page.content_for(:twitter))
           %div.twitter-cycler
             %ul
               - @twitter.each_with_index do |post, index|
-                -  element_class = index == 0 ? 'active' : 'inactive' 
+                -  element_class = index == 0 ? 'active' : 'inactive'
                 %li{class: element_class}
                   = truncate("\"#{post.content}\"", length: 60, separator: " ")
-        
       %div.small-12.medium-2.large-3.columns.social-media-panels.text-centered(data-equalizer-watch)
-        %div.text-centered
-          = link_to(image_tag('youtube.png', class: 'social-media-img'), "https://www.youtube.com/", target: "_blank")
-          = raw(@page.content_for(:youtube))
 
 = render '/refinery/draft_page_message' unless @page.nil? or @page.live?
 
