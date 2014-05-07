@@ -24,6 +24,11 @@
         %div.small-12.columns
         = raw @page.content_for(:mission)
         = raw @page.content_for(:about)
+  - when 'Pledge'
+    %div.row.sub-take-action
+    %div.sub-take-action-body
+      = raw @page.content_for(:body)
+    = render 'refinery/pledge_form'
   - when 'Social Media'
     = render 'refinery/social_media'
   - when 'Legislator Lookup'
