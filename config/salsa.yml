@@ -1,26 +1,5 @@
-# [API URL]/api/authenticate.sjs
-# ?email=[email]
-# &password=[password]
-# &organization_KEY=[number]
-# # &chapter_KEY=[number] This is not needed since we do not have Chapers Package installed
+# SALSA_LABS_API_EMAIL: "anderson.emilyhi@gmail.com"
+# SALSA_LABS_API_PASSWORD: "&erson813"
 
-
-
-# https://hq-salsa4.salsalabs.com/
-# anderson.emilyhi@gmail.com
-# &erson813
-
-# https://hq-salsa4.salsalabs.com/api/authenticate.sjs
-# ?xml
-# &email=pollyk@strategies360.com
-# &password=apple
-# &organization_KEY=51084
-
-
-# set up a post with this information
-
-SALSA_LABS_API_EMAIL: "anderson.emilyhi@gmail.com"
-SALSA_LABS_API_PASSWORD: "&erson813"
-
-# SALSA_LABS_API_EMAIL: "pollyk@strategies360.com"
-# SALSA_LABS_API_PASSWORD: "apple"
+SALSA_LABS_API_EMAIL: "pollyk@strategies360.com"
+SALSA_LABS_API_PASSWORD: "apple"

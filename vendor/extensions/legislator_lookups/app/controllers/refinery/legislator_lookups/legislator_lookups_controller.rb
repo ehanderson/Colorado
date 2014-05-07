@@ -9,11 +9,13 @@ module Refinery
       end
 
       def thank_you
+        # @auth = RestClient.get'https://hq-salsa4.salsalabs.com/api/authenticate.sjs?json&email=pollyk@strategies360.com&password=apple';
+        # email = RestClient.get('https://hq-salsa4.salsalabs.com/api/getObject.sjs?xml&object=supporter&key=62988113');
+        # @emails = JSON.parse(email)
         ################ DO NOT DELETE THE FOLLOWING LINES ###############################
         # current_district = $members_of_congress.last.district
         # district = RestClient.get 'openstates.org/api/v1//legislators/?state=il&chamber=upper&active=true&apikey=d6c3a81da4e74c6c8d9983a6dd258f7e'
         # lower = RestClient.get "openstates.org/api/v1//legislators/?state=il&chamber=lower&active=true&apikey=d6c3a81da4e74c6c8d9983a6dd258f7e"
-        # @lower = JSON.parse(lower)
         # @people = JSON.parse(district)
         @page = Refinery::Page.find_by_link_url("/legislator_lookups/thank_you", :include => [:parts])
       end
