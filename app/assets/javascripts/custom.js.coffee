@@ -1,9 +1,4 @@
 jQuery ->
-  $("a[href*='pdf']").each ->
-    $(this).addClass('pdf')
-    $(this).parent().addClass('text-center')
-
-jQuery ->
   cycleThrough('facebook-cycler')
   cycleThrough('twitter-cycler')
 
