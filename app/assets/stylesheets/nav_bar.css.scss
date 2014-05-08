@@ -37,7 +37,7 @@ $white: #fff;
 }
 
 /*================== Main Nav ==============================*/
-.nav-pic{
+.nav-pic-home{
   height: 30em;
   padding-right:2em;
   padding-left: 1em ;
@@ -49,6 +49,23 @@ $white: #fff;
 
   @media only screen and (max-width: 40em){
     height: 20em;
+    padding-right: 0em;
+    padding-left: 0em;
+  }
+}
+
+.nav-pic-show{
+  height: 15em;
+  padding-right:2em;
+  padding-left: 1em ;
+  display:block;
+  -webkit-background-size:cover;
+  -moz-background-size:cover;
+  -o-background-size: cover;
+  background-size:cover;
+
+  @media only screen and (max-width: 40em){
+    height: 10em;
     padding-right: 0em;
     padding-left: 0em;
   }
