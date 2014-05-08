@@ -1,8 +1,12 @@
-
+%div.row.text-center#leg-title
+  %h1
+    %span= $members_of_congress.first.state
+    %span Representatives
 %div.row
   - $members_of_congress.each do |member|
     %div.small-6.columns.text-center(data-equalizer)
-      =image_tag "http://theunitedstates.io/images/congress/225x275/#{member.bioguide_id}.jpg"
+      %div
+        =image_tag "http://theunitedstates.io/images/congress/225x275/#{member.bioguide_id}.jpg"
       %h4
         %span= member.state
         %span= member.title
@@ -31,11 +35,12 @@
         = link_to "#{member.firstname}'s Facebook Page", "http://facebook.com/#{member.facebook_id}"
       %br
       %br
-%div.row
-  %div.small-12.columns.text-center
+%div.row#leg-row
+  %div.small-6.small-offset-3.columns.text-center.local-leg
     %h4
       What to learn more about your local legislators?
-    = link_to "Click Here", "http://openstates.org/co/", target:"_blank"
+
+      = link_to "Click Here", "http://openstates.org/co/", target:"_blank"
 / ################### DO NOT DELETE THESE COMMENTED LINES ###########################
 / %h2 upper
 / %div.row

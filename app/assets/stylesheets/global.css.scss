@@ -1,6 +1,9 @@
 
 @import 'foundation_mixins_only';
-
+$light-blue: #0074d9;
+$dark-blue: #004b8d;
+$grey: #CCCCCC;
+$white: #fff;
 
 
 .pdf {
@@ -41,4 +44,19 @@
     height: 50px;
     width: 50px;
   }
+}
+
+/*======================== Legislator Lookup ===========================*/
+
+#leg-row{
+  padding-top: 2em;
+  .local-leg{
+    border: 4px solid $light-blue;
+  }
+}
+#leg-title{
+  padding-bottom: 3em;
+}
+#leg-pic{
+  border: 1px solid black;
 }
