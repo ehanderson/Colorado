@@ -3,6 +3,7 @@ module Refinery
     class LegislatorLookupsController < ::ApplicationController
 
       before_filter :find_page, :only => [:create, :new]
+      before_filter :find_footer
 
       def index
         redirect_to :action => "new"
@@ -11,9 +12,10 @@ module Refinery
       def thank_you
         ################ DO NOT DELETE THE FOLLOWING LINES ###############################
         # current_district = $members_of_congress.last.district
-        # district = RestClient.get 'openstates.org/api/v1//legislators/?state=il&chamber=upper&active=true&apikey=d6c3a81da4e74c6c8d9983a6dd258f7e'
-        # lower = RestClient.get "openstates.org/api/v1//legislators/?state=il&chamber=lower&active=true&apikey=d6c3a81da4e74c6c8d9983a6dd258f7e"
+        # district = RestClient.get 'openstates.org/api/v1//legislators/?state=wi&chamber=upper&active=true&apikey=d6c3a81da4e74c6c8d9983a6dd258f7e'
+        # lower = RestClient.get "openstates.org/api/v1//legislators/?state=wi&chamber=lower&active=true&apikey=d6c3a81da4e74c6c8d9983a6dd258f7e"
         # @people = JSON.parse(district)
+        # @lower = JSON.parse(lower)
         @page = Refinery::Page.find_by_link_url("/legislator_lookups/thank_you", :include => [:parts])
       end
 
@@ -48,6 +50,9 @@ module Refinery
         @page = Refinery::Page.find_by_link_url('/legislator_lookups/new', :include => [:parts])
       end
 
+      def find_footer
+        @footer = Refinery::Page.find_by_slug('footer')
+      end
     end
   end
 end
