@@ -2,6 +2,7 @@ module Refinery
   class PagesController < ::ApplicationController
     before_filter :find_page, :set_canonical, :except => [:preview]
     before_filter :find_page_for_preview, :only => [:preview]
+    before_filter :find_footer
 
     # Save whole Page after delivery
     after_filter { |c| c.write_cache? }
@@ -10,6 +11,7 @@ module Refinery
     def home
       render_with_templates?
       background_image
+      salsa
       @facebook = Refinery::SocialMediaPosts::SocialMediaPost.facebook.limit(5)
       @twitter  = Refinery::SocialMediaPosts::SocialMediaPost.twitter.limit(5)
     end
@@ -61,8 +63,8 @@ module Refinery
             # @trial_client =  RestClient.get 'https://hq-salsa4.salsalabs.com/api/getObject.sjs?xml&object=supporter&key=62988113'
       # @trial_client = RestClient.get 'https://sandbox.salsalabs.com/api/authenticate.sjs?xml&email=anderson.emilyhi@gmail.com&password=&erson813'
       # @trial_client =  RestClient.get 'https://hq-salsa4.salsalabs.com/api/describe2.sjs?object=supporter'
-      RestClient.get 'https://hq-salsa4.salsalabs.com/api/authenticate.sjs?xml&email=pollyk@strategies360.com&password=apple'
-      @trial_client =  RestClient.get 'https://hq-salsa4.salsalabs.com/api/getObject.sjs?xml&object=supporter&key=62988113'
+      cookies[:client] = RestClient.get 'https://hq-salsa4.salsalabs.com/api/authenticate.sjs?xml&email=pollyk@strategies360.com&password=apple'
+      @trial_client =  RestClient.get('https://hq-salsa4.salsalabs.com/api/getObject.sjs?xml&object=supporter&key=62988113')
     end
 
     def parent
@@ -115,6 +117,10 @@ module Refinery
                   Refinery::Page.find_by_path_or_id(params[:path], params[:id])
                 end
       @page || (error_404 if fallback_to_404)
+    end
+
+    def find_footer
+      @footer = Refinery::Page.find_by_slug('footer')
     end
 
     alias_method :page, :find_page

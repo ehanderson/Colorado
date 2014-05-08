@@ -1,4 +1,1 @@
-$client = SalsaLabs::ApiClient.new do |config|
-  config.salsa_labs_api_email        = ENV["SALSA_LABS_API_EMAIL"]
-  config.salsa_labs_api_password     = ENV["SALSA_LABS_API_PASSWORD"]
-end
+# $client = RestClient.get 'https://hq-salsa4.salsalabs.com/api/authenticate.sjs?xml&email=pollyk@strategies360.com&password=apple'

@@ -3,25 +3,19 @@
     %div.small-12.columns(data-equalizer)
       %div.small-6.medium-4.large-4.columns.footer-panels
         %ul(data-equalizer-watch)
-          %div.panel-title Additional Resources
-          %li Tool Kits
-          %li Downloadable Content
-          %li Research Papers
-          %li FAQs
-          %li More Federal and State Resources
+          %li.panel-title Additional Resources
+          %li
+            =raw(@footer.content_for(:Additional_Resources))
       %div.small-6.medium-4.large-4.columns.footer-panels
         %ul(data-equalizer-watch)
-          %div.panel-title News
-          %li Newsroom
-          %li eNewsletter Archive
+          %li.panel-title News
+          %li
+            =raw(@footer.content_for(:News))
       %div.small-6.medium-4.large-4.columns.footer-panels
         %ul(data-equalizer-watch)
-          %div.panel-title Contact Us
-          %li Co Address
-          %li Suite #
-          %li Somewhere, Colorado 20000
-          %li phone number
-          %li fax number
+          %li.panel-title Contact Us
+          %li
+            =raw(@footer.content_for(:Contact_Us))
   %div.row
     %div.small-12.centered.columns.footer-panels.text-center
       %ul.inline-list.social-media.text-center(data-equalizer-watch)

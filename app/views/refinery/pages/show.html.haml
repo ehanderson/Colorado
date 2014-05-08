@@ -1,9 +1,13 @@
 - case @page.title
   - when 'Take Action'
-    %div#take-action.large-12.columns.text-center
-      %div.large-6.columns.inline
+    %div#take-action.large-12.columns.text-center(data-equalizer)
+      %div.large-6.columns.inline(data-equalizer-watch)
+        = raw @page.content_for(:Emails)
+      %div.large-6.columns.inline(data-equalizer-watch)
+        = raw @page.content_for(:Story)
+      %div.large-6.columns.inline(data-equalizer-watch)
         = raw @page.content_for(:body)
-      %div.large-6.columns.inline
+      %div.large-6.columns.inline(data-equalizer-watch)
         = raw @page.content_for(:side_body)
   - when 'Sign Up'
     %div.row.sub-take-action

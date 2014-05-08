@@ -44,8 +44,6 @@ gem 'whenever', :require => false
 gem 'rest-client'
 gem 'geocoder'
 
-gem 'salsa_labs'
-
 gem 'sunlight'
 gem 'govkit'
 # To use ActiveModel has_secure_password
