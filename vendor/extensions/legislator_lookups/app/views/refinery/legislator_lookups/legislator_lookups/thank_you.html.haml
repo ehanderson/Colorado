@@ -1,6 +1,6 @@
 %div.row.text-center#leg-title
   %h1
-    %span= $members_of_congress.first.state
+    %span= @state
     %span Representatives
 %div.row
   - $members_of_congress.each do |member|
@@ -40,7 +40,7 @@
     %h4
       What to learn more about your local legislators?
 
-      = link_to "Click Here", "http://openstates.org/co/", target:"_blank"
+      = link_to "Click Here", "http://openstates.org/#{@state.downcase}/", target:"_blank"
 / ################### DO NOT DELETE THESE COMMENTED LINES ###########################
 / %h2 upper
 / %div.row

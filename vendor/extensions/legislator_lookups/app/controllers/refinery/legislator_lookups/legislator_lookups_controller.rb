@@ -10,6 +10,7 @@ module Refinery
       end
 
       def thank_you
+        @state = $members_of_congress.first.state
         ################ DO NOT DELETE THE FOLLOWING LINES ###############################
         # current_district = $members_of_congress.last.district
         # district = RestClient.get 'openstates.org/api/v1//legislators/?state=wi&chamber=upper&active=true&apikey=d6c3a81da4e74c6c8d9983a6dd258f7e'
