@@ -10,6 +10,11 @@
 # supporter_KEY = supporters.first["supporter_KEY"]
 
 # SalsaLabs::Supporter.get(supporter_KEY)
+
+# Faraday: https://github.com/lostisland/faraday
+# Salsa Gem: https://github.com/VelocityStrategies/ruby-salsa_labs/
+# Salsa Gem Authentication: https://github.com/VelocityStrategies/ruby-salsa_labs/blob/master/lib/salsa_labs/api_client.rb
+
 module SalsaLabs
   class Authentication
     attr_reader :email, :password, :host, :authenticated
@@ -18,21 +23,18 @@ module SalsaLabs
       @email = credentials[:email]
       @password = credentials[:password]
       @host = "https://hq-salsa4.salsalabs.com"
-
+      @connection = connect!
       @authenticated = authenticate! 
     end
 
-    def authenticate!
-      return true if @authenticated
-
-      response = connection.get("/api/authenticate.sjs", { email: @email, password: @password })
-      @authentication_cookie = response.env[:response_headers]["set-cookie"]
-
-      Nokogiri::XML(response.body).css('error').empty?
+    def get_email_blasts
+      get_request("getObjects.sjs", {object: 'Supporter'}).body
     end
 
-    def connection
-      @connection ||= 
+    private
+
+    def connect!
+      connection = 
       Faraday.new(url: @host) do |faraday|
         faraday.request  :url_encoded             # form-encode POST params
         faraday.response :logger                  # log requests to STDOUT
@@ -40,14 +42,21 @@ module SalsaLabs
       end
     end
 
-    def get_email_blasts
+    def authenticate!
+      return true if @authenticated
+
+      response = @connection.get("/api/authenticate.sjs", { email: @email, password: @password })
       binding.pry
-      get_request("getObjects.sjs", {object: 'Supporter'})
-      binding.pry
+      # RESPONSE XML SAYS LOGIN SUCCESSFUL
+      # RESPONSE SENDS US BACK THE COOKIE OK
+      # MAYBE FURTHER PARSE THE COOKIE?
+      @authentication_cookie = response.env[:response_headers]["set-cookie"]
+
+      Nokogiri::XML(response.body).css('error').empty?
     end
 
     def get_request(endpoint, params)
-      response = connection.get do |request|
+      response = @connection.get do |request|
         request.headers['cookie'] = @authentication_cookie
         request.url(endpoint, params)
       end
@@ -61,9 +70,9 @@ password = ENV['SALSA_LABS_API_PASSWORD']
 
 client = SalsaLabs::Authentication.new({email: email, password: password })
 
-binding.pry
+blasts = client.get_email_blasts
 
-client.get_email_blasts
+binding.pry
 
 # client = SalsaLabs::ApiClient.new({email: email, password: password })
 
