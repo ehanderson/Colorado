@@ -44,10 +44,10 @@ gem 'whenever', :require => false
 gem 'rest-client'
 gem 'geocoder'
 
-# gem 'salsalabs', '~> 0.2.0', require: 'salsa_labs'
-gem 'salsa_labs'
+gem 'salsalabs', '~> 0.2.0', require: 'salsa_labs'
+# gem 'salsa_labs'
 
-gem 'faraday'
+# gem 'faraday'
 
 gem 'sunlight'
 gem 'govkit'
