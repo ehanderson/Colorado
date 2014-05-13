@@ -44,6 +44,11 @@ gem 'whenever', :require => false
 gem 'rest-client'
 gem 'geocoder'
 
+gem 'salsalabs', '~> 0.2.0', require: 'salsa_labs'
+# gem 'salsa_labs'
+
+# gem 'faraday'
+
 gem 'sunlight'
 gem 'govkit'
 # To use ActiveModel has_secure_password
@@ -85,5 +90,3 @@ ruby "1.9.3"
 gem 'refinerycms-social_media_posts', :path => 'vendor/extensions'
 
 gem 'refinerycms-legislator_lookups', :path => 'vendor/extensions'
-
-
