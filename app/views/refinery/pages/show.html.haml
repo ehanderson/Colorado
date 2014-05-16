@@ -39,9 +39,9 @@
     = render '/refinery/leg_lookup'
   - when 'eNewsletters'
     = render '/refinery/enewsletters'
-  - else
-    = render '/refinery/content_page'
   - when 'eNewsletters'
     = raw @page.content_for(:body)
     = render 'refinery/enewsletters'
+  - else
+    = render '/refinery/content_page'
 
