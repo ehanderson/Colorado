@@ -1,3 +1,8 @@
+$light-blue: #0074d9;
+$dark-blue: #004b8d;
+$grey: #CCCCCC;
+$white: #fff;
+
 #show-page > div {
   display: inline-block;
 }
@@ -9,4 +14,24 @@
 #content-pages{
   width: 60%;
   margin-left: 20%;
+}
+
+.font-color-light-blue {
+  color: $light-blue;
+}
+
+.font-color-dark-blue {
+  color: $dark-blue;
+}
+
+.font-color-grey {
+  color: $grey;
+}
+
+.font-color-white {
+  color: $white;
+}
+
+.font-color-black{
+  color: black;
 }
