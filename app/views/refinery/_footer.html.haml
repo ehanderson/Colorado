@@ -21,9 +21,9 @@
       %ul.inline-list.social-media.text-center(data-equalizer-watch)
         %div.panel-title.text-center Stay Connected
         %li#facebook
-          = image_tag('facebook.png')
+          = link_to image_tag('facebook.png'), 'https://www.facebook.com/climbhigherco', target:"_blank"
         %li#twitter
-          = image_tag('twitter.png')
+          = link_to image_tag('twitter.png'), 'https://twitter.com/ClimbHigherCO', target:'_blank'
 
   %p.copyright.text-center
     = t('.copyright', :year => Time.now.year, :site_name => Refinery::Core.site_name)
