@@ -1,9 +1,18 @@
 
 <%$all_blasts.each do |blast|%>
   <%unless blast['Processing_Thread'] == nil %>
-    <a href= "http://salsa4.salsalabs.com/o/51084/t/0/blastContent.jsp?email_blast_KEY=<%=blast['email_blast_KEY']%>" target = "_blank">
-      <%= blast['Subject']%>
-      <%= blast['Scheduled_Time'].match(/\s([a-zA-Z]*\s\d*\s\d*)/)%>
-    </a><br>
+  <div class="row">
+      <a href= "http://salsa4.salsalabs.com/o/51084/t/0/blastContent.jsp?email_blast_KEY=<%=blast['email_blast_KEY']%>" target = "_blank">
+    <div class="large-12 columns">
+        <%= blast['Scheduled_Time'].match(/\s([a-zA-Z]*\s\d*\s\d*)/)%><br>
+    </div>
+    <div class ="row">
+      <div class ="large-11 large-offset-1 columns ">
+        Title: <%= blast['Subject']%><br>
+        Written By: <%= blast['_From']%>
+      </div>
+    </div><br>
+      </a>
+  </div>
   <%end%>
 <%end%>
