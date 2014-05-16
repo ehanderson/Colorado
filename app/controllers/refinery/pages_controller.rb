@@ -56,7 +56,6 @@ module Refinery
 
     def background_image
       @background_image = set_background_image
-      p @background_image
     end
 
     def set_background_image

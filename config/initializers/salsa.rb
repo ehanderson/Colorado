@@ -10,7 +10,15 @@ t = RestClient.get("https://hq-salsa4.salsalabs.com/api/getObjects.sjs?xml&objec
               )
 w = Hash.from_xml(t).to_json
 parsed_response = JSON.parse(w)
-$all_blasts = parsed_response['data']['email_blast']['item'].reverse
+blasts = parsed_response['data']['email_blast']['item'].reverse
+$all_blasts = []
+# binding.pry
+
+blasts.each do |blast|
+  # binding.pry
+ $all_blasts << blast if blast['Display_To_User'] == "true"
+end
+
 # p parsed_response['data']['email_blast']['item'].first
 # $blast = parsed_response['data']['email_blast']['item'].last
 # binding.pry
