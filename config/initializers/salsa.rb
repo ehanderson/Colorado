@@ -1,20 +1,70 @@
-# THESE SHOULD ALL WORK, AND YET.... DON'T
+# THESE SHOULD ALL WORK, AND YET.... DON'T=
 
 # ============= ATTEMPT #1 RestClient =================== #
 
-# authenticated response
-# response = RestClient.get 'https://hq-salsa4.salsalabs.com/api/authenticate.sjs?&email=pollyk@strategies360.com&password=apple'
+# # # authenticated response
+response = RestClient.get 'https://hq-salsa4.salsalabs.com/api/authenticate.sjs?&email=pollyk@strategies360.com&password=apple'
+cookie = response.cookies
+t = RestClient.get("https://hq-salsa4.salsalabs.com/api/getObjects.sjs?xml&object=email_blast",
+                cookies: cookie
+              )
+w = Hash.from_xml(t).to_json
+parsed_response = JSON.parse(w)
+$all_blasts = parsed_response['data']['email_blast']['item']
+# p parsed_response['data']['email_blast']['item'].first
+# $blast = parsed_response['data']['email_blast']['item'].last
+# binding.pry
 
-# get cookies from response
-# cookie = response.cookies
+# $blast_key = parsed_response['data']['email_blast']['item'].last['email_blast_KEY']
+# $blast_key = parsed_response['data']['email_blast']['item'].last['Date_Requested']
+# $blast_key = parsed_response['data']['email_blast']['item'].last['Subject']
+# <a href= "http://salsa4.salsalabs.com/o/51084/t/0/blastContent.jsp?email_blast_KEY=#{$blast_key}" target = "_blank"> Link to most recent blast</a>
 
-# use cookie with either a POST or GET to retrieve objects - BROKEN
-# RestClient.get("https://sandbox.salsaLabs.com/api/getObjects.sjs",
-#                 {object: 'supporter'},
-#                 {cookies: {session_id: cookie["JSESSIONID"] }} 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# # as soon as you try to interact with them it does not stay authenticated
+
+# # use cookie with either a POST or GET to retrieve objects - BROKEN
+# t = RestClient.get("https://hq-salsa4.salsalabs.com/api/describe2.sjs?xml&object=supporter&key=63053613",
+#                 {:cookies => {:session_id => cookie["JSESSIONID"] }}
 #               )
 
-# ============= ATTEMPT #2 MarcLove Ruby Gem # https://github.com/marclove/salsalabs =================== ## 
+# ============= ATTEMPT #2 MarcLove Ruby Gem # https://github.com/marclove/salsalabs =================== ##
 
 # set up configuration for gem -> it properly authenticates
 # SalsaLabs.configure do |config|
@@ -28,6 +78,7 @@
 # DOESN'T WORK
 # def email_blast
 #   object_name = "supporter"
+# this is the method the gem calls but it does not do what the gem does
 #   SalsaLabs.request("api/getObjects.sjs", {object: "supporter"}) do |response|
 #     Hash.from_xml(response).
 #          try(:[], "supporter").
@@ -46,13 +97,14 @@
 #   end
 # end
 
-# ============= ATTEMPT #3 Velocity Ruby Gem # https://github.com/VelocityStrategies/ruby-salsa_labs =================== ## 
+# ============= ATTEMPT #3 Velocity Ruby Gem # https://github.com/VelocityStrategies/ruby-salsa_labs =================== ##
 
-# $client = SalsaLabs::ApiClient.new({email: 'anderson.emilyhi@gmail.com', password: '&erson813'}) # => doesn't autmocatically authenticate; need to call it manually
+# $client = SalsaLabs::ApiClient.new({email: 'pollyk@strategies360', password: 'apple'}) # => doesn't autmocatically authenticate; need to call it manually
 # $client.authenticate # => doesn't authenticate
+# binding.pry
 # $client.fetch('getObjects.sjs', {object: 'email_blast'}) # => Would love for this to happen... psych
 
-# ============= ATTEMPT #4 TRYING TO RECREATE OWN GEM LEVERAGING GEMS & FARADAY =================== ## 
+# ============= ATTEMPT #4 TRYING TO RECREATE OWN GEM LEVERAGING GEMS & FARADAY =================== ##
 
 # Faraday: https://github.com/lostisland/faraday
 # Salsa Gem: https://github.com/VelocityStrategies/ruby-salsa_labs/
@@ -67,7 +119,7 @@
 #       @password = credentials[:password]
 #       @host = "https://sandbox.salsalabs.com" # https://hq-salsa.wiredforchange.com
 #       @connection = connect!
-#       @authenticated = authenticate! 
+#       @authenticated = authenticate!
 #     end
 
 #     def get_email_blasts
@@ -77,7 +129,7 @@
 #     private
 
 #     def connect!
-#       connection = 
+#       connection =
 #       Faraday.new(url: @host) do |faraday|
 #         faraday.request  :url_encoded             # form-encode POST params
 #         faraday.response :logger                  # log requests to STDOUT
@@ -111,7 +163,9 @@
 # email    = ENV["SALSA_LABS_API_EMAIL"]
 # password = ENV['SALSA_LABS_API_PASSWORD']
 
-# client = SalsaLabs::Authentication.new({email: email, password: password }) # => Authntication WORKS, YAY!!
+# client = SalsaLabs::Authentication.neord }) # => Authntication WORKS, YAY!!
+
+# you can stll never get supporter
 
 # blasts = client.get_email_blasts # => RENDERS A 404 ERROR IN RESPONSE BODY
 
@@ -121,7 +175,7 @@
 # client = SalsaLabs::ApiClient.new({email: 'pollyk@strategies360.com', password: 'apple'})
 # @trial_client = client.fetch('getObjects.sjs', {object: 'Supporter'})
 # SalsaLabs::Supporter.all
-# @support = $client.fetch('getObjects.sjs', {object: 'Supporter'})
+# @support = $client.fetch('getObjects.sjs', {object: 'Supporterw({email: email, password: passw'})
 # client = SalsaLabs::ApiClient.new({email: 'anderson.emilyhi@gmail.com', password: '&erson813'})
 # @support = client.fetch('getObjects.sjs', {object: 'Supporter'})
 # RestClient.get 'https://sandbox.salsalabs.com/api/authenticate.sjs?xml&email=anderson.emilyhi@gmail.com&password=&erson813'

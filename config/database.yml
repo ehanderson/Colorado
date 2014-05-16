@@ -15,7 +15,7 @@
 development:
   adapter: postgresql
   encoding: unicode
-  database: colorado_development
+  database: Colorado_development
   pool: 5
 
   # Connect on a TCP socket. Omitted by default since the client uses a
@@ -39,13 +39,13 @@ development:
 test:
   adapter: postgresql
   encoding: unicode
-  database: colorado_test
+  database: Colorado_test
   pool: 5
 
 
 production:
   adapter: postgresql
   encoding: unicode
-  database: colorado_production
+  database: Colorado_production
   pool: 5
 

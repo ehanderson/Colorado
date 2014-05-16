@@ -75,7 +75,7 @@ module Colorado
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
     config.assets.initialize_on_precompile = true
-    
+
     config.before_configuration do
       apis = [File.join(Rails.root, 'config', 'twitter.yml'),
               File.join(Rails.root, 'config', 'facebook.yml'),
@@ -86,6 +86,6 @@ module Colorado
         end if File.exists?(file)
       end
     end
-    
+
   end
 end
