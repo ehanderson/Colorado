@@ -56,10 +56,11 @@ module Refinery
 
     def background_image
       @background_image = set_background_image
+      p @background_image
     end
 
     def set_background_image
-      !page.images.empty? ? page.images.last.thumbnail.url : '../../assets/images/twitter.png'
+      !page.images.empty? ? page.images.last.thumbnail.url : '/assets/desks.png'
     end
 
     def requested_friendly_id
