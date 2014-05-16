@@ -92,7 +92,8 @@ capybara-*html
 # vendor/extensions dummy applications.
 vendor/extensions/**/spec/dummy
 
-# Ignore social media files
+# Ignore social media and api files
 config/facebook.yml
 config/twitter.yml
 config/database.yml
+config/salsa.yml
