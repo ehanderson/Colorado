@@ -51,20 +51,11 @@ footer {
   #facebook:hover {
     border: 2px solid #3b5998;
   }
-  #instagram:hover {
-    border: 2px solid #3f729b;
-  }
-  #google:hover {
-    border: 2px solid #f4b400;
-  }
-  #youtube:hover {
-    border: 2px solid #c4302b;
-  }
-  #linkedin:hover {
-    border: 2px solid #0e76a8;
-  }
   .copyright {
     padding: 2rem;
     background-color: #333;
   }
+}
+.footer-link-color a{
+  color:white;
 }

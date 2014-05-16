@@ -14,17 +14,6 @@ module Refinery
       @facebook = Refinery::SocialMediaPosts::SocialMediaPost.facebook.limit(5)
       @twitter  = Refinery::SocialMediaPosts::SocialMediaPost.twitter.limit(5)
     end
-
-    # This action can be accessed normally, or as nested pages.
-    # Assuming a page named "mission" that is a child of "about",
-    # you can access the pages with the following URLs:
-    #
-    #   GET /pages/about
-    #   GET /about
-    #
-    #   GET /pages/mission
-    #   GET /about/mission
-    #
     def show
       background_image
       if current_user_can_view_page?
