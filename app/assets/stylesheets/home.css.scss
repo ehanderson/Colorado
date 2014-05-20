@@ -45,24 +45,10 @@
     }
   }
 }
-.splits{
+
+.splits {
   @media only screen and (min-width: 48.063em){
-    border-right:2px solid #E9E9E9 ;
+    border-left:2px solid #E9E9E9 ;
   }
 }
-.social-media{
-    padding-top: 1em;
-    padding-bottom: 1em;
-  .social-media-panels{
-    display:inline-block;
-  }
-  .active {
-    font-style: italic;
-    list-style: none;
-    overflow: hidden;
-    text-align: center;
-  }
-  .inactive {
-    display: none;
-  }
-}
+

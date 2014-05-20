@@ -30,43 +30,16 @@
     %div.large-12.large-centered.columns.spacing.hide-for-small-only
   %div.row.news-group
     %div.small-12.large-12.columns.news(data-equalizer)
-      %div.large-4.medium-4.small-12.columns.news-panels.splits(data-equalizer-watch)
-        = p raw(@page.content_for(:News1))
+      %div.large-4.medium-4.small-12.columns.news-panels(data-equalizer-watch)
+        = raw(@page.content_for(:News1))
       %div.large-4.medium-4.small-12.columns.news-panels.splits(data-equalizer-watch)
         = raw(@page.content_for(:News2))
-      %div.large-4.medium-4.small-12.columns.news-panels(data-equalizer-watch)
+      %div.large-4.medium-4.small-12.columns.news-panels.splits(data-equalizer-watch)
         = raw(@page.content_for(:News3))
   %div.row
     %div.large-12.large-centered.columns.spacing.hide-for-small-only
   %div.row
-    %div.small-12.columns.social-media(data-equalizer)
-      %div.small-12.medium-4.columns.social-media-panels.text-centered.splits(data-equalizer-watch)
-        %h3
-          Follow Us On
-          = link_to("Social Media", "/social-media")
-
-      %div.small-12.medium-4.columns.social-media-panels.text-centered.splits(data-equalizer-watch)
-        %div.text-centered
-          = link_to(image_tag('facebook.png', class: 'social-media-img'), "https://www.facebook.com/", target: "_blank")
-          = raw(@page.content_for(:facebook))
-          %div.facebook-cycler
-            %ul
-              - @facebook.each_with_index do |post, index|
-                -  element_class = index == 0 ? 'active' : 'inactive'
-                %li{class: element_class}
-                  = truncate("\"#{post.content}\"", length: 60, separator: " ")
-
-      %div.small-12.medium-4.columns.social-media-panels.text-centered(data-equalizer-watch)
-        %div.text-centered
-          = link_to(image_tag('twitter.png', class: 'social-media-img'), "https://www.twitter.com/", target: "_blank")
-          = raw(@page.content_for(:twitter))
-          %div.twitter-cycler
-            %ul
-              - @twitter.each_with_index do |post, index|
-                -  element_class = index == 0 ? 'active' : 'inactive'
-                %li{class: element_class}
-                  = truncate("\"#{post.content}\"", length: 60, separator: " ")
-      %div.small-12.medium-2.large-3.columns.social-media-panels.text-centered(data-equalizer-watch)
+    = render partial: '/refinery/social_media_cycler'
 
 = render '/refinery/draft_page_message' unless @page.nil? or @page.live?
 
