@@ -3,10 +3,38 @@
   width:  50px;
 }
 
-.facebook-cycler ul{
-  margin: 0;
+.cycler ul {
+  margin-top: 1.5rem;
 }
 
-.twitter-cycler ul{
-  margin: 0; 
+.social-media {
+    padding-top: 1em;
+    padding-bottom: 1em;
+  .social-media-panels {
+    display: inline-block;
+  }
+  .social-media-img {
+    height: 50px;
+    width: 50px;
+    margin-right: 1rem;
+  }
+  .sm-header h1, h2, h3 {
+  	vertical-align: middle;
+  	margin-bottom: 1rem;
+  }
+  .active {
+    font-style: italic;
+    list-style: none;
+    overflow: hidden;
+    text-align: center;
+  }
+  .inactive {
+    display: none;
+  }
 }
+
+.inline h1, h2, h3 {
+  display: inline;
+}
+
+
