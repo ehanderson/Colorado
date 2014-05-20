@@ -1,0 +1,31 @@
+cs:
+  refinery:
+    plugins:
+      salsas:
+        title: Salsas
+    salsas:
+      admin:
+        salsas:
+          actions:
+            create_new: Přidat Salsa
+            reorder: Řadit Salsas
+            reorder_done: Konec řazení Salsas
+          records:
+            title: Salsas
+            sorry_no_results: Litujeme, ale nebyly nalezny žádné výsledky.
+            no_items_yet: Zatím nebyly vytvořeny žádné Salsas. Zvolte "Přidat Salsa" pro přidání prvního salsa.
+          salsa:
+            view_live_html: Zobrazit náhled salsa<br/><em>(otevře se v novém okně)</em>
+            edit: Upravit salsa
+            delete: Smazat salsa
+      salsas:
+        show:
+          other: Další Salsas
+  activerecord:
+    attributes:
+      'refinery/salsas/salsa':
+        title: Title
+        date: Date
+        link: Link
+        blast_key: Blast Key
+        author: Author

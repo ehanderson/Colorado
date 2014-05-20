@@ -1,0 +1,31 @@
+fr:
+  refinery:
+    plugins:
+      salsas:
+        title: Salsas
+    salsas:
+      admin:
+        salsas:
+          actions:
+            create_new: Créer un(e) nouve(au/l/lle) Salsa
+            reorder: Réordonner les Salsas
+            reorder_done: Fin de réordonnancement des Salsas
+          records:
+            title: Salsas
+            sorry_no_results: "Désolé ! Aucun résultat."
+            no_items_yet: 'Il n''y a actuellement aucun(e) Salsa. Cliquer sur "Créer un(e) nouve(au/l/lle) Salsa" pour créer votre premi(er/ère) salsa.'
+          salsa:
+            view_live_html: Voir ce(t/tte) salsa <br/><em>(Ouvre une nouvelle fenêtre)</em>
+            edit: Modifier ce(t/tte) salsa
+            delete: Supprimer définitivement ce(t/tte) salsa
+      salsas:
+        show:
+          other: Autres Salsas
+  activerecord:
+    attributes:
+      'refinery/salsas/salsa':
+        title: Title
+        date: Date
+        link: Link
+        blast_key: Blast Key
+        author: Author

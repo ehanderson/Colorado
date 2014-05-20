@@ -1,0 +1,31 @@
+nl:
+  refinery:
+    plugins:
+      salsas:
+        title: Salsas
+    salsas:
+      admin:
+        salsas:
+          actions:
+            create_new: Nieuwe Salsa toevoegen
+            reorder: De volgorde van de Salsas wijzigen
+            reorder_done: Klaar met het wijzingen van de van de Salsa-volgorde
+          records:
+            title: Salsas
+            sorry_no_results: Helaas! Er zijn geen resultaten gevonden.
+            no_items_yet: Er zijn nog geen Salsas. Druk op 'Nieuwe Salsa toevoegen' om de eerste toe te voegen.
+          salsa:
+            view_live_html: Deze salsa op de website bekijken <br/><em>(opent in een nieuw venster)</em>
+            edit: Bewerk deze salsa
+            delete: Deze salsa definitief verwijderen
+      salsas:
+        show:
+          other: Andere Salsas
+  activerecord:
+    attributes:
+      'refinery/salsas/salsa':
+        title: Title
+        date: Date
+        link: Link
+        blast_key: Blast Key
+        author: Author

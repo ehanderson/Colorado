@@ -1,0 +1,33 @@
+zh-CN:
+  refinery:
+    plugins:
+      salsas:
+        title: Salsas
+    salsas:
+      admin:
+        salsas:
+          actions:
+            create_new: 建立新的 Salsa
+            reorder: 对 Salsas 重新排序
+            reorder_done: 对 Salsas 的重新排序结束
+          records:
+            title: Salsas
+            sorry_no_results: 对不起，未找到结果。 #Sorry! There are no results found.
+
+            # There are no Salsas yet. Click "Add New Salsa" to add your first salsa.
+            no_items_yet: 目前没有 Salsas . 点击 "Add New Salsa" 创建一个salsa.
+          salsa:
+            view_live_html: 查看 salsa 的最新内容.<br/><em>(新窗口中打开)</em>
+            edit: 编辑 salsa
+            delete: 永久删除 salsa
+      salsas:
+        show:
+          other: 其他 Salsas
+  activerecord:
+    attributes:
+      'refinery/salsas/salsa':
+        title: Title
+        date: Date
+        link: Link
+        blast_key: Blast Key
+        author: Author

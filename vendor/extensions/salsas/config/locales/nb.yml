@@ -1,0 +1,31 @@
+nb:
+  refinery:
+    plugins:
+      salsas:
+        title: Salsas
+    salsas:
+      admin:
+        salsas:
+          actions:
+            create_new: Lag en ny Salsa
+            reorder: Endre rekkefølgen på Salsas
+            reorder_done: Ferdig å endre rekkefølgen Salsas
+          records:
+            title: Salsas
+            sorry_no_results: Beklager! Vi fant ikke noen resultater.
+            no_items_yet: Det er ingen Salsas enda. Klikk på "Lag en ny Salsa" for å legge til din første salsa.
+          salsa:
+            view_live_html: Vis hvordan denne salsa ser ut offentlig <br/><em>(åpner i et nytt vindu)</em>
+            edit: Rediger denne salsa
+            delete: Fjern denne salsa permanent
+      salsas:
+        show:
+          other: Andre Salsas
+  activerecord:
+    attributes:
+      'refinery/salsas/salsa':
+        title: Title
+        date: Date
+        link: Link
+        blast_key: Blast Key
+        author: Author

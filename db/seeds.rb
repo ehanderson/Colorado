@@ -17,3 +17,6 @@ Refinery::SocialMediaPosts::Engine.load_seed
 
 # Added by Refinery CMS LegislatorLookups extension
 Refinery::LegislatorLookups::Engine.load_seed
+
+# Added by Refinery CMS Salsas extension
+Refinery::Salsas::Engine.load_seed

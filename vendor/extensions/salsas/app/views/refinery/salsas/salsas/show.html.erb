@@ -1,0 +1,30 @@
+<% content_for :body_content_title do %>
+  <%= @salsa.title %>
+<% end %>
+<% content_for :body do %>
+  <%@newsletters.each do |blast|%>
+    <%= blast.link%>
+    <a href= "http://salsa4.salsalabs.com/o/51084/t/0/blastContent.jsp?email_blast_KEY=<%=blast.blast_key%>" target = "_blank">
+      <section>
+        <h1>Title</h1>
+        <p>
+          <%=raw blast.title %>
+        </p>
+      </section>
+      <section>
+        <h1>Date</h1>
+        <p>
+          <%=raw blast.date %>
+        </p>
+      </section>
+      <section>
+        <h1>Author</h1>
+        <p>
+          <%=raw blast.author %>
+        </p>
+      </section>
+    </a>
+   <%end%>
+<% end %>
+
+<%= render '/refinery/content_page' %>

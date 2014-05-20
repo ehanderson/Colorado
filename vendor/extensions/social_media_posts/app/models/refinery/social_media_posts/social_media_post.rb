@@ -11,12 +11,14 @@ module Refinery
       scope :youtube,  ->() { where(platform: 'youtube') }
       scope :twitter,  ->() { where(platform: 'twitter') }
       scope :recent,   ->(date) { where("post_date <= ?", date)}
+      scope :old,      ->() { where("post_date > ?", 3.months.ago )}
 
       default_scope order: 'post_date desc'
 
       class << self
 
         def pull_tweets
+
           begin
             $twitter.user_timeline.each do |tweet|
               unless exists?(tweet_id: tweet.id.to_s)
@@ -32,6 +34,7 @@ module Refinery
           rescue
             Rails.logger.warn('Twitter access token is bad')
           end
+          delete_excess_posts
         end
 
         def pull_facebook_statuses
@@ -39,8 +42,8 @@ module Refinery
             statuses = FacebookService.get_statuses($FB_PAGE_TOKEN)
             statuses.each do |status|
               unless exists?(fb_id: status['id'])
-                create!(fb_id: status['id'], 
-                        platform: 'facebook', 
+                create!(fb_id: status['id'],
+                        platform: 'facebook',
                         content: status['message'],
                         post_date: status['updated_time'],
                         likes: !status['likes'].nil? ? status['likes']['data'].length : nil,
@@ -52,8 +55,14 @@ module Refinery
           rescue
             Rails.logger.warn('Facebook access token has expired')
           end
+          delete_excess_posts
         end
 
+        def delete_excess_posts
+          unless self.facebook.count <= 20
+            self.facebook.old.destroy_all
+          end
+        end
       end
     end
   end

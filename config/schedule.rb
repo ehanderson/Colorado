@@ -10,4 +10,10 @@ every 30.minutes do
   rake "update:social_media"
 end
 
+
+every 2.weeks do
+  rake "update:salsa"
+end
+
+
 # Learn more: http://github.com/javan/whenever

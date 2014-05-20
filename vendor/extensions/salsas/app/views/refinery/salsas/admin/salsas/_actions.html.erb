@@ -1,0 +1,25 @@
+<ul>
+  <% if ::Refinery::Salsas::Admin::SalsasController.searchable? %>
+    <li>
+      <%= render '/refinery/admin/search', :url => refinery.salsas_admin_salsas_path %>
+    </li>
+  <% end %>
+  <li>
+    <%= link_to t('.create_new'), refinery.new_salsas_admin_salsa_path,
+                 :class => "add_icon" %>
+  </li>
+<% if !searching? && ::Refinery::Salsas::Admin::SalsasController.sortable? && ::Refinery::Salsas::Salsa.many? %>
+  <li>
+    <%= link_to t('.reorder', :what => "Salsas"),
+                 refinery.salsas_admin_salsas_path,
+                 :id => "reorder_action",
+                 :class => "reorder_icon" %>
+
+    <%= link_to t('.reorder_done', :what => "Salsas"),
+                 refinery.salsas_admin_salsas_path,
+                 :id => "reorder_action_done",
+                 :style => "display: none;",
+                 :class => "reorder_icon" %>
+  </li>
+<% end %>
+</ul>

@@ -90,3 +90,5 @@ ruby "1.9.3"
 gem 'refinerycms-social_media_posts', :path => 'vendor/extensions'
 
 gem 'refinerycms-legislator_lookups', :path => 'vendor/extensions'
+
+gem 'refinerycms-salsas', :path => 'vendor/extensions'

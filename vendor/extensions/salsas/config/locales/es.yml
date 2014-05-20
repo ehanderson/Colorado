@@ -1,0 +1,32 @@
+es:
+  refinery:
+    plugins:
+      salsas:
+        title: Salsas
+#        article: masculino/femenino
+    salsas:
+      admin:
+        salsas:
+          actions:
+            create_new: Crear nuevo salsa
+            reorder: Reordenar salsas
+            reorder_done: Reordenación de salsas completada
+          records:
+            title: Salsas
+            sorry_no_results: Lo siento, no hay resultados
+            no_items_yet: No hay salsas todavía. Pulsa en "Crear nuevo Salsa" para crear tu primer salsa.
+          salsa:
+            view_live_html: Ver este salsa como abierto al público <br/><em>(abre en ventana nueva)</em>
+            edit: Editar este salsa
+            delete: Borrar este salsa para siempre
+      salsas:
+        show:
+          other: Otros salsas
+  activerecord:
+    attributes:
+      'refinery/salsas/salsa':
+        title: Title
+        date: Date
+        link: Link
+        blast_key: Blast Key
+        author: Author

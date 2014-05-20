@@ -1,0 +1,23 @@
+
+<% content_for :body do %>
+  <%@enewsletters.each do |blast|%>
+    <% unless blast.sent == nil%>
+      <div class="row">
+        <a href= "http://salsa4.salsalabs.com/o/51084/t/0/blastContent.jsp?email_blast_KEY=<%=blast.blast_key%>" target = "_blank">
+          <div class="large-12 columns">
+              <%= blast.published.match(/\s([a-zA-Z]*\s\d*\s\d*)/)%><br>
+          </div>
+          <div class ="row">
+            <div class ="large-11 large-offset-1 columns ">
+              Title: <%= blast.title%><br>
+              Written By: <%= blast.author%>
+            </div>
+          </div>
+        </a>
+      </div>
+    <%end%>
+  <%end%>
+<% end %>
+
+
+<%= render '/refinery/content_page' %>

@@ -1,0 +1,31 @@
+en:
+  refinery:
+    plugins:
+      salsas:
+        title: Salsas
+    salsas:
+      admin:
+        salsas:
+          actions:
+            create_new: Add New Salsa
+            reorder: Reorder Salsas
+            reorder_done: Done Reordering Salsas
+          records:
+            title: Salsas
+            sorry_no_results: Sorry! There are no results found.
+            no_items_yet: There are no Salsas yet. Click "Add New Salsa" to add your first salsa.
+          salsa:
+            view_live_html: View this salsa live <br/><em>(opens in a new window)</em>
+            edit: Edit this salsa
+            delete: Remove this salsa forever
+      salsas:
+        show:
+          other: Other Salsas
+  activerecord:
+    attributes:
+      'refinery/salsas/salsa':
+        title: Title
+        date: Date
+        link: Link
+        blast_key: Blast Key
+        author: Author

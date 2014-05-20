@@ -1,0 +1,35 @@
+<%= form_for [refinery, :salsas_admin, @salsa] do |f| -%>
+  <%= render '/refinery/admin/error_messages',
+              :object => @salsa,
+              :include_object_name => true %>
+
+  <div class='field'>
+    <%= f.label :title -%>
+    <%= f.text_field :title, :class => 'larger widest' -%>
+  </div>
+
+  <div class='field'>
+    <%= f.label :date -%>
+    <%= f.text_field :date -%>
+  </div>
+
+  <div class='field'>
+    <%= f.label :link -%>
+    <%= f.text_field :link -%>
+  </div>
+
+  <div class='field'>
+    <%= f.label :blast_key -%>
+    <%= f.text_field :blast_key -%>
+  </div>
+
+  <div class='field'>
+    <%= f.label :author -%>
+    <%= f.text_field :author -%>
+  </div>
+
+  <%= render '/refinery/admin/form_actions', :f => f,
+             :continue_editing => false,
+             :delete_title => t('delete', :scope => 'refinery.salsas.admin.salsas.salsa'),
+             :delete_confirmation => t('message', :scope => 'refinery.admin.delete', :title => @salsa.title) -%>
+<% end -%>
