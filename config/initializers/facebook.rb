@@ -14,6 +14,8 @@ end
 
 $FB_PAGE_TOKEN = ENV["LONG_TERM_TOKEN"] ||= FacebookToken.get_long_term_token
 
+binding.pry
+
 ### ================== RESOURCES ============================= ###
 
 # Extending Page Access Tokens
