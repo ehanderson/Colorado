@@ -3,7 +3,6 @@ module Refinery
   
     def find
       
-      binding.pry
     end
   end
 end
