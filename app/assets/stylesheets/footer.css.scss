@@ -48,8 +48,12 @@ footer {
   #twitter:hover {
     border: 2px solid #55acee;
   }
-  #facebook:hover {
-    border: 2px solid #3b5998;
+  #facebook {
+    background-color: gray;
+    &:hover {
+    background-color: #4c4ca6;
+    border: 2px solid #323299;
+    }
   }
   .copyright {
     padding: 2rem;
