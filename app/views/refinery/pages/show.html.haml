@@ -1,45 +1,47 @@
-- case @page.title
-  - when 'Take Action'
-    %div#take-action.large-12.columns.text-center(data-equalizer)
-      %div.large-6.columns.inline(data-equalizer-watch)
-        = raw @page.content_for(:side_body)
-      %div.large-6.columns.inline(data-equalizer-watch)
-        = raw @page.content_for(:Story)
-      %div.large-6.columns.inline(data-equalizer-watch)
-        = raw @page.content_for(:Body)
-      %div.large-6.columns.inline(data-equalizer-watch)
-        = raw @page.content_for(:Emails)
-  - when 'Sign Up'
-    %div.row.sub-take-action
-      %div.sub-take-action-body
-        = raw @page.content_for(:body)
-      = render 'refinery/sign_up_form'
-  - when 'Share Story'
-    %div.row.sub-take-action
-      %div.sub-take-action-body
-        = raw @page.content_for(:body)
-      = render 'refinery/share_story_form'
-  - when 'About'
-    %div#content-pages
-      %div.row
-        %div.small-12.columns
-          = render '/refinery/side_nav'
-      %div.row
-        %div.small-12.columns
-        = raw @page.content_for(:mission)
-        = raw @page.content_for(:about)
-  - when 'Pledge'
-    %div.row.sub-take-action
-    %div.sub-take-action-body
-      = raw @page.content_for(:body)
-    = render 'refinery/pledge_form'
-  - when 'Social Media'
-    = render 'refinery/social_media'
-  - when 'Legislator Lookup'
-    = render '/refinery/leg_lookup'
-  - when 'eNewsletters'
-    = render '/refinery/content_page'
-    = render '/refinery/enewsletters'
-  - else
-    = render '/refinery/content_page'
+%div.row.content_width
+  %div.row
+    - case @page.title
+      - when 'Take Action'
+        %div#take-action.large-12.columns.text-center(data-equalizer)
+          %div.large-6.columns.inline(data-equalizer-watch)
+            = raw @page.content_for(:side_body)
+          %div.large-6.columns.inline(data-equalizer-watch)
+            = raw @page.content_for(:Story)
+          %div.large-6.columns.inline(data-equalizer-watch)
+            = raw @page.content_for(:Body)
+          %div.large-6.columns.inline(data-equalizer-watch)
+            = raw @page.content_for(:Emails)
+      - when 'Sign Up'
+        %div.row.sub-take-action
+          %div.sub-take-action-body
+            = raw @page.content_for(:body)
+          = render 'refinery/sign_up_form'
+      - when 'Share Story'
+        %div.row.sub-take-action
+          %div.sub-take-action-body
+            = raw @page.content_for(:body)
+          = render 'refinery/share_story_form'
+      - when 'About'
+        %div#content-pages
+          %div.row
+            %div.small-12.columns
+              = render '/refinery/side_nav'
+          %div.row
+            %div.small-12.columns
+            = raw @page.content_for(:mission)
+            = raw @page.content_for(:about)
+      - when 'Pledge'
+        %div.row.sub-take-action
+        %div.sub-take-action-body
+          = raw @page.content_for(:body)
+        = render 'refinery/pledge_form'
+      - when 'Social Media'
+        = render 'refinery/social_media'
+      - when 'Legislator Lookup'
+        = render '/refinery/leg_lookup'
+      - when 'eNewsletters'
+        = render '/refinery/content_page'
+        = render '/refinery/enewsletters'
+      - else
+        = render '/refinery/content_page'
 
